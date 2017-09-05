@@ -1,0 +1,89 @@
+---
+- name: mariaDBを削除
+  yum: name=mariadb-libs state=removed
+  tags: [mysql]
+
+- name: 公式リポジトリの削除
+  yum: name={{item}} state=absent
+  with_items:
+    - mysql-community-release-el7-5.noarch
+
+- name: リポジトリのインストール
+  yum: name={{item}}
+  with_items:
+    - epel-release
+    - http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
+  tags: [repos, mysql]
+
+- name: MySQLのパッケージをインストール
+  yum: name={{ item }} state=present enablerepo="mysql57-community"
+  with_items:
+    - mysql-community-client
+    - mysql-community-common
+    - mysql-community-devel
+    - mysql-community-libs
+    - mysql-community-libs-compat
+    - mysql-community-server
+  tags: mysql
+
+- name: MySQL-pythonをインストール
+  yum: name={{ item }} state=present enablerepo="epel"
+  with_items:
+    - MySQL-python
+    - libselinux-python
+    - libsemanage-python
+  tags: mysql
+
+- name: MySQLを起動
+  service: name=mysqld state=started enabled=yes
+  tags: mysql
+
+- name: 初期パスワードを取得
+  shell: |
+    sudo grep 'password is generated' /var/log/mysqld.log | awk -F'root@localhost: ' '{print $2}'
+  register: tmp_pwd
+  tags: mysql
+
+# - name: set tmp.my.cnf
+#   template: src=.tmp.my.cnf dest=/root/.tmp.my.cnf owner=root mode=0600
+#   tags: mysql
+
+- stat: path=/root/.my.cnf
+  register: is_changed
+  tags: mysql
+
+- name: rootのパスワードを変更
+  shell: |
+    mysql -u root -p{{ tmp_pwd.stdout | quote }} --connect-expired-password -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ mysql_root_password }}'"
+  when: not is_changed.stat.exists
+  tags: mysql
+
+- name: rootユーザーのmy.cnfを作成
+  template: src=.my.cnf dest=/root/.my.cnf owner=root mode=0600
+  when: not is_changed.stat.exists
+  tags: mysql
+
+- name: パスワードポリシーの変更
+  shell: |
+    mysql -u root -p{{ mysql_root_password | quote }} -e "SET GLOBAL validate_password_policy=LOW; SET GLOBAL validate_password_length = 4"
+  tags: mysql
+
+- name: ユーザーを追加
+  mysql_user:
+    name: "{{ mysql_user_name }}"
+    password: "{{ mysql_user_password }}"
+    host: "{{ item }}"
+    priv: "*.*:ALL,GRANT"
+    state: present
+  with_items:
+    - "localhost"
+    - "127.0.0.1"
+    - "::1"
+    - "%"
+  ignore_errors: true
+  tags: [mysql]
+
+- name: DBを作成
+  shell: |
+    mysql -u {{ mysql_user_name }} -p{{ mysql_user_password }} -e "CREATE DATABASE IF NOT EXISTS {{ mysql_dbname }};"
+  tags: mysql

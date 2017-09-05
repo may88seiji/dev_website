@@ -1,0 +1,149 @@
+// ------------------------
+// wysiwyg
+
+.wysiwyg {
+  h2 {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 7px;
+    color: $c_brown-saturate;
+    &:before {
+      margin-bottom: 8px;
+      content: "";
+      width: 30px;
+      height: 1px;
+      background-color: $c_brown-saturate;
+      display: block;
+    }
+    @include mqSP {
+      font-size: 14px;
+      margin-bottom: 5px;
+      &:before {
+        margin-bottom: 5px;
+        width: 20px;
+      }
+    }
+    .article_spot & {
+      color: $c_beige-darken;
+      &:before {
+        background-color: $c_beige-darken;
+      }
+    }
+    .article_bbs & {
+      color: $c_gray-lighten2;
+      &:before {
+        background-color: $c_gray-lighten2;
+      }
+    }
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.75;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include mqSP {
+      font-size: 13px;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  hr {
+    border-color: $c_gray-lighten3;
+    border-bottom: 0;
+  }
+  
+  ul {
+    padding-left: 2em;
+    margin-bottom: 30px;
+    @include mqSP {
+      font-size: 13px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li {
+      list-style: disc;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  ol {
+    @extend ul;
+    li {
+      list-style: decimal;
+    }
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  // textcolor
+  .gray {
+    color: $c_gray-lighten1;
+  }
+  .pink {
+    color: $c_pink;
+  }
+  .orange {
+    color: $c_orange;
+  }
+  .green {
+    color: $c_green;
+  }
+  .blue {
+    color: $c_blue;
+  }
+
+}
+
+// wysiwyg内の画像
+.wp-caption {
+  margin: 30px 0;
+  max-width: 100%;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  p {
+    padding: 2px 5px;
+    font-size: 12px!important;
+    line-height: 1.5;
+    background-color: $c_gray-lighten4;
+    @include mqSP {
+      font-size: 10px!important;
+    }
+  }
+}
+
+.wp-caption-inner {
+  background-color: $c_gray-lighten5;
+  width: 630px;
+  height: 460px;
+  text-align: center;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include mqSP {
+    width: 260px;
+    height: 190px;
+  }
+}

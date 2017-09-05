@@ -1,0 +1,151 @@
+.gcSearchform {
+  overflow: hidden;
+
+  @include mqSP{ 
+    display: none;
+    &.is-menu{
+      display: block;
+      position: relative;
+      background: $c_gray-lighten5;
+      padding: 10px 20px;
+      width: 280px;
+      height: 40px;
+    }
+  }
+
+
+  @include mqPC{ 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    &.is-menu{
+      display: none;
+    }
+  }
+
+
+
+  .input_text {
+    vertical-align: top;
+    height: 40px;
+    width: 240px;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .button_submit {
+    vertical-align: top;
+    height: 40px;
+    transition-duration: $tr_speed;
+    i {
+      font-size: 20px;
+      color: #fff;
+    }
+    &:hover {
+      background-color: $c_gray-lighten2;
+    }
+  }
+}
+
+
+.gcSearchResult {
+  
+  .cse .gsc-control-cse,
+  .gsc-control-cse {
+    padding: 0;
+  }
+  
+  .gsc-search-box {
+    padding: 40px 70px;
+    background-color: $c_gray-lighten4;
+    box-sizing: border-box;
+    @include mqSP {
+      padding: 10px;
+    }
+  }
+  .gsc-input-box {
+    height: 40px;  
+  }
+  .gsib_a,
+  .gsib_b {
+    padding-top: 12px;
+  }
+  .gsc-search-box-tools .gsc-search-box .gsc-input {
+    font-size: 14px;
+    padding-right: 0;
+  }
+  input.gsc-search-button,
+  input.gsc-search-button:focus,
+  input.gsc-search-button:hover  {
+    border: none;
+    margin-left: 0;
+    background-color: $c_brown-lighten;
+    border-radius: 0;
+    padding: 14px 14px 13px 13px;
+    margin-top: 0;
+  }
+  input.gsc-input,
+  .gsc-input-box,
+  .gsc-input-box-hover,
+  .gsc-input-box-focus {
+    border: none;
+    outline: 0;
+    box-shadow: none;
+  }
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b,
+  .gs-webResult.gs-result a.gs-title:link,
+  .gs-webResult.gs-result a.gs-title:link b,
+  .gs-imageResult a.gs-title:link,
+  .gs-imageResult a.gs-title:link b {
+    color: $c_brown-lighten!important;
+  }
+  
+  .gsc-results .gsc-cursor-box {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .gsc-results .gsc-cursor-box .gsc-cursor-current-page,
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    color: #fff;
+    padding: 12px;
+    font-weight: bold;
+    background-color: $c_brown-lighten;
+    font-size: 16px;
+    padding: 12px 15px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    transition-duration: $tr_speed;
+    &:hover {
+      background-color: $c_gray-lighten2;
+    }
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+    background-color: $c_gray-lighten2;
+    pointer-events: none;
+  }
+  .gsc-orderby-label {
+    @include mqSP {
+      font-size: 11px;
+    }
+  }
+  .gsc-result-info-container {
+    @include mqSP {
+      width: 125px;
+      vertical-align: bottom;
+    }
+  }
+  .gsc-result-info {
+    @include mqSP {
+      font-size: 11px;
+      padding-left: 0;
+    }
+  }
+  
+}

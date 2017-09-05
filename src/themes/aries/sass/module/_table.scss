@@ -1,0 +1,52 @@
+.table_transparent {
+  tr {
+    th,td {
+      display: block;
+      // height: 14px;
+      // height: 14px;
+      padding: 10px 0;
+      font-size: 14px;
+      // vertical-align: top;
+      line-height: 20px;
+      a {
+        color: $c_brown-lighten;
+        border-bottom: 1px solid $c_brown-lighten;
+        &:hover {
+          border-bottom-color: transparent;
+        }
+      }
+    }
+    &:first-child {
+      th,td {
+        padding-top: 0;
+      }
+    }
+    &:last-child {
+      th,td {
+        padding-bottom: 0;
+      }
+    }
+    th {
+      width: 100px;
+      font-weight: bold;
+      height: 20px;
+    }
+  }
+  @include mqSP {
+    display: block;
+    tr {
+      display: block;
+      th,td {
+        display: block;
+      }
+      th {
+        padding: 0;
+        font-size: 13px;
+      }
+      td {
+        padding: 0 0 5px 0;
+        font-size: 12px;
+      }
+    }
+  }
+}

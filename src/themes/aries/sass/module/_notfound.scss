@@ -1,0 +1,61 @@
+.notfound {
+  position: relative;
+  padding: 55px 0;
+  @include mqSP {
+    padding: 30px 0 0;
+  }
+  &:after {
+    position: absolute;
+    top: 55px;
+    content: "";
+    margin: 0 auto;
+    @include sprite($bg_plus);
+    display: block;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 0;
+    @include mqSP {
+      top: 30px;
+      @include r-sprite($bg_plus);
+      margin-left: -100px;
+    }
+  }
+ 
+}
+.notfound-heading {
+  font-size: 200px;
+  font-family: $f_kaushan;
+  color: $c_brown-saturate;
+  text-align: center;
+  position: relative;
+  top: 15px;
+  left: -23px;
+  z-index: 1;
+  font-weight: normal;
+  @include mqSP {
+    font-size: 100px;
+    top: 7px;
+    left: -11px;
+  }
+}
+
+.notfound-text_en {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 117px;
+  position: relative;
+  z-index: 1;
+  @include mqSP {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+}
+
+.notfound-text_jp {
+  font-size: 16px;
+  text-align: center;
+  @include mqSP {
+    font-size: 13px;
+  }
+}
+

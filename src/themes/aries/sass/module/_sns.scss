@@ -1,0 +1,89 @@
+.snsIcons {
+  @include mqSP{
+    display:none;
+  }
+
+  @include mqPC{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    li {
+      padding: 5px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      border-right: 1px solid $c_gray-lighten4;
+      &:last-child {
+        border-right: 0;
+      }
+      a {
+        display: block;
+        &:hover {
+          opacity: $tr_opacity;
+        }
+      }
+      i {
+        font-size: 21px;
+        color: $c_gray-lighten2;
+        .snsIcons-contact  & {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .table_transparent & {
+    display: block;
+    li {
+      border-right: 0;
+      padding: 0 5px 0 0;
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        border-bottom: 0;
+        display: block;
+        border-radius: 3px;
+        padding: 3px;
+      }
+      i {
+        color: #fff;
+      }
+      &.snsIcons-facebook {
+        a {
+          background-color: $c_facebook;
+        }
+      }
+      &.snsIcons-instagram {
+        a {
+          background-color: $c_instagram;
+        }
+      }
+    }
+    @include mqSP {
+      display: block;
+      min-width: 100px;
+      li {
+        display: inline-block;
+        i {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+.snsShare {
+  li {
+    display: inline-block;
+    &.line {
+      @include mqPC {
+        display: none;
+      }
+    }
+    @include mqSP {
+      .pluginConnectButton {
+        display: none;
+      }
+    }
+  }
+}

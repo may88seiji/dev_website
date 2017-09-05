@@ -1,0 +1,6 @@
+---
+
+- name: gitのインストール
+  yum: name={{ item }} state=present
+  with_items:
+    - git

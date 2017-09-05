@@ -1,0 +1,4 @@
+/www/node_modules
+/www/public/storage
+/www/storage/*.key
+/www/vendor

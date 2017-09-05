@@ -1,0 +1,147 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$bg-plus-name: 'bg_plus';
+$bg-plus-x: 0px;
+$bg-plus-y: 0px;
+$bg-plus-offset-x: 0px;
+$bg-plus-offset-y: 0px;
+$bg-plus-width: 400px;
+$bg-plus-height: 400px;
+$bg-plus-total-width: 920px;
+$bg-plus-total-height: 574px;
+$bg-plus-image: '../img/sprite.png';
+$bg-plus: (0px, 0px, 0px, 0px, 400px, 400px, 920px, 574px, '../img/sprite.png', 'bg_plus', );
+$icon-new-name: 'icon_new';
+$icon-new-x: 622px;
+$icon-new-y: 410px;
+$icon-new-offset-x: -622px;
+$icon-new-offset-y: -410px;
+$icon-new-width: 62px;
+$icon-new-height: 62px;
+$icon-new-total-width: 920px;
+$icon-new-total-height: 574px;
+$icon-new-image: '../img/sprite.png';
+$icon-new: (622px, 410px, -622px, -410px, 62px, 62px, 920px, 574px, '../img/sprite.png', 'icon_new', );
+$icon-pr-name: 'icon_pr';
+$icon-pr-x: 694px;
+$icon-pr-y: 410px;
+$icon-pr-offset-x: -694px;
+$icon-pr-offset-y: -410px;
+$icon-pr-width: 62px;
+$icon-pr-height: 62px;
+$icon-pr-total-width: 920px;
+$icon-pr-total-height: 574px;
+$icon-pr-image: '../img/sprite.png';
+$icon-pr: (694px, 410px, -694px, -410px, 62px, 62px, 920px, 574px, '../img/sprite.png', 'icon_pr', );
+$logo-book-name: 'logo_book';
+$logo-book-x: 0px;
+$logo-book-y: 410px;
+$logo-book-offset-x: 0px;
+$logo-book-offset-y: -410px;
+$logo-book-width: 200px;
+$logo-book-height: 164px;
+$logo-book-total-width: 920px;
+$logo-book-total-height: 574px;
+$logo-book-image: '../img/sprite.png';
+$logo-book: (0px, 410px, 0px, -410px, 200px, 164px, 920px, 574px, '../img/sprite.png', 'logo_book', );
+$logo-box-black-name: 'logo_box_black';
+$logo-box-black-x: 410px;
+$logo-box-black-y: 0px;
+$logo-box-black-offset-x: -410px;
+$logo-box-black-offset-y: 0px;
+$logo-box-black-width: 510px;
+$logo-box-black-height: 174px;
+$logo-box-black-total-width: 920px;
+$logo-box-black-total-height: 574px;
+$logo-box-black-image: '../img/sprite.png';
+$logo-box-black: (410px, 0px, -410px, 0px, 510px, 174px, 920px, 574px, '../img/sprite.png', 'logo_box_black', );
+$logo-box-white-name: 'logo_box_white';
+$logo-box-white-x: 410px;
+$logo-box-white-y: 184px;
+$logo-box-white-offset-x: -410px;
+$logo-box-white-offset-y: -184px;
+$logo-box-white-width: 510px;
+$logo-box-white-height: 174px;
+$logo-box-white-total-width: 920px;
+$logo-box-white-total-height: 574px;
+$logo-box-white-image: '../img/sprite.png';
+$logo-box-white: (410px, 184px, -410px, -184px, 510px, 174px, 920px, 574px, '../img/sprite.png', 'logo_box_white', );
+$logo-horizontal-name: 'logo_horizontal';
+$logo-horizontal-x: 210px;
+$logo-horizontal-y: 410px;
+$logo-horizontal-offset-x: -210px;
+$logo-horizontal-offset-y: -410px;
+$logo-horizontal-width: 402px;
+$logo-horizontal-height: 68px;
+$logo-horizontal-total-width: 920px;
+$logo-horizontal-total-height: 574px;
+$logo-horizontal-image: '../img/sprite.png';
+$logo-horizontal: (210px, 410px, -210px, -410px, 402px, 68px, 920px, 574px, '../img/sprite.png', 'logo_horizontal', );
+$spritesheet-width: 920px;
+$spritesheet-height: 574px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($bg-plus, $icon-new, $icon-pr, $logo-book, $logo-box-black, $logo-box-white, $logo-horizontal, );
+$spritesheet: (920px, 574px, '../img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.heading_primary {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 28px;
+  .en {
+    font-family: $f_kaushan;
+    display: block;
+    font-size: 17px;
+    font-weight: normal;
+    padding-bottom: 5px;
+    &:before,
+    &:after {
+      content: "++";
+      display: inline-block;
+    }
+    &:before {
+      padding-right: 5px;
+    }
+    &:after {
+      padding-left: 5px;
+    }
+    .section_feature &,
+    .section_latest &,
+    .section_serialaize &{
+      color: $c_brown-saturate;
+    }
+    .section_spot & {
+      color: $c_beige;
+    }
+    .section_bbs &,
+    .section_backnumber &,
+    .section_others & {
+      color: $c_gray-lighten2;
+    }
+    .section_gourmet & {
+      color: $c_orange;
+    }
+    .section_beauty & {
+      color: $c_pink;
+    }
+    .section_school & {
+      color: $c_blue;
+    }
+    .section_life & {
+      color: $c_green;
+    }
+    .section_sightseeing & {
+      color: $c_yellow;
+    }
+  }
+  @include mqSP {
+    font-size: 22px;
+    margin-bottom: 15px;
+    .en {
+      font-size: 15px;
+    }
+  }
+}
+
+.heading_secondary {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  // padding-top: 10px;
+  @include mqSP {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+.heading_ternary {
+  background-color: $c_beige-darken;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  @include mqSP {
+    font-size: 14px;
+  }
+}

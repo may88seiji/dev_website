@@ -1,0 +1,5 @@
+{
+    "clientSecretFile": "../gas/client_secret_919951311318-94r5fg90vqa0s0jplkm8k1k5355knug0.apps.googleusercontent.com.json"
+  , "scopes": ["https://www.googleapis.com/auth/script.external_request", "https://www.googleapis.com/auth/script.storage", "https://www.googleapis.com/auth/spreadsheets"]
+  , "scriptId": "MZ4WWH5J0q-Ogaba3GHl355k3OLo33DbG"
+}

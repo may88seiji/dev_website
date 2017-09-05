@@ -1,0 +1,42 @@
+@import '../var';
+
+// col
+// 30カラムを基準
+// 親要素（.c-colWrap）にdata-c-col="3" としたときは3カラムに均等割
+// 子要素（.c-col）にdata-piece="10" としたときは、10/30 の横幅。不均等割も可能。
+// todo: 不均等割にするときに何対何まで想定しといたほうがいいか。
+
+.c-colWrap {
+  @if $use-flex == true {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+  } @else{
+    @extend %clearfix;  
+  }
+}
+
+$w-colBase: 3.33333333%; 
+.c-col {
+  width: $w-colBase;
+  @if $use-flex == false {
+    float: left;
+  }
+  @for $i from 1 through 30 {
+    [data-c-col="#{$i}"] & {
+      width: #{$w-colBase * 30 / $i};
+    }
+    &[data-c-piece="#{$i}"] {
+      width: #{$w-colBase * $i};
+    }
+  }
+
+  // 確認用
+  @for $i from 0 through 30 {  
+    &:nth-child(#{$i + 1}) {
+      background-color: lighten(#aaa, 0.9 * $i);
+    }  
+  }
+  
+}
+

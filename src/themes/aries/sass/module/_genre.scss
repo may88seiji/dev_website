@@ -1,0 +1,30 @@
+.genreTag {
+  font-size: 11px;
+  color: #fff;
+  line-height: 1;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+  @include mqSP {
+    font-size: 10px;
+    padding: 1px 2px;
+  }
+  &.genre_article {
+    background-color: $c_brown-saturate;
+  }
+  &.genre_gourmet {
+    background-color: $c_orange;
+  }
+  &.genre_life {
+    background-color: $c_green;
+  }
+  &.genre_beauty {
+    background-color: $c_pink;
+  }
+  &.genre_school {
+    background-color: $c_blue;
+  }
+  &.genre_sightseeing {
+    background-color: $c_yellow;
+  }
+}

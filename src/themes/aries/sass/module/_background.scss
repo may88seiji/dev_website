@@ -1,0 +1,19 @@
+.background {
+  height: 100%;
+  width: 100%;
+  background-position: center top;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+  margin-right: $w_gnavi;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#000,0.1);
+  }
+}

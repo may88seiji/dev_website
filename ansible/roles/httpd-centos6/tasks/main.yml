@@ -1,0 +1,16 @@
+- name: Install httpd
+  yum: name=httpd state=present
+
+- name: Make document root
+  file: path={{ item }} state=directory mode=0755 owner={{ user_name }} group={{ user_group }}
+  with_items:
+    - "{{ document_root }}"
+    - "{{ coding['document_root'] }}"
+
+- name: Copy httpd configuration
+  template: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
+  notify: restart httpd
+
+- name: Copy vhosts configuration
+  template: src=vhosts.conf dest=/etc/httpd/conf.d/vhosts.conf
+  notify: restart httpd

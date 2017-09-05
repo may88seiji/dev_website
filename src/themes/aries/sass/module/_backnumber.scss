@@ -1,0 +1,90 @@
+// ------------------------
+// バックナンバー
+
+.backnumber {
+  li {
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: $c_gray-lighten5;
+    @include mqSP {
+      padding: 10px;
+      border-top: 2px solid $c_gray-lighten2;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.backnumber-image,
+.backnumber-text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.backnumber-image {
+  width: 174px;
+  @include mqSP {
+    width: 80px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.backnumber-text {
+  // padding: 10px 15px;
+  padding: 8px 15px 10px;
+  @include mqSP {
+    padding: 0 0 0 10px;
+  }
+  .link_arrowRight {
+    margin-top: 5px;
+    font-size: 14px;
+    padding-right: 20px;
+    @include mqSP {
+      font-size: 12px;
+    }
+    a {
+      color: $c_brown-lighten;
+      border-color: $c_brown-lighten;
+      &:after {
+        color: $c_black;
+      }
+      &:hover {
+        color: $c_brown-lighten;
+        border-color: transparent;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.backnumber-date {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 0;
+  @include mqSP {
+    font-size: 13px;
+  }
+}
+
+.backnumber-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 15px;
+  @include mqSP {
+    font-size: 13px;
+    margin-top: 0;
+  }
+}
+
+.backnumber-note {
+  font-size: 14px;
+  line-height: 1.5;
+  @include mqSP {
+    font-size: 11px;
+  }
+}

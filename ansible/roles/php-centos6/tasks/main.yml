@@ -1,0 +1,49 @@
+---
+
+- name: Install repos
+  yum: name={{item}}
+  with_items:
+    - http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    - http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+    - http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+    - http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/x86_64/ius-release-1.0-11.ius.centos6.noarch.rpm
+  tags: repos
+
+- name: Remove repos
+  replace: dest=/etc/yum.repos.d/{{item}} regexp="enabled *= *1" replace="enabled=0"
+  with_items:
+    - epel.repo
+    - rpmforge.repo
+    - remi.repo
+    - ius.repo
+  tags: repos
+
+- name: Install php56u and modules
+  yum: name={{ item }} state=present enablerepo=ius
+  with_items:
+    - php56u
+    # - php-fpm
+    # - php-enchant
+    # - php-IDNA_Convert
+    - php56u-mbstring
+    - php56u-mysqlnd
+    - php56u-pdo
+    - php56u-gd
+    # - php-PHPMailer
+    # - php-process
+    # - php-simplepie
+    # - php-xml
+  tags: php
+
+- name: Copy php.ini
+  template: src=php.ini dest=/etc/php.ini
+  notify: restart httpd
+  tags: php
+
+# - name: Disable default pool
+#   command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
+#   notify: restart php-fpm
+
+# - name: Copy php-fpm configuration
+#   template: src=wordpress.conf dest=/etc/php-fpm.d/
+#   notify: restart php-fpm

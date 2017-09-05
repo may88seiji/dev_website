@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<%_
+  // FrontMatterのMETA情報が無ければ、翻訳データを代入
+  var _meta = {}, _og = {};
+  _meta.title = file.fm.title ? file.fm.title : meta.title;
+  _meta.keyword = file.fm.keywords ? file.fm.keywords : meta.keyword;
+  _meta.description = file.fm.description ? file.fm.description : meta.description;
+  _meta.locale = file.fm.lang ? file.fm.lang : locale;
+  _og.locale = file.fm.og_locale ? file.fm.og_locale : og.locale;
+  _meta.og = _og;
+_%>
+<!--[if IE 9 ]><html lang="<%= _meta.locale %>" class="is-ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="<%= _meta.locale %>"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= _meta.title %></title>
+  <meta name="keywords" content="<%= _meta.keyword %>">
+  <meta name="description" content="<%= _meta.description %>">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <!-- facebook -->
+  <meta property="og:title" content="<%= _meta.title %>">
+  <meta property="og:site_name" content="<%= _meta.title %>">
+  <meta property="og:description" content="<%= _meta.description %>">
+  <meta property="og:url" content="http://domain/<%= file.fm.og_url %>">
+  <meta property="og:image" content="http://domein/assets/img/og.jpg">
+  <meta property="og:locale" content="<%= _meta.og.locale %>">
+  <meta property="og:type" content="website">
+  <meta property="fb:app_id" content="" />
+  <!-- twitter -->
+  <meta name="twitter:title" content="<%= _meta.title %>" />
+  <meta name="twitter:description" content="<%= _meta.description %>" />
+  <meta name="twitter:url" content="http://domain/<%= file.fm.og_url %>" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://domain/assets/img/og.jpg" />
+  <link rel="alternate" hreflang="<%= _meta.locale %>" href="http://domain/<%= _meta.locale %>/" />
+  <link rel="stylesheet" href="<%- assets %>/css/style.css" media="screen">
+  <!--link rel="stylesheet" href="<%- assets %>/css/print.css" media="print"-->
+  <!--link rel="apple-touch-icon" href="<%- assets %>/img/apple-touch-icon.png"-->
+  <!--link rel="icon" href="<%- assets %>/img/favicon_32_32.png"-->
+  <!--[if IE 9 ]>
+    <style>
+    </style>
+  <![endif]-->
+</head>
+<body class="">
+  <div id="fb-root"></div>
+
+  <div class="l-container">
+    <?- include(relativePath + 'partials/_header') ?>
+    <%- contents %>
+    <?- include(relativePath + 'partials/_footer') ?>
+  </div>
+
+  <!--script src="https://maps.googleapis.com/maps/api/js?key="></script-->
+  <script src="<%- assets %>/js/build.min.js"></script>
+  <script src="//scdn.line-apps.com/n/line_it/thirdparty/loader.min.js" async="async" defer="defer" ></script>
+  <script>
+    // GoogleAnalyticsObject
+  </script>
+
+</body>
+</html>

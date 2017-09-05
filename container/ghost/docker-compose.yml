@@ -1,0 +1,12 @@
+version: '2'
+services:
+  ghost:
+    image: ghost:latest
+    container_name: cinra_ghost
+    volumes:
+      - ./ghost:/var/lib/ghost
+    ports:
+      - "80:2368"
+    environment:
+      NODE_ENV: development
+      VIRTUAL_HOST: cinra.dev

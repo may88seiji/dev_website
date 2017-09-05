@@ -1,0 +1,20 @@
+{
+  "dist": {
+      "srcDir": "./"
+    , "dstDir": "../www/html/assets/themes/cinra-prototype/"
+  }
+
+  , "staticDist": {
+      "srcDir": "./"
+    , "dstDir": "../www/static/assets/themes/cinra-prototype/"
+  }
+
+  , "themesDescription": {
+        "base": " frontテーマのベース。"
+      , "aries": " WordPressでの利用を想定したテーマ。inlude: jQuery / browserify-shim"
+      , "triangulum": " ejsテンプレート排出機構 + google spread sheet連携"
+      , "orion": "EJS。ES6対応"
+  }
+
+  , "type" : "normal"
+}

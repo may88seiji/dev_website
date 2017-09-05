@@ -1,0 +1,20 @@
+.date {
+  color: $c_gray-lighten1;
+  font-size: 12px;
+  font-style: italic;
+  &:before {
+    @include icofont;
+    @extend .icon-clock;
+    margin-right: 5px;
+    font-size: 13px;
+    font-style: normal;
+    vertical-align: text-top;
+    color: $c_gray;
+  }
+  @include mqSP {
+    font-size: 10px;
+    &:before {
+      font-size: 11px;
+    }
+  }
+}

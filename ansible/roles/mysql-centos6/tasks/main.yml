@@ -1,0 +1,61 @@
+---
+- name: Install mysql package
+  yum: name={{ item }} state=present
+  with_items:
+   - mysql
+   - mysql-server
+   - mysql-devel
+  tags: mysql
+
+- name: Start mysql
+  service: name=mysqld state=started enabled=yes
+  tags: mysql
+
+- name: Check the auth to show tables by root
+  shell: mysql -u root -e 'show databases'
+  register: not_root_auth
+  ignore_errors: true
+  changed_when: false
+  tags: [mysql, mysql-rm-testdb]
+
+- name: Remove testdb
+  shell: |
+    mysql -u root -e "DROP DATABASE IF EXISTS test;"
+    mysql -u root -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';"
+  # when: not_root_auth == 1
+  ignore_errors: true
+  tags: [mysql, mysql-rm-testdb]
+
+- name: Remove auth from root
+  shell: |
+    mysql -u root -e "DELETE FROM mysql.user WHERE User='';"
+    mysql -u root -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
+    mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('{{ mysql['root_password'] }}');" -D mysql
+  # when: not_root_auth == 1
+  ignore_errors: true
+  tags: [mysql, mysql-rm-auth]
+
+- name: Set Password
+  shell: |
+    mysql -u root -p{{ mysql['root_password'] }} -e "SET PASSWORD FOR 'root'@'127.0.0.1' = PASSWORD('{{ mysql['root_password'] }}');" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "SET PASSWORD FOR 'root'@'::1' = PASSWORD('{{ mysql['root_password'] }}');" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "GRANT ALL PRIVILEGES ON *.* TO '{{ user_name }}'@'localhost';" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "GRANT ALL PRIVILEGES ON *.* TO '{{ user_name }}'@'127.0.0.1';" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "GRANT ALL PRIVILEGES ON *.* TO '{{ user_name }}'@'::1';" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "SET PASSWORD FOR '{{ user_name }}'@'localhost' = PASSWORD('{{ user_password }}');" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "SET PASSWORD FOR '{{ user_name }}'@'127.0.0.1' = PASSWORD('{{ user_password }}');" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "SET PASSWORD FOR '{{ user_name }}'@'::1' = PASSWORD('{{ user_password }}');" -D mysql
+    mysql -u root -p{{ mysql['root_password'] }} -e "FLUSH PRIVILEGES;"
+  tags: mysql
+
+# - name: Check existance of Db
+#   shell: mysql -u {{ user_name }} -p{{ user_password }} -e 'show databases'
+#   register: is_auth
+#   ignore_errors: true
+#   changed_when: false
+#   tags: mysql
+
+- name: Create Db
+  shell: |
+    mysql -u {{ user_name }} -p{{ user_password }} -e "CREATE DATABASE IF NOT EXISTS {{ mysql['dbname'] }};"
+  tags: mysql

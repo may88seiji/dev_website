@@ -1,0 +1,347 @@
+.header-logo {
+  a {
+    @include mqSP{
+      @include r-sprite($logo_horizontal);
+    }
+    @include mqPC{
+      @include r-sprite($logo_book);
+    }
+    text-indent: -9999px;
+    margin: 0 auto;
+    display: block;
+    &:hover {
+      opacity: $tr_opacity;
+    }
+  }
+
+  @include mqSP{
+    display: none;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    background: white;
+    height: 50px;
+    &.display-block{
+      display: block;
+      a {
+        margin-top: 8px;
+      }
+    }
+  }
+
+
+}
+
+.header-gNavi {
+  margin: 0 auto;
+  border-top: 1px solid $c_brown-saturate;
+
+
+  @include mqSP{
+    width: 320px;
+    ul {
+      display: -webkit-box;
+    }
+  }
+
+  @include mqPC{
+    width: 100px;
+  }
+
+  li {
+    @include mqSP{
+      border-bottom: 1px solid $c_brown-saturate;
+      border-right: 1px solid $c_brown-saturate;
+      width: 33%;
+      &:nth-child(3n){
+        border-right: none;
+      }
+    }
+
+    @include mqPC{
+      height: 80px;
+      border-bottom: 1px solid $c_brown-saturate;
+    }
+
+    a {
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      color: $c_brown-saturate;
+      display: block;
+      font-size: 14px;
+      height: 100%;
+      box-sizing: border-box;
+      &:hover {
+        background-color: rgba($c_brown-saturate,0.1);
+      }
+    }
+    &.is-current {
+      a {
+        background-color: $c_brown-saturate;
+        color: #fff;
+      }
+    }
+    i {
+      display: block;
+      font-size: 37px;
+      position: relative;
+      &.icon-memo {
+        right: -5px;
+      }
+
+      &[class^="icon-"], 
+      &[class*=" icon-"]{
+        line-height:40px;
+      }
+    }
+  }
+}
+
+.header-subNavi {
+  @extend .header-gNavi;
+
+  @include mqSP{
+    // width: 320px;
+    ul {
+      display: block;
+    }
+  }
+
+  @include mqPC{
+    // width: 100px;
+  }
+
+
+  border-top: 0;
+  li {
+    padding: 2px 0;
+
+    @include mqSP{
+      width: 90%;
+      border-bottom: 1px dashed $c_gray-lighten1;
+      margin: 0 5%;
+      border-right: 0;
+    }
+
+    @include mqPC{
+      border-bottom: 1px dashed $c_gray-lighten1;
+      height: 37px;
+    }
+
+    &:last-child{
+      border-bottom: none;
+    }
+
+
+
+    a {
+      font-size: 12px;
+      color: $c_gray-lighten1;
+      position: relative;
+
+      @include mqSP{
+        text-align: left;
+        &::after{
+          @include icofont;
+          content: "\e907";
+          position: absolute;
+          right: 0;
+        }
+      }
+
+
+    }
+    &:last-child {
+      a {
+        border-bottom: 0;
+      }
+    }
+    &.header-subNavi-gourmet {
+      a {
+        &:hover {
+          background-color: rgba($c_orange,0.1);
+        }
+      }
+      &.is-current {
+        a {
+          background-color: $c_orange;
+        }
+      }
+    }
+    &.header-subNavi-beauty {
+      a {
+        &:hover {
+          background-color: rgba($c_pink,0.1);
+        }
+      }
+      &.is-current {
+        a {
+          background-color: $c_pink;
+        }
+      }
+    }
+    &.header-subNavi-school {
+      a {
+        &:hover {
+          background-color: rgba($c_blue,0.1);
+        }
+      }
+      &.is-current {
+        a {
+          background-color: $c_blue;
+        }
+      }
+    }
+    &.header-subNavi-life {
+      a {
+        &:hover {
+          background-color: rgba($c_green,0.1);
+        }
+      }
+      &.is-current {
+        a {
+          background-color: $c_green;
+        }
+      }
+    }
+    &.header-subNavi-sightseeing {
+      a {
+        &:hover {
+          background-color: rgba($c_yellow,0.1);
+        }
+      }
+      &.is-current {
+        a {
+          background-color: $c_yellow;
+        }
+      }
+    }
+  }
+
+}
+
+.header-bbs {
+  background-color: $c_gray-lighten2;
+  color: #fff;
+  text-align: center;
+  height: 70px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+
+
+
+// for min layout
+
+.js-lmin-togglewrapper{
+  @include  mqSP {
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    background: white;
+    position: absolute;
+    cursor: pointer;
+  }
+
+}
+
+.js-menu-wrapper{
+  @include  mqSP {
+    z-index: 1;
+    width: 100%;
+    background: white;
+    position: absolute;
+    overflow: scroll;
+  }
+
+}
+
+
+
+.js-lmin-toggle{
+  @include  mqSP {
+    position: absolute;
+    left: 0;
+    width: 270px;
+    height: 50px;
+    &::before{
+      content: "\e901";
+      color: $c_brown-saturate;
+      position: absolute;
+      top: 15px;
+      left: 105px;
+    }
+
+    &::after{
+      font-family: $f_kaushan;
+      color: $c_brown-saturate;
+      content: 'MENU';
+      position: absolute;
+      top: 15px;
+      left: 128px;
+    }
+  }
+}
+
+
+
+.js-lmin-top{
+  @include  mqSP {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background:$c_brown-lighten2;
+    &::before{
+      content: '\e909';
+      color: white;
+      position: absolute;
+      top: 17px;
+      left: 17px;
+    }
+  }
+}
+
+
+.js-lmin-toggle-close{
+  @include  mqSP {
+    position: absolute;
+    background:$c_brown-lighten2;
+    left: -320px;
+    width: 320px;
+    height: 50px;
+    z-index: 20;
+
+    &::before{
+      content: "\e900";
+      color: white;
+      position: absolute;
+      top: 15px;
+      left: 115px;
+    }
+
+    &::after{
+      font-family: $f_kaushan;
+      color: white;
+      content: 'CLOSE';
+      position: absolute;
+      top: 15px;
+      left: 138px;
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

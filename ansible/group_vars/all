@@ -1,0 +1,40 @@
+---
+project: cinra
+hostname: cinra.dev
+charset: utf8
+
+user_name: cinra
+user_password: pass
+user_group: www
+user_password_hashed: $1$uc.0Q8Bx$Cql6FGmN1.nr.92prAz0c1
+
+project_root: "/home/{{ user_name }}/dist"
+document_root: "{{ project_root }}/container/wp/html"
+log_root: "/var/log"
+bin_path: "/usr/bin"
+
+httpd_error_log: "{{ log_root }}/httpd/error_log"
+httpd_access_log: "{{ log_root }}/httpd/access_log combined"
+httpd_basic_auth: no
+
+php_max_file_size: 40M
+
+admin_email: d.creative@cinra.net
+
+mysql_dbname: "{{ project }}"
+mysql_dbname_for_test: "{{ project }}_test"
+mysql_user_name: "{{user_name}}"
+mysql_user_password: "{{user_password}}"
+mysql_host: localhost
+mysql_root_password: n7UDxHTX-zCJdTcJk
+
+wp_sitename: wordpress package by cinra
+wp_admin: dev
+wp_password: cvS%zJm(Qn0Ou9(0NT
+wp_email: "{{ admin_email }}"
+wp_theme: "{{ project }}"
+wp_table_prefix: wp
+wp_test_root: "{{ project_root }}/www/test"
+
+wp_use_acfpro: true
+wp_use_i18n: true
