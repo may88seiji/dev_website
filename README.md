@@ -1,4 +1,4 @@
-# CINRA Project Template
+#Template
 
 ## Wordpress Package
 
