@@ -1,4 +1,0 @@
-[client]
-user=root
-password={{ tmp_pwd.stdout }}
-connect-expired-password
