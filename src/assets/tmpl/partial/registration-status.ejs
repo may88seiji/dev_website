@@ -1,0 +1,12 @@
+<% if (typeof registrationStatus === 'undefined') { var registrationStatus = 0; } %>
+
+<section class="registration-wrap">
+  <ol class="registration-status">
+    <li<% if(registrationStatus>=1) { %> class="is-active"<% } %>>お客さま<br />情報入力</li>
+    <li<% if(registrationStatus>=2) { %> class="is-active"<% } %>>お届け先<br />情報入力</li>
+    <li<% if(registrationStatus>=3) { %> class="is-active"<% } %>>サイズ<br />選択</li>
+    <li<% if(registrationStatus>=4) { %> class="is-active"<% } %>>登録内容<br />確認</li>
+    <li<% if(registrationStatus>=5) { %> class="is-active"<% } %>>支払設定<br /><span>（外部サイト）</span></li>
+    <li<% if(registrationStatus>=6) { %> class="is-active"<% } %>>登録完了</li>
+  </ol>
+</section>

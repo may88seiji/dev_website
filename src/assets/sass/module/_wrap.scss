@@ -1,0 +1,10 @@
+.wrap_toFaq{
+  margin: 70px 0;
+  text-align: center;
+  @include mqTB{
+    margin: calc-vw(70,1280) 0;
+  }
+  @include mqSP{
+    margin: calc-vw(80) calc-vw(30) calc-vw(100);
+  }
+}

@@ -1,0 +1,22 @@
+<% 
+  if (typeof registrationCanBack === 'undefined') { var registrationCanBack = true; }
+  if (typeof conditionedNext === 'undefined') { var conditionedNext = false; }
+
+  var nextText = 'NEXT';
+  var backText = 'BACK';
+  if(typeof registrationComplete !== 'undefined') { nextText = 'MY PAGE' }
+  if(typeof registrationConfirm !== 'undefined') { nextText = '確認する' }
+  if(typeof registrationNextText !== 'undefined') { nextText = registrationNextText }
+  if(typeof registrationBackText !== 'undefined') { backText = registrationBackText }
+
+  var nextType = 'button_next';
+  if(typeof registrationNextType !== 'undefined') { nextType = registrationNextType }
+%>
+<div class="pager_simple-wrap">
+  <div class="pager_simple">
+    <% if(registrationCanBack) { %><a href="#" class="button_back"><%- backText %></a><% } %>
+    <div class="button_next-wrap js-button_next-wrap <% if(conditionedNext) { %>is-disabled<% } %>">
+      <input type="submit" class="<%- nextType %><% if(conditionedNext) { %> is-disabled<% } %> js-button_next" value=<%- nextText %>>
+    </div>
+  </div>
+</div>

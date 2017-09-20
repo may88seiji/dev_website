@@ -1,0 +1,915 @@
+// List
+//
+// Styleguide 12.0.0
+
+// List Octagon
+//
+// 八角形の写真リスト（Girlfriends）
+//
+// Markup:
+// <h1 class="heading_section_primary">GIRL FRIENDS</h1>
+//
+// Styleguide 12.1.0
+.list_octagon {
+  width: 812px;
+  margin: -40px auto 0;
+  overflow: hidden;
+  @include mqTB {
+    width: calc-vw(812,1280);
+    margin: calc-vw(-40,1280) auto 0;
+  }
+  @include mqSP {
+    width: calc-vw(522);
+    margin: calc-vw(-55) auto 0;
+  }
+  .page-detail_gift & {
+    @include mqNotSP {
+      width: 910px;
+      margin-bottom: 0;
+      @include mqTB {
+        width: calc-vw(910,1280);
+      }
+    }
+  }
+  .page-list_girlfriends & {
+    @include mqNotSP {
+      width: 970px;
+      margin-top: 30px;
+      @include mqTB {
+        width: calc-vw(970,1280);
+        margin-top: calc-vw(30,1280);
+      }
+    }
+    @include mqSP {
+      margin-top: calc-vw(28);
+    }
+  }
+  .about-editor & {
+    @include mqNotSP {
+      width: 410px;
+      @include mqTB {
+        width: calc-vw(410,1280);
+      }
+    }
+  }
+  
+  > li {
+    text-align: center;
+    width: 158px;
+    float: left;
+    margin-right: 60px;
+    margin-top: 40px;
+    @include mqNotSP {
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+    @include mqTB {
+      width: calc-vw(158,1280);
+      margin-right: calc-vw(60,1280);
+      margin-top: calc-vw(40,1280);
+    }
+    @include mqSP {
+      width: calc-vw(220);
+      margin-top: calc-vw(55);
+      margin-right: calc-vw(74);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    a {
+      &:hover {
+        .list_octagon-img {
+          opacity: $tr_opacity;
+        }
+        .list_octagon-text {
+          color: $c_gray2;
+        }
+      }
+    }
+    .page-detail_gift & {
+      @include mqNotSP {
+        width: 430px;
+        margin-right: 50px;
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        @include mqTB {
+          width: calc-vw(430,1280);
+          margin-right: calc-vw(50,1280);
+        }
+      }
+      @include mqSP {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    .page-list_girlfriends & {
+      @include mqNotSP {
+        margin-right: 44px;
+        margin-top: 48px;
+        &:nth-child(4n) {
+          margin-right: 44px;
+          @include mqTB {
+            margin-right: calc-vw(44,1280);
+            margin-top: calc-vw(48,1280);
+          }
+        }
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+        @include mqTB {
+          margin-right: calc-vw(44,1280);
+          margin-top: calc-vw(48,1280);
+        }
+      }
+      @include mqSP {
+        width: calc-vw(220);
+      }
+    }
+    .about-editor & {
+      @include mqNotSP {
+        width: 165px;
+        margin-right: 80px;
+        @include mqTB {
+          width: calc-vw(165,1280);
+          margin-right: calc-vw(80,1280);
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      @include mqSP {
+        width: calc-vw(250);
+        margin-right: calc-vw(20);
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+    a {
+      @include transition;
+      display: block;
+      &:hover {
+        opacity: $tr_opacity;
+      }
+    }
+  }
+}
+.list_octagon-img {
+  width: 158px;
+  height: 158px;
+  margin: 0 auto;
+  position: relative;
+  @include transition;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  image {
+    width: 100%;
+    height: 100%;
+  }
+  @include mqTB {
+    width: calc-vw(158,1280);
+    height: calc-vw(158,1280);
+  }
+  @include mqSP {
+    width: calc-vw(220);
+    height: calc-vw(220);
+  }
+  &:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/frame-octagon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-size: 158px auto;
+    @include mqTB {
+      background-size: calc-vw(158,1280);
+    }
+    @include mqSP {
+      background-size: calc-vw(220) auto;
+    }
+  }
+  
+  .side-girlfriends & {
+    width: 95px;
+    height: 95px;
+    @include mqTB {
+      width: calc-vw(95,1280);
+      height: calc-vw(95,1280);
+    }
+    @include mqSP {
+      width: 95px;
+      height: 95px;
+    }
+    &:after {
+      background-size: 95px auto;
+      @include mqTB {
+        background-size: calc-vw(95,1280);
+      }
+      @include mqSP {
+        background-size: 95px auto;
+      }
+    }
+  }
+
+}
+.list_octagon-text {
+  font-size: 18px;
+  @include f_chikumin;
+  margin-top: 15px;
+  @include transition;
+  @include mqTB {
+    font-size: calc-vw(18,1280);
+    margin-top: calc-vw(15,1280);
+  }
+  @include mqSP {
+    font-size: 16px;
+    margin-top: calc-vw(10);
+  }
+}
+.list_octagon-summary {
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: left;
+  @include mqTB {
+    font-size: calc-vw(13,1280);
+    margin-top: calc-vw(15,1280);
+  }
+  @include mqSP {
+    margin-top: calc-vw(10);
+    font-size: 12px;
+  }
+}
+.list_octagon-position {
+  font-size: 15px;
+  text-align: center;
+  margin: 10px 0;
+  white-space: nowrap;
+  @include mqTB {
+    font-size: calc-vw(15,1280);
+  }
+  @include mqSP {
+    font-size: 11px;
+    margin: 0 0 calc-vw(5) 0;
+  }
+}
+
+.list_octagon-sns {
+  margin-top: 15px;
+  @include mqTB {
+    margin-top: calc-vw(15,1280);
+  }
+  @include mqSP {
+    margin-top: calc-vw(10);
+  }
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    @include mqTB {
+      margin-right: calc-vw(5,1280);
+    }
+    @include mqSP {
+      margin-right: calc-vw(10);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      padding: 5px;
+      @include mqTB {
+        padding: calc-vw(5,1280);
+      }
+    }
+    i {
+      font-size: 20px;
+      &.icon-twitter {
+        font-size: 18px;
+        @include mqTB {
+          font-size: calc-vw(18,1280);
+        }
+        @include mqSP {
+          font-size: 15px;
+        }
+      }
+      @include mqTB {
+        font-size: calc-vw(20,1280);
+      }
+      @include mqSP {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+// List Privilege
+//
+// 会員特典リスト
+//
+// Markup:
+// <ul class="list_memberPrivilege">
+//   <li>ギフトを<br />受け取れる</li>
+//   <li>イベントの先行<br />予約ができる</li>
+//   <li>会員限定記事が<br />見れる</li>
+//   <li>メールマガジンが<br />受け取れる</li>
+// </ul>
+// <br><hr><br>
+// <ul class="list_memberPrivilege_horizontal">
+//   <li>ギフトを<br />受け取れる</li>
+//   <li>イベントの先行<br />予約ができる</li>
+//   <li>会員限定記事が<br />見れる</li>
+//   <li>メールマガジンが<br />受け取れる</li>
+// </ul>
+//
+// Styleguide 12.2.0
+.list_memberPrivilege {
+  @extend %clearfix;
+  width: 332px;
+  margin: 0 auto 20px auto;
+  @include mqTB {
+    width: calc-vw(332,1280);
+  }
+  @include mqSP {
+    width: 100%;
+    margin: 0 auto calc-vw(80) auto;
+    text-align: center;
+  }
+  .page-login & {
+    @include mqSP {
+      margin: 0 auto calc-vw(30) auto;
+    }
+  }
+  li {
+    position: relative;
+    float: left;
+    width: 166px;
+    height: 128px;
+    margin: 0 0 20px 0;
+    padding: 80px 0 0 0;
+    background-image: url(../img/frame-octagon.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    @include mqTB {
+      width: calc-vw(166,1280);
+      height: calc-vw(128,1280);
+      margin: 0 0 calc-vw(20,1280) 0;
+      padding: calc-vw(60,1280) 0 0 0;
+      background-size: calc-vw(126,1280) auto;
+      font-size: calc-vw(12,1280);
+    }
+    @include mqSP {
+      display: inline-block;
+      float: none;
+      width: calc-vw(238);
+      background-size: 100% auto;
+      height: calc-vw(240);
+      margin: 0 calc-vw(30) calc-vw(30) 0;
+      padding: calc-vw(140) 0 0 0;
+      font-size: calc-vw(22);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(1) {
+      &:before {
+        top: 30px;
+        height: 37px;
+        background-image: url(../img/icon-gift.svg);
+        background-size: auto 37px;
+        @include mqTB {
+          top: calc-vw(20,1280);
+          height: calc-vw(37,1280);
+          background-size: auto calc-vw(37,1280);
+        }
+        @include mqSP {
+          top: calc-vw(50);
+          height: calc-vw(72);
+          background-size: auto calc-vw(72);
+        }
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        top: 24px;
+        height: 45px;
+        background-image: url(../img/icon-event.svg);
+        background-size: auto 45px;
+        @include mqTB {
+          top: calc-vw(14,1280);
+          height: calc-vw(45,1280);
+          background-size: auto calc-vw(45,1280);
+        }
+        @include mqSP {
+          top: calc-vw(40);
+          height: calc-vw(88);
+          background-size: auto calc-vw(88);
+        }
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        top: 30px;
+        height: 36px;
+        background-image: url(../img/icon-book.svg);
+        background-size: auto 36px;
+        @include mqTB {
+          top: calc-vw(20,1280);
+          height: calc-vw(36,1280);
+          background-size: auto calc-vw(36,1280);
+        }
+        @include mqSP {
+          top: calc-vw(50);
+          height: calc-vw(68);
+          background-size: auto calc-vw(68);
+        }
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        top: 30px;
+        height: 34px;
+        background-image: url(../img/icon-mail.svg);
+        background-size: auto 34px;
+        @include mqTB {
+          top: calc-vw(20,1280);
+          height: calc-vw(34,1280);
+          background-size: auto calc-vw(34,1280);
+        }
+        @include mqSP {
+          top: calc-vw(50);
+          height: calc-vw(66);
+          background-size: auto calc-vw(66);
+        }
+      }
+    }
+  }
+}
+.list_memberPrivilege_horizontal {
+  @extend .list_memberPrivilege;
+  margin: calc-vw(80) 0;
+  @include mqNotSP {
+    width: 100%;
+    margin: calc-vw(50,1280) 0;
+    li {
+      width: 25%;
+      margin-right: 0;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// List link
+//
+// リンクのリスト ( 先頭に● )
+//
+// Markup:
+// <ul class="list_link">
+//   <li><a href="">ご利用規約</a></li>
+//   <li><a href="">プライバシーポリシー</a></li>
+// </ul>
+//
+// Styleguide 12.3.0
+.list_link {
+  margin: 0 0 40px 0;
+  li {
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0 0 0 20px;
+    font-size: 15px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      background: $c_k;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+    a {
+      color: $c_blue;
+      // text-decoration: underline;
+      border-bottom: 1px solid $c_blue;
+      display: inline-block;
+      @include transition;
+      line-height: 1;
+      &:hover {
+        // text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+    }
+    @include mqSP {
+      font-size: 14px;
+    }
+  }
+}
+
+// List Mypage Menu
+//
+// マイページサイドカラムのメニュー
+//
+// Markup:
+// <h3 class="heading_mypage">MENU</h3>
+// <ul class="list_mypage-menu">
+//   <li class="button_border_block"><a href="">登録情報</a></li>
+//   <li class="button_border_block"><a href="">配達状況一覧</a></li>
+//   <li class="button_border_block"><a href="">MEMBERS 限定記事一覧</a></li>
+// </ul>
+//
+// Styleguide 12.4.0
+.list_mypage-menu {
+  li {
+    margin-bottom: 20px;
+    padding: 0;
+    a, span {
+      padding: 0;
+      height: 40px;
+      line-height: 40px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include mqTB {
+    li {
+      margin-bottom: calc-vw(20,1280);
+    }
+  }
+  @include mqSP {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// List Mypage News
+//
+// マイページサイドカラムのニュース
+//
+// Markup:
+// <h3 class="heading_mypage">お知らせ</h3>
+// <ul class="list_mypage-news">
+//   <li>
+//     <p class="list_mypage-news-title"><a href="">She is オープニングパーティーのお知らせ／10組20名さまをご招待</a></p>
+//     <p class="list_mypage-news-date">Sep 16. 2017</p>
+//   </li>
+//   <li>
+//     <p class="list_mypage-news-title"><a href="">She is オープニングパーティーのお知らせ／10組20名さまをご招待</a></p>
+//     <p class="list_mypage-news-date">Sep 16. 2017</p>
+//   </li>
+//   <li>
+//     <p class="list_mypage-news-title"><a href="">She is オープニングパーティーのお知らせ／10組20名さまをご招待</a></p>
+//     <p class="list_mypage-news-date">Sep 16. 2017</p>
+//   </li>
+// </ul>
+// <p class="button_fill"><a href="">お知らせ一覧</a></p>
+//
+// Styleguide 12.5.0
+.list_mypage-news {
+  li {
+    border-top: 1px solid $c_gray;
+    padding: 30px 20px;
+    @include mqTB {
+      padding: calc-vw(30,1280) calc-vw(20,1280);
+    }
+    @include mqSP {
+      padding: 20px 15px;
+    }
+    a {
+      @include transition;
+      &:hover {
+        color: $c_gray2;
+      }
+    }
+  }
+}
+.list_mypage-news-date {
+  font-size: 11px;
+  @include f_poppins;
+  @include mqTB {
+    font-size: calc-vw(11, 1280);
+  }
+}
+
+.list_mypage-news-title {
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: bold;
+  margin-bottom: 10px;
+  @include mqTB {
+    font-size: calc-vw(16, 1280);
+    margin-bottom: calc-vw(10,1280);
+  }
+  @include mqSP {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+}
+
+// List Notice
+//
+// おしらせ一覧
+//
+// Markup:
+//<ul class="list_notice">
+//  <li>
+//  <div class="list_notice-inner">
+//  <div class="list_notice-img"><img class="js-lazyload" data-src="https://unsplash.it/150/150" alt=""></div>
+//  <div class="list_notice-textBox">
+//  <div class="list_notice-title">18px She is オープニングパーティのお知らせオープニングパーティのお知らせオープニングパーティのお知らせオープニング</div>
+//  <div class="list_notice-description">13px #999999 １行分のテキスト詳細が入ってもいいかも？テキスト詳細が入ってもいいかも？</div>
+//  <div class="list_notice-date">Sep 16. 2017</div>
+//  </div>
+//  </div>
+//  </li>
+//  <li>
+//  <div class="list_notice-inner">
+//  <div class="list_notice-img"><img class="js-lazyload" data-src="https://unsplash.it/150/150" alt=""></div>
+//  <div class="list_notice-textBox">
+//  <div class="list_notice-title">18px She is オープニングパーティのお知らせオープニングパーティのお知らせオープニングパーティのお知らせオープニング</div>
+//  <div class="list_notice-description">13px #999999 １行分のテキスト詳細が入ってもいいかも？テキスト詳細が入ってもいいかも？</div>
+//  <div class="list_notice-date">Sep 16. 2017</div>
+//  </div>
+//  </div>
+//  </li>
+//</ul>
+//
+// Styleguide 12.6.0
+
+.list_notice{
+  width: 780px;
+  margin: 0 auto 70px;
+  
+  > li {
+    border-top: 1px solid $c_gray;
+    padding: 20px 0;
+    a {
+      @include transition;
+      display: block;
+      &:hover {
+        opacity: $tr_opacity;
+      }
+    }
+  }
+  @include mqTB{
+    width: calc-vw(780,1280);
+    margin: 0 auto calc-vw(70,1280);
+  }
+  @include mqSP{
+    width: calc-vw(290,320);
+    margin: 0 auto calc-vw(40,320);
+    > li {
+      padding: calc-vw(15,320) 0 calc-vw(15,320) 0 ;
+    }
+  }
+}
+
+.list_notice-img{
+  width: 140px;
+  height: 140px;
+  margin-right: 40px;
+  position: relative;
+  @include mqTB{
+    width: calc-vw(140,1280);
+    height: calc-vw(140,1280);
+    margin-right: calc-vw(40,1280);
+  }
+  @include mqSP{
+    width: calc-vw(100,320);
+    height: calc-vw(100,320);
+    margin-right: calc-vw(16,320);
+  }
+}
+
+.list_notice-inner{
+  display: flex;
+  align-items: center;
+  @include mqSP{
+    align-items: inherit;
+  }
+}
+
+.list_notice-textBox{
+  width: 600px;
+  @include mqTB{
+    width: calc-vw(600,1280);
+  }
+  @include mqSP{
+    width: calc-vw(160,320);
+  }
+}
+
+.list_notice-title{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  @include mqTB{
+    font-size: calc-vw(18,1280);
+  }
+  @include mqSP{
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+.list_notice-description{
+  font-size: 13px;
+  color: $c_gray2;
+  @include mqTB{
+    font-size: calc-vw(13,1280);
+  }
+  @include mqSP{
+    font-size: 12px;
+  }
+}
+.list_notice-date{
+  font-size: 11px;
+  margin-top: 10px;
+  @include mqTB{
+    font-size: calc-vw(11,1280);
+    margin-top: calc-vw(10,1280);
+  }
+  @include mqSP{
+    font-size: 11px;
+  }
+}
+
+// List Flow
+//
+// 手順
+//
+// Markup:
+//<ol class="list_flow">
+//<li>
+//<i><svg viewBox="0 0 51.2 34.9"><use xlink:href="#s-icon_card"></use></svg></i>
+//<div class="list_flow-text">クレジットカードで<br />Members登録</div>
+//</li>
+//<li>
+//<i><svg viewBox="0 0 50 34.07"><use xlink:href="#s-icon_mail"></use></svg></i>
+//<div class="list_flow-text">マイページで会員限定記事が読めたり、メールマガジンでイベント情報をお届け</div>
+//</li>
+//<li>
+//<i><svg viewBox="0 0 50 37.31"><use xlink:href="#s-icon_gift"></use></svg></i>
+//<div class="list_flow-text">登録した翌月末から<br />毎月ギフトをお届け！</div>
+//</li>
+//</ol>
+//
+// Styleguide 12.7.0
+.list_flow {
+  display: flex;
+  width: 753px;
+  margin: 0 auto 70px;
+  justify-content: space-between;
+  @include mqTB {
+    width: calc-vw(753,1280);
+    margin-bottom: calc-vw(70,1280);
+  }
+  @include mqSP {
+    margin-bottom: calc-vw(80);
+    width: calc-vw(520);
+    flex-direction: column;
+    height: calc-vw(610);
+  }
+  > li {
+    width: 185px;
+    text-align: center;
+    position: relative;
+    @include mqTB {
+      width: calc-vw(185,1280);
+    }
+    @include mqSP {
+      display: table;
+      width: 100%;
+      height: calc-vw(185);
+    }
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 12px;
+      border-color: transparent transparent transparent $c_k;
+      position: absolute;
+      left: 230px;
+      top: 82px;
+      @include mqTB {
+        border-width: calc-vw(10,1280) 0 calc-vw(10,1280) calc-vw(12,1280);
+        left: calc-vw(230,1280);
+        top: calc-vw(82,1280);
+      }
+      @include mqSP {
+        border-width: calc-vw(12) calc-vw(10) 0 calc-vw(10);
+        border-color: $c_k transparent transparent transparent;
+        top: calc-vw(194);
+        left: calc-vw(80);
+      }
+    }
+    &:last-child {
+      svg {
+        height: 66px;
+        margin-top: -33px;
+        @include mqTB {
+          height: calc-vw(66,1280);
+          margin-top: calc-vw(-33,1280);
+        }
+        @include mqSP {
+          width: calc-vw(88);
+          height: auto;
+          margin-top: 0;
+        }
+      }
+      &:after {
+        content: none;
+      }
+    }
+    i {
+      display: block;
+      height: 185px;
+      width: 185px;
+      background-image: url(../img/icon-octagon_g.svg);
+      background-repeat: no-repeat;
+      background-size: 185px auto;
+      position: relative;
+      margin-bottom: 20px;
+      @include mqTB {
+        height: calc-vw(185,1280);
+        width: calc-vw(185,1280);
+        background-size: calc-vw(185,1280) auto;
+      }
+      @include mqSP {
+        display: table-cell;
+        vertical-align: middle;
+        height: calc-vw(185);
+        width: calc-vw(185);
+        background-size: calc-vw(185) auto;
+      }
+      svg {
+        width: 82px;
+        height: 56px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -28px 0 0 -41px;
+        @include mqTB {
+          width: calc-vw(82,1280);
+          height: calc-vw(56,1280);
+          margin: calc-vw(-28,1280) 0 0 calc-vw(-41,1280);
+        }
+        @include mqSP {
+          width: calc-vw(82);
+          height: auto;
+          margin: 0;
+          transform: translate(-50%,-50%);
+        }
+      }
+    }
+  }
+}
+.list_flow-text {
+  font-size: 14px;
+  max-width: 175px;
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: left;
+  display: inline-block;
+  
+  .page-registration & {
+    font-weight: normal;
+  }
+  @include mqTB {
+    font-size: calc-vw(14,1280);
+    max-width: calc-vw(175,1280);
+  }
+  @include mqSP {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: calc-vw(60);
+    font-size: 12px;
+  }
+}

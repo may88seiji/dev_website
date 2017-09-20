@@ -1,0 +1,293 @@
+// Pager
+//
+// Styleguide 17.0.0
+
+// Pager Simple
+//
+// BACK / NEXT のページャー
+//
+// Markup:
+// <div class="pager_simple-wrap">
+//   <div class="pager_simple">
+//     <a href="#" class="button_back">BACK</a>
+//     <a href="#" class="button_next">NEXT</a>
+//   </div>
+// </div>
+//
+// Styleguide 17.1.0
+.pager_simple-wrap {
+  margin-top: 40px;
+  background: $c_gray4;
+}
+.button_next-wrap{
+  width: 50%;
+  float: right;
+  position: relative;
+  @include mqSP{
+    width: 63%;
+  }
+  &:after {
+    position: absolute;
+    content: "\e901";
+    @include icofont;
+    color: $c_w;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding: 0 5px 0 10px;
+    font-size: 10px;
+    @include transition;
+    top: 31px;
+    right: 15px;
+    pointer-events: none;
+  }
+  &.is-disabled::after{
+    color: $c_gray;
+  }
+  &:not(.is-disabled):hover::after{
+    padding: 0 0 0 15px;
+  }
+}
+.pager_simple {
+  @extend %clearfix;
+  width: 640px;
+  margin: 0 auto;
+  @include mqTB {
+    width: 100%;
+  }
+  @include mqSP {
+    width: 100%;
+  }
+  .page-mypage .main-inner & {
+    width: 100%;
+  }
+  a,input {
+    width: 50%;
+    box-sizing: border-box;
+    &.button_back {
+      float: left;
+    }
+    &.button_next {
+      float: right;
+    }
+    @include mqSP {
+      &.button_back {
+        width: 37%;
+      }
+      &.button_next {
+        width: 63%;
+      }
+      &:first-child:last-child {
+        width: 100%;
+      }
+    }
+  }
+  input{
+    width: 100%;
+    background: #000;
+    padding-right: 60px;
+    font-size: 18px;
+    @include mqTB{
+      font-size: calc-vw(18,1280);
+    }
+  }
+}
+
+// Pager 
+//
+// 一覧のページャー
+//
+// Markup:
+//<div class="pager">
+//<div class="prev"><a href="">Prev</a></div>
+//<ol>
+//<li><a href="#">1</a></li>
+//<li><a href="#">2</a></li>
+//<li class="is-current"><span>3</span></li>
+//<li><a href="#">4</a></li>
+//<li class="ellipsis"><span>...</span></li>
+//<li><a href="#">123</a></li>
+//</ol>
+//<ul>
+//<li>1</li>
+//<li>124</li>
+//</ul>
+//<div class="next"><a href="">Next</a></div>
+//</div>
+//
+// Styleguide 17.2.0
+
+.pager {
+  width: 980px;
+  overflow: hidden;
+  padding: 30px 0;
+  margin: 40px auto 0;
+  border-top: 1px solid $c_k;
+  border-bottom: 1px solid $c_k;
+  position: relative;
+  @include mqTB{
+    width: calc-vw(980,1280);
+  }
+  @include mqSP {
+    width: calc-vw(290,320);
+  }
+  .l-main:not(:only-child) & {
+    width: 600px;
+    border-top: none;
+    border-bottom: none;
+    @include mqTB{
+      width: calc-vw(600,1280);
+    }
+    @include mqSP{
+      width: calc-vw(290,320);
+    }
+  }
+  .page-mypage & {
+    border-top-color: $c_gray;
+    border-bottom-color: $c_gray;
+  }
+  a {
+    display: block;
+  }
+}
+
+.pager-numPC {
+  list-style: none;
+  width: 715px;
+  display: flex;
+  justify-content: center;
+  margin: -5px auto;
+  @include mqTB{
+    width: calc-vw(715,1280);
+  }
+  @include mqSP {
+    display: none;
+  }
+  .l-main:not(:only-child) & {
+    display: none;
+  }
+}
+.pager-numSP {
+  display: none;
+  @include mqSP {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin: -5px auto;
+  }
+  .l-main:not(:only-child) & {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    margin: -5px auto;
+
+    @include mqTB {
+      width: calc-vw(80,1280);
+    }
+    @include mqSP {
+      width: calc-vw(180);
+    }
+  }
+  
+  li {
+    @include mqSP {
+      &:first-child {
+        position: relative;
+        &::after {
+          content: "/";
+          position: absolute;
+          display: block;
+          right: 0;
+          top: 0;
+        }
+      }
+      &:hover {
+        color: $c_k;
+      }
+    }
+    .l-main:not(:only-child) & {
+      &:first-child {
+        position: relative;
+        &:after {
+          content: "/";
+          position: absolute;
+          display: block;
+          right: 0;
+          top: 0;
+        }
+      }
+      &:hover {
+        color: $c_k;
+      }
+    }
+  }
+}
+
+.pager-numPC,
+.pager-numSP {
+  li {
+    margin: 0 1px;
+    display: inline-block;
+    font-size: 24px;
+    transition: $tr_speed;
+    width: 50px;
+    height: 50px;
+    line-height: 2.2;
+    text-align: center;
+    @include f_poppins-base_b;
+    @include mqTB{
+      width: calc-vw(50,1280);
+      height: calc-vw(50,1280);
+      font-size: calc-vw(24,1280);
+    }
+
+    &:hover:not(.is-current):not(.ellipsis) {
+      color: $c_gray2;
+    }
+    &.is-current{
+      position: relative;
+      z-index: 10;
+      transition: $tr_speed;
+      border: 1px solid $c_gray;
+      border-radius: 50%;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        left: -23px;
+        top: -13px;
+        transition: $tr_speed;
+      }
+    }
+  }
+}
+
+.prev,
+.next{
+  background-color: $c_k;
+  color: $c_w;
+  font-weight: bold;
+  transition: $tr_speed;
+  position: absolute;
+  a{
+    padding: 6px 47px;
+    @include mqTB {
+      padding: calc-vw(6,1280) calc-vw(47,1280);
+    }
+    @include mqSP {
+      padding: 6px 14px;
+    }
+  }
+  &:hover {
+    background-color: $c_gray2;
+  }
+}
+.prev{
+  left: 0;
+}
+.next{
+  right: 0;
+}

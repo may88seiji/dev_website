@@ -1,0 +1,123 @@
+// News
+//
+// Markup:
+//<div class="news">
+//<h2 class="news-heading">お知らせ</h2>
+//<p class="news-text"><span class="news-text-date">2017.6.4</span>She is オープニングパーティのお知らせ</p>
+//</div>
+//
+// Styleguide 16.0.0
+.news {
+  width: calc(100% -40px);
+  margin: 0 20px 20px;
+  background-color: $c_k;
+  color: $c_w;
+  display: flex;
+  font-size: 15px;
+  box-sizing: border-box;
+  > a {
+    display: flex;
+    padding: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    @include transition;
+    &:after {
+      @include icofont;
+      content: "\e901";
+      position: absolute;
+      font-size: 14px;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include transition;
+      @include mqTB {
+        font-size: calc-vw(14,1280);
+        right: calc-vw(25,1280);
+      }
+      @include mqSP {
+        right: 0;
+        bottom: calc-vw(5);
+        font-size: 10px;
+      }
+    }
+    @include mqSP {
+      padding: calc-vw(15,1280) 0;
+      display: block;
+      position: relative;
+      padding-right: calc-vw(60);
+    }
+    &:hover {
+      background-color: $c_gray2;
+      &:after {
+        transform: translate(5px,-50%);
+      }
+    }
+  }
+  @include mqTB {
+    width: calc(100% calc-vw(-40,1280));
+    margin: 0 calc-vw(20,1280) calc-vw(20,1280);
+    font-size: calc-vw(15,1280);
+  }
+  @include mqSP {
+    width: calc-vw(580);
+    margin: 0 auto calc-vw(30);
+    display: block;
+    padding: calc-vw(15) calc-vw(30);
+    font-size: 11px;
+  }
+}
+.news-heading {
+  width: 115px;
+  text-align: center;
+  position: relative;
+  @include mqTB {
+    width: calc-vw(115,1280);
+  }
+  @include mqSP {
+    width: auto;
+    display: inline-block;
+    padding-right: calc-vw(35);
+    white-space: nowrap;
+  }
+  &:after {
+    content: "";
+    height: 14px;
+    width: 1px;
+    background-color: $c_gray;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    @include mqTB {
+      height: calc-vw(14,1280);
+      top: calc-vw(5,1280);
+    }
+    @include mqSP {
+      height: calc-vw(20);
+      top: calc-vw(4);
+    }
+  }
+}
+
+.news-text {
+  padding: 0 30px;
+  position: relative;
+  @include mqTB {
+    padding: 0 calc-vw(30,1280);
+  }
+  @include mqSP {
+    display: inline;
+    padding: 0 calc-vw(30);
+  }
+  
+}
+
+.news-text-date {
+  padding-right: 30px;
+  @include mqTB {
+    padding-right: (30,1280);
+  }
+  @include mqSP {
+    padding-right: calc-vw(30);
+  }
+}

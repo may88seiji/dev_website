@@ -1,0 +1,147 @@
+// Gift
+//
+// Styleguide 13.0.0
+
+// Gift 
+//
+// Markup:
+//<div class="news">
+//<h2 class="news-heading">お知らせ</h2>
+//<p class="news-text"><span class="news-text-date">2017.6.4</span>She is オープニングパーティのお知らせ</p>
+//</div>
+//
+// Styleguide 13.1.0
+
+.gift-description {
+  background-color: $c_w;
+  padding-bottom: 0;
+  
+  .cards_simple {
+    .cards-img {
+      text-align: center;
+      height: 160px;
+      position: relative;
+      @include mqTB {
+        height: calc-vw(160,1280);
+      }
+      @include mqSP {
+        height: calc-vw(240);
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    > li {
+      &:nth-child(1) {
+        svg {
+          width: 93px;
+          height: 107px;
+          margin: -53px 0 0 -46px;
+          @include mqTB {
+            width: calc-vw(93,1280);
+            height: calc-vw(107,1280);
+            margin: calc-vw(-53,1280) 0 0 calc-vw(-46,1280);
+          }
+          @include mqSP {
+            width: calc-vw(160);
+            height: auto;
+            margin: 0;
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
+      &:nth-child(2) {
+        svg {
+          width: 160px;
+          height: 82px;
+          margin: -41px 0 0 -80px;
+          @include mqTB {
+            width: calc-vw(160,1280);
+            height: calc-vw(82,1280);
+            margin: calc-vw(-41,1280) 0 0 calc-vw(-80,1280);
+          }
+          @include mqSP {
+            width: calc-vw(280);
+            height: auto;
+            margin: 0;
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
+      &:nth-child(3) {
+        svg {
+          width: 147px;
+          height: 88px;
+          margin: -44px 0 0 -73px;
+          @include mqTB {
+            width: calc-vw(147,1280);
+            height: calc-vw(88,1280);
+            margin: calc-vw(-44,1280) 0 0 calc-vw(-73,1280);
+          }
+          @include mqSP {
+            width: calc-vw(260);
+            height: auto;
+            margin: 0;
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.gift-description-heading {
+  font-size: 36px;
+  text-align: center;
+  @include f_chikumin;
+  font-weight: bold;
+  @include mqTB {
+    font-size: calc-vw(36,1280);
+  }
+  @include mqSP {
+    font-size: 22px;
+  }
+}
+
+.gift-past {
+  background-color: #EEEFF0; //TODO
+}
+
+.gift-members {
+  background-color: $c_w;
+  padding-bottom: 0;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    height: 470px;
+    width: 100%;
+    background-image: url(../img/gift-detail-member-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: 180px;
+    left: 0;
+    background-attachment: fixed;
+    .use-tablet & {
+      background-attachment: scroll;
+    }
+    @include mqTB {
+      height: calc-vw(470,1280);
+      bottom: calc-vw(180,1280);
+    }
+    @include mqSP {
+      content: none;
+    }
+  }
+}
+
+.gift-timeline {
+  iframe {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,373 @@
+// Text
+//
+// Styleguide 1.0.0
+
+// Text Letter
+//
+// 本文テキスト
+//
+// Markup:
+// <p class="text_letter">本文テキストサンプルテキスト。</p>
+//
+// Styleguide 1.1.0
+.text_letter {
+  @include f_base;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.75;
+  @include mqTB {
+    font-size: calc-vw(15,1280);
+  }
+  @include mqSP {
+    font-size: 14px;
+  }
+  .mypage-cancellation-description & {
+    margin-bottom: 40px;
+    @include mqSP {
+      margin-bottom: calc-vw(60);
+      &:last-child {
+        margin-bottom: calc-vw(80);
+      }
+    }
+  }
+  .wrap_toFaq & {
+    margin-bottom: 40px;
+    @include mqTB{
+      margin-bottom: calc-vw(40,1280);
+    }
+    @include mqSP{
+      margin-bottom: calc-vw(20,320);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+  > a {
+    color: $c_link;
+    text-decoration: underline;
+    @include transition;
+    &:hover {
+      opacity: $tr_opacity;
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+
+// Text heading description
+//
+// セクション見出しのディスクリプション
+//
+// Markup:
+// <p class="text_headingDescription">"She is"は、さまざまな仲間（Girlfriends）たちと、場所をつくっています。</p>
+//
+// Styleguide 1.2.0
+.text_headingDescription {
+  @include f_base;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  width: 780px;
+  margin: 10px auto 60px;
+  @include mqTB {
+    width: calc-vw(780,1280);
+    font-size: calc-vw(15,1280);
+    margin-bottom: calc-vw(60,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+    margin: calc-vw(28) calc-vw(30) calc-vw(70);
+    width: calc-vw(290,320);
+  }
+  .heading_section_secondary + & {
+    margin-top: -65px;
+    @include mqTB {
+      margin-top: calc-vw(-65,1280);
+    }
+    @include mqSP {
+      margin-top: calc-vw(-37,320);
+    }
+  }
+}
+
+// Text heading description
+//
+// セクション見出しのディスクリプション（ちょっと小さい&見出しとのマージン狭い）
+//
+// Markup:
+// <p class="text_headingDescription_secondary">今回のギフトに関わったGirlfriends</p>
+//
+// Styleguide 1.2.1
+.text_headingDescription_secondary {
+  @extend .text_headingDescription;
+  color: $c_gray2;
+  margin-top: -65px;
+  @include mqTB {
+    margin-top: calc-vw(-65,1280);
+  }
+  @include mqSP {
+    margin-top: calc-vw(-60);
+  } 
+  .gift-description & {
+    margin-top: 20px;
+    @include mqTB {
+      margin-top: calc-vw(20,1280);
+    }
+  }
+  .text_headingDescription + & {
+    margin-top: -35px;
+    margin-bottom: 110px;
+    @include mqTB {
+      margin-top: calc-vw(-35,1280);
+      margin-bottom: calc-vw(110,1280);
+    }
+    @include mqSP {
+      margin-top: calc-vw(-40);
+      margin-bottom: calc-vw(65);
+    }
+  }
+}
+// Text summary
+//
+// 記事詳細の概要
+//
+// Markup:
+// <p class="text_summary">"She is"は、さまざまな仲間（Girlfriends）たちと、場所をつくっています。</p>
+//
+// Styleguide 1.3.0
+.text_summary {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.75;
+  @include mqTB {
+    font-size: calc-vw(14,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+  }
+  > a {
+    color: $c_link;
+    text-decoration: underline;
+    @include transition;
+    &:hover {
+      opacity: $tr_opacity;
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+// Text form description
+//
+// フォーム上のディスクリプション
+//
+// Markup:
+// <div class="text_formDescription">
+//   自動継続月額¥3,500のMembersに加入します。<br />
+//   ※今お申込みいただくと、10月下旬に「未来から来た女性のギフト」をお届けします。<br />
+//   ※お支払い方法はクレジットカードのみです。<br />
+//   ※いつでも解約可能です（ただし、お申し込み月は解約することができません）。<br />
+//   <span>＊ は必須項目です。</span>
+// </div>
+//
+// Styleguide 1.4.0
+.text_formDescription {
+  font-size: 15px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  line-height: 1.75;
+  span {
+    color: $c_red_dark;
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include mqTB {
+    font-size: calc-vw(15,1280);
+  }
+  @include mqSP {
+    margin-top: calc-vw(60);
+    margin-bottom: calc-vw(60);
+    padding: 0 calc-vw(30);
+    font-size: 14px;
+  }
+  .form-item_confirm & {
+    padding: 0;
+    @include mqSP {
+      margin-top: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .registration-section_complete & {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .page-reminder & {
+    @include mqSP {
+      margin: calc-vw(60) 0;
+    }
+    a {
+      color: $c_blue;
+      // text-decoration: underline;
+      border-bottom: 1px solid $c_blue;
+      display: inline-block;
+      @include transition;
+      line-height: 1;
+      &:hover {
+        // text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+  .page-login & {
+    padding: 0;
+    a {
+      color: $c_blue;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include mqSP {
+      margin-top: 0;
+      &:last-child {
+        margin-top: calc-vw(40);
+        margin-bottom: calc-vw(60);
+      }
+    }
+  }
+  .page-login .login-box &{
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+// Text form error
+//
+// フォーム エラー表示
+//
+// Markup:
+// <p class="text-formError">必須項目です</p>
+// <p class="text-formError">無効なメールアドレスです</p>
+//
+// Styleguide 1.5.0
+.text-formError {
+  padding-top: 5px;
+  @include f_base;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  color: $c_red_dark;
+  &:first-of-type {
+    border-top: 2px solid $c_red_dark;
+  }
+}
+
+// Text form note
+//
+// フォーム 備考
+//
+// Markup:
+// <p class="text_formNote">※イベントの先行予約についてはメールマガジンで情報をお届けします。ご希望の方は必ず「希望する」にチェックしてください。</p>
+// <p class="text_formNoteImportant">※対応サイズはあくまで目安です。デザインによって異なる場合がありますので、あらかじめご了承ください。</p>
+//
+// Styleguide 1.6.0
+.text_formNote {
+  margin-top: 20px;
+  @include f_base;
+  font-size: 12px;
+  line-height: 1.75;
+  > a {
+    color: $c_link;
+    text-decoration: underline;
+    @include transition;
+    &:hover {
+      opacity: $tr_opacity;
+    }
+  }
+}
+.text_formNoteImportant {
+  @extend .text-formError;
+  margin-top: 20px;
+  padding: 0;
+  border: none;
+  @include f_base;
+  color: $c_k;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+// Text Section Description
+//
+// セクション見出しのディスクリプション
+//
+// Markup:
+//<p class="text_section_description">"She is"は、さまざまな仲間（Girlfriends）たちと、場所をつくっています。</p>
+//
+// Styleguide 1.7.0
+
+.text_section_description{
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+  @include mqTB{
+    padding-bottom: calc-vw(20,1280);
+  }
+  @include mqSP{
+    width: 260px;
+    margin: 0 auto;
+    font-size: 13px;
+    padding-bottom: calc-vw(22,320);
+    
+    .page-list_girlfriends & {
+      padding-bottom: calc-vw(16,320);
+    }
+    
+    .page-registration & {
+      width: calc-vw(290,320);
+      font-size: 14px;
+      text-align: inherit;
+      padding-bottom: calc-vw(30);
+      line-height: 1.8;
+    }
+  }
+}
+
+// Text message
+//
+// 完了メッセージなど、少し大きめの中央寄せテキスト
+//
+// Markup:
+//<p class="text_message">"She is"は、さまざまな仲間（Girlfriends）たちと、場所をつくっています。</p>
+//
+// Styleguide 1.8.0
+.text_message {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 50px;
+  @include mqTB {
+    font-size: calc-vw(16,1280);
+    margin-bottom: calc-vw(50,1280);
+  }
+  @include mqSP {
+    font-size: 14px;
+    margin-bottom: calc-vw(50);
+    padding: 0 calc-vw(30);
+    .section-content & {
+      padding: 0;
+    }
+  }
+  .page-list &,
+  .page-mypage & {
+    text-align: center;
+  }
+}

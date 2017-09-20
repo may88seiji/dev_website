@@ -1,0 +1,61 @@
+.figure_holizontal{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  >div{
+    &:first-child {
+      margin-right: 10px;
+      width: 290px;
+
+      img{
+        max-width: inherit;
+        width: 290px;
+      }
+    }
+  }
+  
+  @include mqTB{
+    >div{
+      &:first-child {
+        margin-right: calc-vw(10,1280);
+        width: calc-vw(290,1280);
+
+        img{
+          max-width: inherit;
+          width: calc-vw(290,1280);
+        }
+      }
+    }
+  }
+  @include mqSP{
+    justify-content: inherit;
+    flex-direction: column;
+    margin-bottom: calc-vw(30,320);
+
+    >div{
+      &:first-child {
+        margin-right: inherit;
+        width: calc-vw(290,320);
+
+        img{
+          width: calc-vw(290,320);
+          margin-bottom: calc-vw(6,320);
+        }
+      }
+    }
+  }
+}
+
+.figure-caption{
+  margin-left: 12px;
+  width: 285px;
+  font-size: 15px;
+  @include mqTB{
+
+  }
+  @include mqSP{
+    margin-left: 0;
+    width: calc-vw(290,320);
+    font-size: 14px;
+  }
+}

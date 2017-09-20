@@ -1,0 +1,67 @@
+.mypage-buttons {
+  padding-top: 60px;
+  text-align: center;
+  p {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .mypage-buttons-2col {
+    p {
+      display: inline-block;
+    }
+  }
+  @include mqSP {
+    padding-left: calc-vw(30);
+    padding-right: calc-vw(30);
+    .mypage-buttons-2col {
+      margin-bottom: 20px;
+      p {
+        display: block;
+      }
+    }
+    a {
+      font-size: 12px;
+    }
+    .button_fill {
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+.mypage-description {
+  margin-bottom: 60px;
+  @include mqSP {
+    padding: 0 calc-vw(30);
+    margin-bottom: calc-vw(60);
+  }
+}
+.mypage-description_cancellation {
+  border-bottom: 1px solid $c_gray;
+  @include mqSP {
+    padding: 0 calc-vw(30);
+  }
+}
+
+
+.mypage-aboutCancellation {
+  margin: 20px 0 40px;
+  @include mqTB {
+    margin: calc-vw(20,1280) 0 calc-vw(40,1280);
+  }
+  @include mqSP {
+    margin: calc-vw(40) 0 calc-vw(40);
+  }
+  .text_letter {
+    font-size: 13px;
+    @include mqTB {
+      font-size: calc-vw(13,1280);
+    }
+    @include mqSP {
+      font-size: 11px;
+    }
+  }
+}

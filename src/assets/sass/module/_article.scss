@@ -1,0 +1,146 @@
+// Article
+//
+// Markup:
+//
+// Styleguide 22.0.0
+
+.article-head{
+  margin-top: 60px;
+  border-bottom: 1px solid $c_gray;
+  padding-bottom: 30px;
+  @include mqTB{
+
+  }
+  @include mqSP{
+    margin-top: 0;
+    padding-bottom: calc-vw(20,320);
+  }
+}
+
+.article-head_flex{
+  display: flex;
+  justify-content: space-between;
+  @include mqTB{
+    justify-content: inherit;
+    flex-direction: column;
+  }
+  @include mqSP{
+    flex-direction: column;
+  }
+}
+
+.article-head-lead{
+  font-size: 14px;
+//  padding-top: 11px;
+  @include mqSP{
+    padding-top: 25px;
+    font-size: 12px;
+  }
+}
+.article-head-staff{
+  font-size: 13px;
+  color: $c_gray2;
+  margin-top: 3px;
+  span{
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+  @include mqSP{
+    font-size: 11px;
+  }
+}
+
+.article-head-tags{
+  font-size: 11px;
+  margin-top: 22px;
+  @include transition;
+  
+  > li{
+    margin-right: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    &:first-child {
+      &::after {
+        content: "|";
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  a{
+    transition: $tr_speed;
+    &:hover {
+      color: $c_gray;
+    }
+  }
+
+  @include mqTB{
+
+  }
+  @include mqSP{
+    margin-top: calc-vw(10,320);
+    font-size: 10px;
+  }
+}
+
+.article-head-shareIcons{
+  font-size: 11px;
+  margin-top: 22px;
+  padding-left: 20px;
+  @include transition;
+  
+  > li{
+    margin-right: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:first-child {
+      margin-right: 70px;
+    }
+    &::before {
+      font-size: 14px;
+    }
+    a{
+      transition: $tr_speed;
+      font-size: 13px;
+      &:hover {
+        color: $c_gray;
+      }
+      @include mqSP {
+        font-size: 15px;
+      }
+    }
+  }
+  @include mqTB{
+
+  }
+  @include mqSP{
+    margin-top: calc-vw(20,320);
+  }
+}
+
+.article-head-share{
+  font-size: 11px;
+  position: relative;
+  &::before {
+    content: "\e908";
+    @include icofont;
+    position: absolute;
+    left: -20px;
+    top: 2px;
+  }
+  
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 50px;
+    background-color: $c_k;
+    position: absolute;
+    top: 50%;
+    right: -200%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,533 @@
+// Billboard
+//
+// Styleguide 9.0.0
+
+[class*="billboard_"] {
+  position: relative;
+}
+
+// Billboard top
+//
+// トップページメインビジュアル
+//
+// Markup:
+//<div class="billboard_top">
+//<div class="billboard-image"><img class="js-lazyload" data-src="https://unsplash.it/1745/760" alt=""></div>
+//<div class="billboard-textBox">
+//<p class="billboard-textBox-lead c-cl-f_1">2017年8月 今月の特集</p>
+//<h2 class="billboard-textBox-title">未来からきた女性</h2>
+//<p class="billboard-textBox-description">She is が考えるすごい女性たち。<br />彼女たちのチャーミングな生き方って？</p>
+//<p class="button_fill"><a href="">FEATURE</a></p>
+//</div>
+//<p class="billboard-note">SEP 16,2017　ミランダ・ジュライ インタビュー</p>
+//</div>
+//
+// Styleguide 9.1.0
+
+
+.billboard_top {
+  margin: 0 20px 80px;
+  @include mqTB {
+    margin: 0 calc-vw(20,1280) calc-vw(80,1280);
+  }
+  @include mqSP {
+    margin: 0;
+  }
+  .button_fill {
+    span {
+      &:hover {
+        background-color: inherit;
+      }
+    }
+  }
+  a {
+    > * {
+      @include transition;
+    }
+    &:hover {
+      .billboard-image-inner {
+        opacity: $tr_opacity;
+      }
+      .billboard-textBox {
+        color: $c_gray2;
+        &:after {
+          color: $c_k;
+          transform: translateX(5px);
+        }
+      }
+      .button_fill {
+        span {
+          background-color: $c_gray2;
+        }
+      }
+    }
+  }
+}
+
+
+.billboard-textBox {
+  width: 450px;
+  background-color: $c_w;
+  position: absolute;
+  bottom: -50px;
+  right: 40px;
+  padding: 35px 50px;
+  box-sizing: border-box;
+  @include mqTB {
+    width: calc-vw(450,1280);
+    bottom: calc-vw(-50,1280);
+    right: calc-vw(40,1280);
+    padding: calc-vw(35,1280) calc-vw(50,1280);
+  }
+  @include mqSP {
+    position: relative;
+    width: calc-vw(580);
+    bottom: auto;
+    left: calc-vw(30);
+    top: calc-vw(-40);
+    padding: calc-vw(35) calc-vw(30);
+  }
+  a & {
+    display: block;
+    &:after {
+      @include icofont;
+      content: "\e901";
+      font-size: 17px;
+      position: absolute;
+      bottom: 43px;
+      right: 50px;
+      @include transition;
+      @include mqTB {
+        font-size: calc-vw(17,1280);
+        bottom: calc-vw(43,1280);
+        right: calc-vw(50,1280);
+
+      }
+      @include mqSP {
+        font-size: 11px;
+        bottom: calc-vw(45);
+        right: calc-vw(45);
+      }
+    }
+  }
+}
+
+
+
+.billboard-text {
+  width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  @include mqTB {
+    width: calc-vw(780,1280);
+  }
+  @include mqSP {
+    width: 100%;
+    padding: 0 calc-vw(30);
+    box-sizing: border-box;
+    text-align: left;
+  }
+  p {
+    margin-bottom: 1em;
+    font-size: 15px;
+    line-height: 1.7;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include mqTB {
+      font-size: calc-vw(15,1280);
+    }
+    @include mqSP {
+      font-size: 13px;
+    }
+  }
+}
+
+.billboard-image {
+  position: relative;
+  .billboard_feature & {
+    margin-bottom: 50px;
+    @include mqTB {
+      margin-bottom: calc-vw(50,1280);
+    }
+    @include mqSP {
+      margin-bottom: calc-vw(115);
+    }
+  }
+}
+
+.billboard-image-inner {
+  position: relative;
+  @include transition;
+  transition-property: opacity;
+  min-height: calc-vw(445,1280);
+  @include mqSP {
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    height: calc-vw(560);
+  }
+  img {
+    width: 100%;
+    display: block;
+    @include mqSP {
+      height: 100%;
+      width: auto;
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: block;
+      vertical-align: top;
+    }
+  }
+}
+
+.billboard-textBox-lead {
+  font-size: 15px;
+  margin-bottom: 5px;
+  @include mqTB {
+    font-size: calc-vw(15,1280);
+    margin-bottom: calc-vw(5,1280);
+  }
+}
+
+.billboard-textBox-title {
+  font-size: 36px;
+  margin-bottom: 5px;
+  @include transition;
+  @include f_chikumin;
+  @include mqTB {
+    font-size: calc-vw(36,1280);
+    margin-bottom: calc-vw(5,1280);
+  }
+  @include mqSP {
+    font-size: 24px;
+  }
+}
+
+.billboard-textBox-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  @include transition;
+  @include mqTB {
+    font-size: calc-vw(16,1280);
+    margin-bottom: calc-vw(20,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+  }
+}
+
+.billboard-note {
+  font-size: 12px;
+  font-weight: bold;
+  width: calc(100% - 500px);
+  margin-top: 8px;
+  position: absolute;
+  @include mqTB {
+    width: calc(100% - #{calc-vw(500,1280)});
+    font-size: calc-vw(12,1280);
+    margin-top: calc-vw(8,1280);
+  }
+}
+
+.billboard_feature {
+  margin: 0 20px 70px;
+  @include mqTB {
+    margin: 0 calc-vw(20,1280) calc-vw(70,1280);
+  }
+  @include mqSP {
+    margin: 0 0 calc-vw(100);
+  }
+}
+.billboard_feature-lead {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+  @include mqTB {
+    font-size: calc-vw(15,1280);
+    margin-bottom: calc-vw(15,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+}
+.billboard_feature-title {
+  font-size: 36px;
+  @include f_chikumin;
+  text-align: center;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  @include mqTB {
+    font-size: calc-vw(36,1280);
+    margin-bottom: calc-vw(35,1280);
+  }
+  @include mqSP {
+    font-size: 24px;
+    margin-bottom: calc-vw(30);
+  }
+}
+.billboard_feature-text {
+  font-size: 21px;
+  @include f_chikumin;
+  text-align: center;
+  @include mqTB {
+    font-size: calc-vw(21,1280);
+  }
+  @include mqSP {
+    font-size: 15px;
+    padding: 0 calc-vw(15);
+  }
+  p {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  span {
+    display: block;
+  }
+}
+
+.billboard-gift {
+  position: absolute;
+  right: 40px;
+  bottom: -50px;
+  border: 3px solid $c_k;
+  background-color: $c_w;
+  box-shadow: 7px 7px 0 rgba($c_k,0.1);
+  @include mqTB {
+    right: calc-vw(40,1280);
+    bottom: calc-vw(-50,1280);
+    box-shadow: calc-vw(7,1280) calc-vw(7,1280) 0 rgba($c_k,0.1);
+  }
+  @include mqSP {
+    right: calc-vw(30);
+    bottom: calc-vw(-70);
+    width: auto;
+    box-shadow: calc-vw(7) calc-vw(7) 0 rgba($c_k,0.1);
+  }
+  a {
+    display: flex;
+    width: 350px;
+    align-items: center;
+    @include mqTB {
+      width: calc-vw(350,1280);
+    }
+    @include mqSP {
+      width: 100%;
+      flex-direction: column;
+    }
+    &:hover {
+      .billboard-gift-img {
+        img {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+.billboard-gift-img {
+  line-height: 0;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  position: relative;
+  @include mqTB {
+    width: calc-vw(150,1280);
+    height: calc-vw(150,1280);
+  }
+  @include mqSP {
+    height: calc-vw(150);
+    width: calc-vw(290);
+  }
+  img {
+    @include transition;
+    max-height: 100%;
+    max-width: inherit;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include mqSP {
+      max-width: 100%;
+      height: auto;
+      max-height: inherit;
+    }
+  }
+}
+
+.billboard-gift-text {
+  width: 200px;
+  padding-bottom: 26px;
+  text-align: center;
+  @include mqTB {
+    width: calc-vw(200,1280);
+    padding-bottom: calc-vw(26,1280);
+  }
+  @include mqSP {
+    width: 100%;
+    position: relative;
+    padding: calc-vw(12) calc-vw(90) 0 calc-vw(20);
+    text-align: left;
+    box-sizing: border-box;
+  }
+  &:after {
+    @include icofont;
+    content: "\e901";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    @include transition;
+    a:hover & {
+      transform: translateX(5px);
+    }
+    @include mqTB {
+      bottom: calc-vw(20,1280);
+      right: calc-vw(20,1280);
+      font-size: calc-vw(12,1280);
+    }
+    @include mqSP {
+      font-size: 10px;
+      bottom: calc-vw(20);
+      right: calc-vw(20);
+    }
+  }
+  &:only-child {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    display: table;
+    padding-bottom: 0;
+    @include mqTB {
+      height: calc-vw(100,1280);
+    }
+    @include mqSP {
+      width: calc-vw(420);
+      height: calc-vw(120);
+      padding: 0;
+    }
+  }
+  .icon-membersonly {
+    display: inline-block;
+    width: 150px;
+    height: 34px;
+    background-image: url(../img/icon-membersonly_h.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-bottom: 10px;
+    @include mqTB {
+      width: calc-vw(150,1280);
+      height: calc-vw(34,1280);
+      margin-bottom: calc-vw(10,1280);
+      background-size: calc-vw(150,1280) auto;
+    }
+    @include mqSP {
+      width: calc-vw(210);
+      height: calc-vw(48);
+      background-size: calc-vw(210) auto;
+      position: absolute;
+      top: calc-vw(-35);
+      left: calc-vw(10);
+    }
+  }
+}
+
+.billboard-gift-text-lead {
+  font-size: 24px;
+  @include f_chikumin;
+  font-weight: bold;
+  text-align: center;
+  @include transition;
+  a:hover & {
+    color: $c_gray2;
+  }
+  @include mqTB {
+    font-size: calc-vw(24,1280);
+  }
+  @include mqSP {
+    font-size: 14px;
+    text-align: left;
+  }
+  &:only-child {
+    font-size: 21px;
+    @include f_base;
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    @include mqTB {
+      font-size: calc-vw(21,1280);
+    }
+    @include mqSP {
+      font-size: 13px;
+    }
+    small {
+      font-size: 15px;
+      display: block;
+      font-weight: normal;
+      @include mqTB {
+        font-size: calc-vw(15,1280);
+      }
+      @include mqSP {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+// Billboard detail
+//
+// 記事詳細メインビジュアル/タイトル
+//
+// Markup:
+//<div class="billboard_detail">
+//<div class="billboard-image">
+//<div class="billboard-image-inner">
+//<img class="js-lazyload" data-src="https://unsplash.it/1745/760" alt="">
+//</div>
+//</div>
+//<div class="billboard-title">
+//<h1 class="heading_detail_primary">吉澤嘉代子×たなかみさき対談<br>二人に共通する「性と妄想」の話</h1>
+//<p class="text_summary">14px 概要テキストが入ります概要テキスト（20文字）</p>
+//</div>
+//</div>
+//
+// Styleguide 9.3.0
+.billboard_detail {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #000;
+  .billboard-image {
+    order: 2;
+    @include mqSP {
+      order: 1;
+    }
+  }
+  .billboard-title {
+    order: 1;
+//    border-bottom: 1px solid $c_k;
+    padding-bottom: 45px;
+    @include mqTB{
+      padding-bottom: calc-vw(45,1280);
+    }
+    @include mqSP{
+      order: 2;
+      padding-bottom: calc-vw(48);
+      h1{
+        width: calc-vw(290,320);
+      }
+      p{
+        width: calc-vw(290,320);
+        margin: 0 auto;
+        font-size: 12px;
+      }
+    }
+  }
+}

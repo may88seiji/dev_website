@@ -1,0 +1,27 @@
+.contact-section {
+  width: 100%;
+  margin: 0 0 63px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include mqTB {
+    margin-bottom: calc-vw(200,1280);
+  }
+  @include mqSP {
+    margin-bottom: calc-vw(60);
+  }
+}
+.contact-section-inner {
+  width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include mqTB {
+    width: 100%;
+    padding: 0 calc-vw(30,1280);
+  }
+  @include mqSP {
+    width: 100%;
+    padding: 0 calc-vw(30);
+  }
+
+}

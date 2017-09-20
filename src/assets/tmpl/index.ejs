@@ -1,0 +1,99 @@
+<%- include('partial/head') %>
+
+<div class="l-container c-bg-b_1">
+
+<div class="l-content">
+  <div class="l-main">
+    <style scoped="true">
+      .l-main {
+        padding: 100px 0;
+      }
+      table {
+        width: 800px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      td,th {
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        padding: 5px 10px;
+      }
+      td:last-child,th:last-child {
+        border-right: none;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      td a[href=""],td a[href="#"]{
+        pointer-events: none;
+        opacity: 0.2;
+      }
+      .thr td {
+        text-decoration: line-through;
+      }
+      
+    </style>
+    
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Group</th><th>Page</th><th>Status</th><th>作業者</th></tr>
+      </thead>
+      <tbody>
+        <tr class="g-0"><td> 1</td><td>0</td><td><a href="0-1-top.html">トップページ</a></td><td>★確認出し（7/31）</td><td>大石</td></tr>			
+        <tr class="g-f"><td> 2</td><td>F</td><td><a href="F-2-list-notice.html">お知らせ一覧</a></td><td>★確認出し（8/15）</td><td>武田</td></tr>
+        <tr class="g-a"><td> 3</td><td>A-2</td><td><a href="A-3-detail-news.html">お知らせ記事（A-12 HOTTOPICと同じ）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-b"><td> 4</td><td>B</td><td><a href="B-4-list-feature.html">特集一覧</a></td><td>★確認出し（7/31）</td><td>大石</td></tr>
+        <tr class="g-b"><td> 5</td><td>B</td><td><a href="B-5-detail-feature.html">特集別ページ</a></td><td>★確認出し（8/15）</td><td>大石</td></tr>
+        <tr class="g-b"><td> 6</td><td>B</td><td><a href="B-6-list-gift.html">ギフト一覧</a></td><td>★確認出し（7/31）</td><td>大石</td></tr>
+        <tr class="g-b"><td> 7</td><td>B</td><td><a href="B-7-detail-gift.html">ギフト別ページ</a></td><td>★確認出し（8/16）</td><td>大石</td></tr>
+        <tr class=""><td> 8</td><td>-</td><td><a href="">記事一覧</a></td><td>-</td><td>-</td></tr>
+        <tr class="g-a"><td> 9</td><td>A</td><td><a href="A-9-detail-interview.html">各記事（INTERVIEW）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-a"><td>10</td><td>A-2</td><td><a href="A-10-detail-column.html">各記事（COLUMN）（A-9 INTERVIEWと同じ）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-a"><td>11</td><td>A</td><td><a href="A-11-detail-hottopic.html">各記事（HOTTOPIC）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-a"><td>12</td><td>A-2</td><td><a href="A-12-detail-voice.html">各記事（VOICE）（A-12 HOTTOPICと同じ）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class=""><td>13</td><td>-</td><td><a href="">タグ</a></td><td>-</td><td>-</td></tr>
+        <tr class="g-a"><td>14</td><td>A</td><td><a href="A-14-list-tag.html">各カテゴリ（LOVEなど）のタグ別一覧</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class=""><td>15</td><td>-</td><td><a href="">各種別（INTERVIEWなど）のタグ別一覧</a></td><td>-</td><td>-</td></tr>
+        <tr class="g-a"><td>16</td><td>A</td><td><a href="A-16-list-series.html">連載一覧</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-a"><td>17</td><td>A-2</td><td><a href="A-17-list-article.html">各連載別 記事一覧（A-14 タグ別一覧と同じ）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-f"><td>18</td><td>F</td><td><a href="F-18-list-girlfriends.html">GIRLFRIENDS</a></td><td>★確認出し（8/15）</td><td>武田</td></tr>
+        <tr class="g-f"><td>19</td><td>F</td><td><a href="F-19-detail-girlfriends.html">GIRLFRIENDS詳細</a></td><td>★確認出し（8/15）</td><td>武田</td></tr>
+        <tr class="g-f"><td>20</td><td>F</td><td><a href="F-20-search.html">検索結果ページ</a></td><td>★確認出し（8/16）</td><td>大石</td></tr>
+        <tr class="g-c"><td>21</td><td>C</td><td><a href="C-21-registration.html">会員登録ページ</a></td><td>★確認出し（8/16）</td><td>武田</td></tr>
+        <tr class="g-d"><td>22</td><td>D</td><td><a href="D-22-registration-member-1.html">有料会員申し込み入力画面1</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>22</td><td>D</td><td><a href="D-22-registration-member-2.html">有料会員申し込み入力画面2</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>22</td><td>D</td><td><a href="D-22-registration-member-3.html">有料会員申し込み入力画面3</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>23</td><td>D</td><td><a href="D-23-registration-member-confirm.html">有料会員申し込み確認画面</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>25</td><td>D</td><td><a href="D-25-registration-member-thankyou.html">Thankyou画面</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>26</td><td>D</td><td><a href="D-26-login.html">ログインページ</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>27</td><td>D</td><td><a href="D-27-reminder.html">パスワードを忘れた方</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-d"><td>28</td><td>D</td><td><a href="D-28-mypage.html">マイページ</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-e"><td>29</td><td>E-2</td><td><a href="E-29-0-1-registration-info-cansel.html">登録情報（解約可能）</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-e"><td>29</td><td>E-2</td><td><a href="E-29-0-registration-info.html">登録情報（解約不可）</a></td><td>★確認出し（8/24）</td><td>宇根</td></tr>
+        <tr class="g-e"><td>29-1</td><td>E</td><td><a href="E-29-1-registration-change.html">登録情報 / パスワード変更画面</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-e"><td>29-2</td><td>E-2</td><td><a href="E-29-2-registration-confirm.html">確認画面</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-f"><td>29-3</td><td>F-2</td><td><a href="F-29-3-complete.html">完了画面</a></td><td>★確認出し（8/15）</td><td>大石</td></tr>
+        <tr class="g-e"><td>30</td><td>E</td><td><a href="E-30-delivery.html">配達状況</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-e thr"><td>31</td><td>E</td><td><a href="#">領収書 ( pdfのためコーディング不要 )</a></td><td>-</td><td>-</td></tr>
+        <tr class="g-e"><td>32</td><td>E</td><td><a href="E-32-0-cancellation.html">有料会員解約画面</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-e"><td>32-1</td><td>E-2</td><td><a href="E-32-1-cancellation-confirm.html">確認画面</a></td><td>★確認出し（8/8）</td><td>宇根</td></tr>
+        <tr class="g-f"><td>33</td><td>F-2</td><td><a href="F-33-complete.html">完了画面</a></td><td>★確認出し（8/15）</td><td>大石</td></tr>
+        <tr class="g-a"><td>34</td><td>A-2</td><td><a href="A-34-list-limited.html">会員限定記事一覧画面（A-14 タグ別一覧と同じ）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-a"><td>35</td><td>A-2</td><td><a href="A-35-detail-limited.html">会員限定記事（A-12 HOTTOPICと同じ）</a></td><td>★確認出し（8/7）</td><td>武田</td></tr>
+        <tr class="g-c"><td>36</td><td>C</td><td><a href="C-36-about.html">ABOUTページ</a></td><td>★確認出し（8/16）</td><td>大石</td></tr>
+        <tr class="g-f"><td>37</td><td>F</td><td><a href="F-37-privacy-policy.html">プライバシーポリシー</a></td><td>★確認出し（8/15）<br />（中身wysiwyg想定）</td><td>武田</td></tr>
+        <tr class="g-f"><td>38</td><td>F-2</td><td><a href="F-38-terms.html">利用規約</a></td><td>★確認出し（8/15）<br />（中身wysiwyg想定）</td><td>武田</td></tr>
+        <tr class="g-f"><td>39</td><td>F-2</td><td><a href="F-39-commercial-transactions.html">特定取引法に基づく表記</a></td><td>★確認出し（8/15）<br />（中身wysiwyg想定）</td><td>武田</td></tr>
+        <tr class="g-f"><td>40</td><td>F</td><td><a href="F-40-contact.html">お問い合わせ</a></td><td>★確認出し（8/16）</td><td>大石</td></tr>
+        <tr class="g-f"><td>41</td><td>F</td><td><a href="F-41-contact-confirm.html">お問い合わせ確認</a></td><td>★確認出し（8/16）</td><td>大石</td></tr>
+        <tr class="g-f"><td>42</td><td>F-2</td><td><a href="F-42-contact-complete.html">お問い合わせ完了</a></td><td>★確認出し（8/15）</td><td>大石</td></tr>
+        <tr class="g-f"><td>43</td><td>F</td><td><a href="F-43-faq.html">よくあるご質問</a></td><td>★確認出し（8/15）</td><td>武田</td></tr>
+        <tr class="g-f"><td>44</td><td>F-2</td><td><a href="F-44-404.html">Notfound画面</a></td><td>★確認出し（8/15）</td><td>大石</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<%- include('partial/foot') %>

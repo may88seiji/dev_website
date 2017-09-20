@@ -1,0 +1,12 @@
+.advertisement{
+  img{
+    margin: 0 auto;
+    display: block;
+    width: calc-vw(300,320);
+    height: 100%;
+  }
+  transition: $tr_speed;
+  &:hover {
+    opacity: $tr_opacity;
+  }
+}

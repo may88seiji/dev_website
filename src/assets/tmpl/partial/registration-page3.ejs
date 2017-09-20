@@ -1,0 +1,68 @@
+<%
+  if(typeof registrationConfirm === 'undefined') { var registrationConfirm = false }
+  if(typeof isMypage === 'undefined') { var isMypage = false }
+%>
+
+<% if(!registrationConfirm && !isMypage) { %>
+  <div class="text_formDescription">
+    She isでは、オリジナルプロダクトとしてインナーウェアなどもお届けします。あなたは普段、どのサイズの服を買うことが多いですか？<br />
+    <span>＊ は必須項目です。</span>
+  </div>
+<% } %>
+
+    <dl class="form-item">
+      <dt class="heading_formTitle">服のサイズ<span>＊</span></dt>
+<% if(isMypage && !registrationConfirm) { %>
+      <dd class="text_formNote mb20">She isでは、インナーウェアなどもお届けします。あなたは普段、どのサイズの服を買うことが多いですか？<br /></dd>
+<% } %>
+      <dd>
+<% if(!registrationConfirm) { %>
+        <div class="form-item-wrap js-radioToNext">
+          <div class="form-item_3cal form-item_radio_l"><input type="radio" name="size" value="S" /><label>S</label></div>
+          <div class="form-item_3cal form-item_radio_l"><input type="radio" name="size" value="M" /><label>M</label></div>
+          <div class="form-item_3cal form-item_radio_l"><input type="radio" name="size" value="L" /><label>L</label></div>
+        </div>
+<% } else { %>
+        <p class="form-item-confirm">M</p>
+<% } %>
+      </dd>
+    </dl>
+
+<% if(!registrationConfirm) { %>
+    <dl class="form-item_reference">
+      <dt class="heading_formTitle">対応サイズ（ヌード寸法／単位：CM）</dt>
+      <dd>
+        <table class="table_simple">
+          <thead>
+            <tr>
+              <th></th>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>バスト</th>
+              <td>75〜83</td>
+              <td>81〜89</td>
+              <td>87〜95</td>
+            </tr>
+            <tr>
+              <th>ウエスト</th>
+              <td>59〜67</td>
+              <td>65〜73</td>
+              <td>71〜79</td>
+            </tr>
+            <tr>
+              <th>ヒップ</th>
+              <td>84〜92</td>
+              <td>90〜98</td>
+              <td>96〜104</td>
+            </tr>
+          </tbody>
+        </table>
+      </dd>
+      <dd class="text_formNoteImportant">※対応サイズはあくまで目安です。デザインによって異なる場合がありますので、あらかじめご了承ください。</dd>
+    </dl>
+<% } %>
