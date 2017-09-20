@@ -1,8 +1,5 @@
-# project name
+# dev_website
 
-新規自社メディア 
-
-（仮）
 - [Staging]()
 
 ---
