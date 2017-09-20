@@ -1,0 +1,2529 @@
+// Cards
+//
+// Styleguide 5.0.0
+
+// Cards
+//
+// 記事など一覧
+//
+// Markup:
+//<ul class="cards">
+//<li class="is-sponsored">
+//<a href="">
+//<div class="cards-img c-bd-b_1">
+//<img class="js-lazyload" data-src="http://placehold.jp/300x300.png" alt="">
+//</div>
+//<div class="cards-text">
+//<div class="cards-lead c-cl-f_1">2017.8 特集：未来からきた女性</div>
+//<div class="cards-title">ミランダ・ジュライ インタビュー</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//<li>#LOVE</li>
+//<li>#INTERVIEW</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//<li>
+//<a href="">
+//<div class="cards-img ">
+//<img class="js-lazyload" data-src="http://placehold.jp/300x300.png" alt="">
+//</div>
+//<div class="card-text">
+//<div class="cards-lead">2017.8 特集：未来からきた女性</div>
+//<div class="cards-title">ミランダ・ジュライ インタビュー</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//<li class="is-sponsored">
+//<a href="">
+//<div class="cards-img c-bd-b_1">
+//<img class="js-lazyload" data-src="http://placehold.jp/300x300.png" alt="">
+//</div>
+//<div class="cards-text">
+//<div class="cards-lead c-cl-f_1">2017.8 特集：未来からきた女性</div>
+//<div class="cards-title">ミランダ・ジュライ インタビュー</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//<li>#LOVE</li>
+//<li>#INTERVIEW</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//<li class="is-sponsored">
+//<a href="">
+//<div class="cards-img ">
+//<img class="js-lazyload" data-src="http://placehold.jp/300x300.png" alt="">
+//</div>
+//<div class="card-text">
+//<div class="cards-lead">2017.8 特集：未来からきた女性</div>
+//<div class="cards-title">ミランダ・ジュライ インタビュー</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//<li class="is-sponsored">
+//<a href="">
+//<div class="cards-img ">
+//<img class="js-lazyload" data-src="http://placehold.jp/300x300.png" alt="">
+//</div>
+//<div class="card-text">
+//<div class="cards-lead">2017.8 特集：未来からきた女性</div>
+//<div class="cards-title">ミランダ・ジュライ インタビュー</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//</ul>
+//
+// Styleguide 5.1.0
+
+.cards{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  width: 980px;
+  margin: 0 auto;
+  > li{
+    width: 300px;
+    margin-bottom: 50px;
+    &.is-ad {
+      @include mqSP {
+        width: 100%;
+        .cards-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    > a {
+      display: block;
+      &:hover {
+        .cards-lead,
+        .cards-title,
+        .cards-description,
+        .cards-tags {
+          opacity: .4;
+        }
+        img{
+          opacity: $tr_opacity;
+        }
+        [class*="c-cl-f"]{
+          opacity: 1;
+        }
+        &:after {
+          opacity: $tr_opacity;
+        }
+      }
+    }
+  }
+  &:after {
+    content:"";
+    display: block;
+    width: 31%;
+  }
+
+  @include mqTB{
+    width: calc-vw(980,1280);
+    > li{
+      width: calc-vw(300,1280);
+      margin-bottom: calc-vw(50,1280);
+    }
+  }
+
+  @include mqSP{
+    width: calc-vw(290,320);
+    > li{
+      width: calc-vw(140,320);
+      margin-bottom: calc-vw(22,320);;
+    }
+  }
+}
+
+.cards-img{
+  box-sizing: border-box;
+  position: relative;
+  @include transition;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 11px;
+  img{
+    @include transition;
+  }
+  
+  &[class*="c-bd-b"]{
+    &::after {
+      content: "";
+      border-style: solid;
+      border-width: 5px;
+      position: absolute;
+      height: 300px;
+      width: 300px;
+      z-index: 0;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      border-color: inherit;
+    }
+  }
+
+  @include mqTB{
+    width: calc-vw(300,1280);
+    height: calc-vw(300,1280);
+    margin-bottom: calc-vw(11,1280);
+    &[class*="c-bd-b"]{
+      &::after {
+        border-width: calc-vw(5,1280);
+        height: calc-vw(300,1280);
+        width: calc-vw(300,1280);
+      }
+    }
+  }
+  @include mqSP{
+    width: calc-vw(140,320);
+    height: calc-vw(140,320);
+    margin-bottom: calc-vw(4,320);
+    &[class*="c-bd-b"]{
+      &::after {
+        border-width: calc-vw(4,320);
+        height: calc-vw(140,320);
+        width: calc-vw(140,320);
+      }
+    }
+  }
+}
+
+.cards-lead{
+  font-size: 14px;
+  @include transition;
+
+  @include mqTB{
+    font-size: calc-vw(14,1280);
+  }
+  @include mqSP{
+    font-size: 11px;
+  }
+  .cards_highlight & {
+    padding-top: 25px;
+    @include mqTB{
+      padding-top: calc-vw(25,1280);
+    }
+    @include mqSP {
+      padding-top: calc-vw(20);
+    }
+  }
+}
+
+.cards-title{
+  font-size: 18px;
+  font-weight: bold;
+  @include transition;
+
+  @include mqTB{
+    font-size: calc-vw(18,1280);
+  }
+  @include mqSP{
+    font-size: 13px;
+  }
+}
+
+.cards-description{
+  font-size: 13px;
+  margin-top: 5px;
+  @include transition;
+  color: $c_gray2;
+  @include mqTB{
+    font-size: calc-vw(13,1280);
+    margin-top: calc-vw(5,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .is-limited & {
+    margin-top: 25px;
+    @include mqTB {
+      margin-top: calc-vw(25,1280);
+    }
+  }
+  .cards_simple & {
+    font-size: 15px;
+    color: $c_k;
+    @include mqTB {
+      font-size: calc-vw(15,1280);
+    }
+    @include mqSP {
+      font-size: 12px;
+    }
+  }
+}
+
+.cards-tags {
+  font-size: 11px;
+  margin-top: 15px;
+  @include transition;
+  @include f_poppins;
+  .cards_highlight & {
+    margin-top: 12px;
+    @include mqTB {
+      margin-top: calc-vw(12,1280);
+    }
+    @include mqSP {
+      margin-top: calc-vw(10);
+      font-size: 10px;
+    }
+  }
+  li{
+    margin-right: 6px;
+    display: inline-block;
+    &:first-child {
+      &::after {
+        content: "|";
+        margin-left: 10px;
+      }
+    }
+  }
+  @include mqTB{
+    font-size: calc-vw(11,1280);
+    margin-top: calc-vw(15,1280);
+    li {
+      margin-right: calc-vw(6,1280);
+      padding-right: calc-vw(6,1280);
+      &:first-child {
+        &::after {
+          margin-left: calc-vw(10,1280);
+        }
+      }
+    }
+  }
+  @include mqSP {
+    margin-top: calc-vw(30);
+  }
+}
+
+.cards-date{
+  &:only-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.is-sponsored{
+  position: relative;
+  &::after {
+    content: "sponsored";
+    background-color: $c_w;
+    padding: 3px 13px;
+    font-size: 13px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    text-transform: uppercase;
+  }
+  @include mqTB{
+    &::after {
+      padding: calc-vw(3,1280) calc-vw(13,1280);
+      font-size: calc-vw(13,1280);
+      top: calc-vw(8,1280);
+      left: calc-vw(8,1280);
+    }
+  }
+  @include mqSP{
+    &::after {
+      padding: calc-vw(3,320) calc-vw(13,320);
+      font-size: 10px;
+      top: calc-vw(4,320);
+      left: calc-vw(4,320);
+    }
+  }
+}
+
+// Cards_rect
+//
+// 長方形カード
+//
+// Markup:
+//<ul class="cards_rect">
+//<li>
+//<a href="">
+//<div class="cards_rect-img"><img class="js-lazyload" data-src="http://placehold.jp/980x380.png" alt=""></div>
+//<div class="cards_rect-text c-bd-b_1">
+//<div class="cards_rect-title"><p>前田エマ、服にあう</p></div>
+//<div class="cards_rect-description"><p>She is が考えるすごい女性たち。<br>彼女たちのチャーミングな生き方って？</p></div>
+//</div>
+//</a>
+//</li>
+//<li>
+//<a href="">
+//<div class="cards_rect-img"><img class="js-lazyload" data-src="http://placehold.jp/980x380.png" alt=""></div>
+//<div class="cards_rect-text">
+//<div class="cards_rect-title"><p>たなかみさきの紳士淑女のススメ</p></div>
+//<div class="cards_rect-description"><p>She is が考えるすごい女性たち。<br>彼女たちのチャーミングな生き方って？</p></div>
+//</div>
+//</a>
+//</li>
+//</ul>
+//
+// Styleguide 5.2.0
+
+.cards_rect{
+  display: flex;
+  flex-wrap:wrap;
+  width: 980px;
+  margin: 0 auto;
+  
+  > li{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    margin-bottom: 90px;
+    > a {
+      display: block;
+      &:hover {
+        .cards_rect-text-head {
+          &:after {
+            transform: translateX(5px);
+            .l-side & {
+              transform: translateX(5px) scale(.7);
+            }
+          }
+        }
+        img{
+          opacity: $tr_opacity;
+        }
+        .cards_rect-title,
+        .cards_rect-description{
+          color: $c_gray2;
+        }
+      }
+    }
+  }
+  
+  @include mqTB{
+    width: calc-vw(980,1280);
+    > li{
+      height: calc-vw(380,1280);
+      margin-bottom: calc-vw(90,1280);
+    }
+  }
+  
+  @include mqSP{
+    width: calc-vw(290,320);
+    > li{
+      width: calc-vw(290,320);
+      height: calc-vw(190,320);
+      margin-bottom: calc-vw(50,320);
+    }
+  }
+}
+
+.cards_rect-img{
+  width: 980px;
+  height: 380px;
+  img{
+    width: 980px;
+    height: 380px;
+    @include transition;
+  }
+
+  @include mqTB{
+    width: calc-vw(980,1280);
+    height: calc-vw(380,1280);
+    img{
+      width: calc-vw(980,1280);
+      height: calc-vw(380,1280);
+    }
+  }
+
+  @include mqSP{
+    height: calc-vw(190,320);
+    width: calc-vw(290,320);
+    overflow: hidden;
+    position: relative;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: auto;
+      height: 100%;
+      max-width: inherit;
+    }
+  }
+}
+
+.cards_rect-text{
+  width: 450px;
+  background-color: $c_w;
+  position: relative;
+  
+  @include mqTB{
+    width: calc-vw(450,1280);
+  }
+
+  @include mqSP{
+    width: calc-vw(225,320);
+  }
+}
+
+.cards_rect-text-head {
+  position: absolute;
+  bottom: 0;
+  width: 450px;
+  min-height: 40px;
+  padding: 20px 80px 5px 0;
+  border-width: 4px;
+  border-color: inherit;
+  border-top-style: solid;
+  background-color: $c_w;
+  box-sizing: border-box;
+  &:after {
+    content: "\e901";
+    @include icofont;
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    font-size: 16px;
+    @include transition;
+  }
+  @include mqTB {
+    width: calc-vw(450,1280);
+    min-height: calc-vw(40,1280);
+    padding: calc-vw(20,1280) calc-vw(80,1280) calc-vw(5,1280) 0;
+    &:after {
+      font-size: calc-vw(16,1280);
+      bottom: calc-vw(5,1280);
+      right: calc-vw(30,1280);
+    }
+  }
+  @include mqSP {
+    width: calc-vw(450);
+    padding: calc-vw(16) calc-vw(80) calc-vw(5) 0;
+
+    &:after {
+      font-size: 12px;
+      right: calc-vw(30);
+    }
+  }
+}
+
+.cards_rect-lead {
+  font-size: 15px;
+  margin-bottom: 5px;
+  @include mqTB {
+    font-size: calc-vw(15,1280);
+    margin-bottom: calc-vw(5,1280);
+  }
+  @include mqSP {
+    font-size: 10px;
+    margin-bottom: calc-vw(3);
+  }
+}
+
+.cards_rect-title{
+  @include f_chikumin;
+  font-size: 32px;
+  line-height: 1.4;
+  background-color: $c_w;
+  @include transition;
+
+  @include mqTB{
+    font-size: calc-vw(32,1280);
+  }
+  @include mqSP{
+    font-size: 17px;
+  }
+}
+
+.cards_rect-description{
+  background-color: $c_w;
+  width: 450px;
+  position: absolute;
+  padding-right: 35px;
+  bottom: 0;
+  transform: translateY(100%);
+  font-size: 15px;
+  box-sizing: border-box;
+  @include transition;
+
+  @include mqTB{
+    width: calc-vw(450,1280);
+    padding-right: calc-vw(80,1280);
+    font-size: calc-vw(15,1280);
+  }
+
+  @include mqSP{
+    width: calc-vw(225,320);
+    font-size: 11px;
+    padding-right: calc-vw(30);
+  }
+}
+
+// Cards_highlight
+//
+// 特集など
+//
+// Markup:
+//<ul class="cards_highlight">
+//<li>
+//<a href="">
+//<div class="cards-img">
+//<p class="cards-img-date">sep 16.2017</p>
+//<p class="cards-img-title">大森靖子×道重さゆみ<br />未来の女の子対談</p>
+//<img class="js-lazyload" data-src="http://placehold.jp/415x415.png" alt="">
+//</div>
+//<div class="cards-text c-bd-b_1">
+//<div class="cards-lead c-cl-f_1">2017.8 特集：未来からきた女性</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//<li>#LOVE</li>
+//<li>#INTERVIEW</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//<li>
+//<a href="">
+//<div class="cards-img">
+//<p class="cards-img-date">sep 16.2017</p>
+//<p class="cards-img-title">大森靖子×道重さゆみ<br />未来の女の子対談</p>
+//<img class="js-lazyload" data-src="http://placehold.jp/415x415.png" alt="">
+//</div>
+//<div class="cards-text c-bd-b_1">
+//<div class="cards-lead c-cl-f_1">2017.8 特集：未来からきた女性</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//<li>#LOVE</li>
+//<li>#INTERVIEW</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//<li>
+//<a href="">
+//<div class="cards-img">
+//<p class="cards-img-date">sep 16.2017</p>
+//<p class="cards-img-title">大森靖子×道重さゆみ<br />未来の女の子対談</p>
+//<img class="js-lazyload" data-src="http://placehold.jp/415x415.png" alt="">
+//</div>
+//<div class="cards-text c-bd-b_1">
+//<div class="cards-lead c-cl-f_1">2017.8 特集：未来からきた女性</div>
+//<div class="cards-description sp-hide">簡単なディスクリプション(20文字程度)</div>
+//<ul class="cards-tags sp-hide">
+//<li class="cards-date">Sep 16. 2017</li>
+//<li>#LOVE</li>
+//<li>#INTERVIEW</li>
+//</ul>
+//</div>
+//</a>
+//</li>
+//</ul>
+//
+// Styleguide 5.3.0
+
+.cards_highlight {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px 60px;
+  .page-detail_feature & {
+    margin-bottom: 0;
+  }
+  .gift-past & {
+    justify-content: center;
+  }
+  @include mqTB {
+    margin: 0 calc-vw(20,1280) calc-vw(60,1280);
+  }
+  @include mqSP {
+    display: block;
+    margin: 0 calc-vw(30);
+    padding-bottom: calc-vw(60);
+    .page-detail_feature & {
+      padding-bottom: 0;
+    }
+  }
+  > li {
+    width: 33.3%;
+    position: relative;
+    .page-detail_feature & {
+      background-color: $c_w;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:nth-child(even) {
+      .page-detail_feature & {
+        background-color: rgba($c_w,0.7);
+      }
+    }
+    &.is-empty {
+      @include mqSP {
+        display: none;
+      }
+    }
+    .page-detail_feature & {
+      @include mqSP {
+        margin-bottom: 0;
+      }
+    }
+    &.is-limited {
+      .cards-img-inner {
+        &:after {
+          background-color: rgba($c_k,0);
+        }
+      }
+      .cards-img {
+        &:after {
+          content: "";
+          width: 90px;
+          height: 90px;
+          background-image: url(../img/icon-membersonly.svg);
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background-repeat: no-repeat;
+          background-position: 0;
+          background-size: 90px auto;
+          z-index: 3;
+          @include mqTB {
+            width: calc-vw(90,1280);
+            height: calc-vw(90,1280);
+            top: calc-vw(5,1280);
+            right: calc-vw(5,1280);
+            background-size: calc-vw(90,1280) auto;
+          }
+          @include mqSP {
+            width: calc-vw(140);
+            height: calc-vw(140);
+            top: calc-vw(10);
+            right: calc-vw(10);
+            background-size: calc-vw(140) auto;
+          }
+          .page-list_gift & {
+            content: none;
+
+          }
+        }
+      }
+
+    }
+    > a {
+      display: block;
+      &:hover {
+        .cards-img-inner {
+          &:after {
+            background-color: rgba($c_k,.45);
+          }
+        }
+      }
+    }
+    @include mqSP {
+      width: 100%;
+      margin-bottom: calc-vw(40);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .cards-img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 0;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+    &:after {
+      content: none;
+      
+    }
+  }
+  .cards-img-inner {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+    }
+    &[class*="c-"] {
+      &:before {
+        content: "";
+        height: 90%;
+        width: 90%;
+        border: 2px solid;
+        border-color: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 3;
+      }
+    }
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: rgba($c_k,0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      @include transition;
+    }
+  }
+  .cards-img-inner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    width: 90%;
+  }
+  .cards-img-date {
+    color: $c_w;
+    @include f_poppins;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+    @include mqTB {
+      font-size: calc-vw(13,1280);
+      margin-bottom: calc-vw(10,1280);
+    }
+    @include mqSP {
+      font-size: 11px;
+      margin-bottom: calc-vw(5);
+    }
+  }
+  .cards-img-title {
+    color: $c_w;
+    @include f_chikumin;
+    text-align: center;
+    font-size: 24px;
+    @include mqTB {
+      font-size: calc-vw(24,1280);
+    }
+    @include mqSP {
+      font-size: 18px;
+    }
+  }
+  .cards-text {
+    padding: 0 20px 35px;
+    box-sizing: border-box;
+    @include mqTB {
+      padding: 0 calc-vw(20,1280) calc-vw(35,1280);
+    }
+    @include mqSP {
+      padding: 0;
+    }
+    .page-detail_feature & {
+      @include mqSP {
+        padding: 0 calc-vw(20) calc-vw(40);
+      }
+    }
+    .page-top & {
+      padding-bottom: 0;
+    }
+  }
+  .cards-description {
+    color: $c_k;
+  }
+}
+.cards-label {
+  position: absolute;
+  bottom: -15px;
+  right: 5px;
+  background-color: $c_w;
+  border: 4px solid $c_k;
+  z-index: 3;
+  line-height: 1;
+  padding: 8px 5px 10px;
+  font-size: 18px;
+  @include f_chikumin;
+  font-weight: bold;
+  min-width: 220px;
+  text-align: center;
+  box-sizing: border-box;
+  @include mqTB {
+    bottom: calc-vw(-15,1280);
+    right: calc-vw(5,1280);
+    padding: calc-vw(8,1280) calc-vw(5,1280) calc-vw(10,1280);
+    min-width: calc-vw(220,1280);
+    font-size: calc-vw(18,1280);
+  }
+  @include mqSP {
+    font-size: 15px;
+    min-width: calc-vw(340);
+    border-width: 2px;
+    padding: calc-vw(16) calc-vw(10);
+  }
+  &:after {
+    content: "\e901";
+    @include icofont;
+    font-size: 10px;
+    @include transition;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: 4px;
+    a:hover & {
+      transform: translateX(5px);
+    }
+  }
+  small {
+    font-size: 12px;
+    margin: 0 -12px 0 -7px;
+    @include mqTB {
+      font-size: calc-vw(12,1280);
+      margin: 0 calc-vw(-12,1280) 0 calc-vw(-7,1280);
+    }
+  }
+}
+
+// Cards Mypage
+//
+// マイページ情報カード
+//
+// Markup:
+// <div class="cards_mypage">
+//   <div class="cards_mypage-body">
+//     <p class="cards_mypage-heading">登録情報</p>
+//     <p class="cards_mypage-name">竹中 万季 さん</p>
+//     <p class="cards_mypage-mail">takenaka.cinra.net</p>
+//   </div>
+//   <div class="cards_mypage-button">
+//     <p class="button_fill"><a href="">登録情報</a></p>
+//   </div>
+// </div>
+// <div class="cards_mypage">
+//   <div class="cards_mypage-body">
+//     <p class="cards_mypage-heading">配送状況</p>
+//     <p class="cards_mypage-text">10月のギフト：<br />2017年10月12日に発送済み</p>
+//   </div>
+//   <div class="cards_mypage-button">
+//     <p class="button_fill"><a href="">配送状況一覧</a></p>
+//   </div>
+// </div>
+//
+// Styleguide 5.4.0
+.cards_mypage {
+  // @extend %clearfix;
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid $c_gray;
+  padding: 60px 0;
+  &:first-child {
+    padding-top: 0;
+  }
+  @include mqTB {
+    padding: calc-vw(60, 1280) calc-vw(20, 1280);
+  }
+  @include mqSP {
+    display: block;
+    width: 100%;
+    padding: calc-vw(50) 0;
+  }
+}
+.cards_mypage-body {
+  // float: left;
+  display: table-cell;
+  width: 400px;
+  vertical-align: middle;
+  padding-left: 20px;
+  @include mqTB {
+    width: calc-vw(400, 1280);
+  }
+  @include mqSP {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 0 calc-vw(50) 0;
+    padding: 0 calc-vw(30);
+  }
+}
+.cards_mypage-button {
+  width: 160px;
+  // float: right;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 20px;
+  @include mqTB {
+    width: calc-vw(160, 1280);
+  }
+  @include mqSP {
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+.cards_mypage-heading {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  @include mqTB {
+    font-size: calc-vw(12, 1280);
+  }
+  @include mqSP {
+    margin-bottom: calc-vw(30);
+  }
+}
+.cards_mypage-name {
+  font-size: 25px;
+  margin-bottom: 10px;
+  @include f_chikumin;
+  @include mqTB {
+    font-size: calc-vw(25, 1280);
+  }
+}
+.cards_mypage-mail {
+  font-size: 15px;
+  @include f_poppins;
+  @include mqTB {
+    font-size: calc-vw(15, 1280);
+  }
+  @include mqSP {
+    font-size: 14px;
+  }
+}
+.cards_mypage-text {
+  font-size: 18px;
+  @include f_base;
+  @include mqTB {
+    font-size: calc-vw(18, 1280);
+  }
+}
+
+// Cards Mypage Article
+//
+// 会員限定記事
+// TODO: dl のところ見直したい
+// TODO: 他と合わせてflexにしたい
+//
+// Markup:
+//<ul class="cards_article">
+//<li>
+//<dl>
+//<dt class="cards_article-img"><img class="js-lazyload" data-src="http://placehold.jp/522x348.png" alt="結局、最高のデートってどんなもの？"></dt>
+//<dd class="cards_article-body">
+//<h1 class="cards_article-subtitle">編集後記</h1>
+//<p class="cards_article-heading">結局、最高のデートってどんなもの？</p>
+//<p class="cards_article-text">みんなのTwitterやInstagramの投稿から見えてきた、最高のデートって？GirlFriendのはくると編集部の野村・竹中が座談会形式でお届け。</p>
+//<p class="button_fill"><a href="">READ</a></p>
+//</dd>
+//</dl>
+//</li>
+//<li>
+//<dl>
+//<dt class="cards_article-img"><img class="js-lazyload" data-src="http://placehold.jp/522x348.png" alt="結局、最高のデートってどんなもの？"></dt>
+//<dd class="cards_article-body">
+//<h1 class="cards_article-subtitle">編集後記</h1>
+//<p class="cards_article-heading">結局、最高のデートってどんなもの？</p>
+//<p class="cards_article-text">みんなのTwitterやInstagramの投稿から見えてきた、最高のデートって？GirlFriendのはくると編集部の野村・竹中が座談会形式でお届け。</p>
+//<p class="button_fill"><a href="">READ</a></p>
+//</dd>
+//</dl>
+//</li>
+//<li>
+//<dl>
+//<dt class="cards_article-img"><img class="js-lazyload" data-src="http://placehold.jp/522x348.png" alt="結局、最高のデートってどんなもの？"></dt>
+//<dd class="cards_article-body">
+//<h1 class="cards_article-subtitle">編集後記</h1>
+//<p class="cards_article-heading">結局、最高のデートってどんなもの？</p>
+//<p class="cards_article-text">みんなのTwitterやInstagramの投稿から見えてきた、最高のデートって？GirlFriendのはくると編集部の野村・竹中が座談会形式でお届け。</p>
+//<p class="button_fill"><a href="">READ</a></p>
+//</dd>
+//</dl>
+//</li>
+//</ul>
+//
+// Styleguide 5.5.0
+.cards_article {
+  margin: 0 0 30px 0;
+  .page-detail_feature & {
+    width: 980px;
+    margin: 0 auto;
+    @include mqTB {
+      width: calc-vw(980,1280);
+    }
+    @include mqSP {
+      width: 100%;
+      padding: 0 calc-vw(30);
+      box-sizing: border-box;
+    }
+  }
+  > li {
+    background: $c_gray_light;
+    margin: 0 0 30px 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    dl {
+      @extend %clearfix;
+      padding: 30px;
+      @include mqTB {
+        padding: calc-vw(30, 1280);
+      }
+      @include mqSP {
+        padding: calc-vw(30) calc-vw(30) calc-vw(40) calc-vw(30);
+      }
+    }
+    @include mqSP {
+      margin:0 0 calc-vw(30) 0;
+    }
+    &.is-limited {
+      position: relative;
+      &:after {
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-image: url(../img/icon-membersonly.svg);
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        background-size: 90px auto;
+        z-index: 3;
+        @include mqTB {
+          width: calc-vw(90,1280);
+          height: calc-vw(90,1280);
+          top: calc-vw(20,1280);
+          right: calc-vw(20,1280);
+          background-size: calc-vw(90,1280) auto;
+        }
+        @include mqSP {
+          width: calc-vw(140);
+          height: calc-vw(140);
+          top: calc-vw(10);
+          right: calc-vw(10);
+          background-size: calc-vw(140) auto;
+        }
+      }
+      .cards_article-body {
+        padding-right: 140px;
+        box-sizing: border-box;
+        @include mqTB {
+          padding-right: calc-vw(140,1280);
+        }
+        @include mqSP {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  @include mqSP {
+    width: calc(100% - 30px);
+    margin: 0 calc-vw(30) calc-vw(60) calc-vw(30);
+  }
+}
+.cards_article-img {
+  float: left;
+  width: 180px;
+  line-height: 0;
+  text-align: center;
+  position: relative;
+  img {
+    max-width: 100%;
+  }
+  @include mqTB {
+    width: calc-vw(180, 1280);
+  }
+  @include mqSP {
+    float: none;
+    width: 100%;
+    margin: 0 0 calc-vw(30) 0;
+  }
+  .page-detail_feature & {
+    width: 300px;
+    @include mqTB {
+      width: calc-vw(300,1280);
+    }
+    @include mqSP {
+      width: 100%;
+    }
+  }
+  
+}
+.cards_article-body {
+  float: right;
+  width: 330px;
+  @include mqTB {
+    width: calc-vw(330, 1280);
+  }
+  @include mqSP {
+    float: none;
+    width: 100%;
+  }
+  .page-detail_feature & {
+    width: 590px;
+    @include mqTB {
+      width: calc-vw(590, 1280);
+    }
+    @include mqSP {
+      width: 100%;
+    }
+  }
+}
+.cards_article-subtitle {
+  font-size: 15px;
+  font-weight: bold;
+  @include mqTB {
+    font-size: calc-vw(15, 1280);
+  }
+  @include mqSP { 
+    font-size: 12px;
+  }
+}
+.cards_article-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  @include mqTB {
+    font-size: calc-vw(18, 1280);
+    margin-bottom: calc-vw(10,1280)
+  }
+  @include mqSP {
+    font-size: 13px;
+    margin-bottom: calc-vw(20);
+  }
+}
+.cards_article-text {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.75;
+  @include mqTB {
+    font-size: calc-vw(15, 1280);
+    margin-bottom: calc-vw(20,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+    margin-bottom: calc-vw(35);
+  }
+}
+
+// Cards Mypage Delivery
+//
+// マイページ配達情報リスト
+//
+// Markup:
+// <ul class="cards_mypage-delivery">
+//<li>
+//<div class="cards_mypage-delivery-summary c-bg-b_1">
+//<a href="">
+//<h2 class="cards_mypage-delivery-heading">
+//<span class="c-cl-f_1">2018年1月のギフト</span>
+//ひとりでもいい
+//</h2>  
+//<p class="cards_mypage-delivery-schedule">（2月下旬のお届け）</p>  
+//</a>
+//</div>
+//<div class="cards_mypage-delivery-status">
+//<h3 class="cards_mypage-delivery-status-heading">発送前</h3>
+//<p class="cards_mypage-delivery-status-text">決済予定日：12月1日</p>
+//</div>
+//<div class="cards_mypage-delivery-button">
+//<p class="button_fill"><a href="" target="_blank">領収書PDF</a></p>
+//</div>
+//</li>
+//<li>
+//<div class="cards_mypage-delivery-summary c-bg-b_1">
+//<a href="">
+//<h2 class="cards_mypage-delivery-heading">
+//<span class="c-cl-f_1">2018年1月のギフト</span>
+//ひとりでもいい
+//</h2>  
+//<p class="cards_mypage-delivery-schedule">（2月下旬のお届け）</p>  
+//</a>
+//</div>
+//<div class="cards_mypage-delivery-status">
+//<h3 class="cards_mypage-delivery-status-heading">発送前</h3>
+//</div>
+//<div class="cards_mypage-delivery-button">
+//<p class="button_fill"><a href="" target="_blank">領収書PDF</a></p>
+//</div>
+//</li>
+//<li>
+//<div class="cards_mypage-delivery-summary c-bg-b_1">
+//<a href="">
+//<h2 class="cards_mypage-delivery-heading">
+//<span class="c-cl-f_1">2018年1月のギフト</span>
+//母と娘２行の時２行の時２行の時母と娘２行の時２行の時２行の時
+//</h2>  
+//<p class="cards_mypage-delivery-schedule">（2月下旬のお届け）</p>  
+//</a>
+//</div>
+//<div class="cards_mypage-delivery-status">
+//<h3 class="cards_mypage-delivery-status-heading">発送前</h3>
+//<p class="cards_mypage-delivery-status-text">決済予定日：12月1日</p>
+//</div>
+//<div class="cards_mypage-delivery-button">
+//<p class="button_fill"><a href="" target="_blank">領収書PDF</a></p>
+//</div>
+//</li>
+//<li>
+//<div class="cards_mypage-delivery-summary c-bg-b_1">
+//<a href="">
+//<h2 class="cards_mypage-delivery-heading">
+//<span class="c-cl-f_1">2018年9・10月のギフト</span>
+//母と娘２行の時２行の時２行の時母と娘２行の時２行の時２行の時
+//</h2>  
+//<p class="cards_mypage-delivery-schedule">（2月下旬のお届け）</p>  
+//</a>
+//</div>
+//<div class="cards_mypage-delivery-status">
+//<h3 class="cards_mypage-delivery-status-heading">発送前</h3>
+//<p class="cards_mypage-delivery-status-text">詳しくはメールでご案内しておりますので、support@sheishere.jpからのメールをご確認ください。</p>
+//  </div>
+//  <div class="cards_mypage-delivery-button">
+//  <p class="button_fill"><a href="" target="_blank">領収書PDF</a></p>
+//  </div>
+//  </li>
+//  </ul>
+//
+// Styleguide 5.6.0
+.cards_mypage-delivery {
+  margin-bottom: 45px;
+  @include mqTB {
+    margin-bottom: calc-vw(45,1280);
+  }
+  @include mqSP {
+    padding: 0 calc-vw(30);
+  }
+  > li {
+    display: flex;
+    padding-bottom: 20px;
+    border-top: 2px solid $c_k;
+    @include mqTB {
+      padding-bottom: calc-vw(20,1280);
+    }
+    &:last-child {
+      border-bottom: 2px solid $c_k;
+    }
+  }
+}
+.cards_mypage-delivery-summary {
+  width: 190px;
+  box-sizing: border-box;
+  @include mqTB {
+    width: calc-vw(190,1280);
+  }
+  @include mqSP {
+    width: calc-vw(290);
+  }
+  > a {
+    display: block;
+    position: relative;
+    padding: 25px 20px 40px;
+    @include mqTB {
+      padding: calc-vw(25,1280) calc-vw(20,1280) calc-vw(40,1280);
+    }
+    @include mqSP {
+      padding: calc-vw(20) calc-vw(30) calc-vw(50);
+    }
+    &:after {
+      @include icofont;
+      content: "\e901";
+      color: $c_w;
+      position: absolute;
+      font-size: 10px;
+      bottom: 15px;
+      right: 15px;
+      @include transition;
+    }
+    &:hover {
+      &:after {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+.cards_mypage-delivery-heading {
+  font-size: 16px;
+  @include transition;
+  @include mqTB {
+    font-size: calc-vw(16,1280);
+  }
+  @include mqSP {
+    font-size: 15px;
+  }
+  > span {
+    font-size: 13px;
+    display: block;
+    @include mqTB {
+      font-size: calc-vw(13,1280);
+    }
+    @include mqSP {
+      font-size: 12px;
+    }
+  }
+  a:hover & {
+    color: $c_gray2;
+  }
+}
+.cards_mypage-delivery-schedule {
+  font-size: 12px;
+  @include transition;
+  @include mqTB {
+    font-size: calc-vw(12,1280);
+  }
+  @include mqSP {
+    font-size: 11px;
+  }
+  a:hover & {
+    color: $c_gray2;
+  }
+}
+
+.cards_mypage-delivery-status {
+  padding: 30px 170px 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  @include mqTB {
+    padding: calc-vw(30,1280) calc-vw(170,1280) calc-vw(40,1280) calc-vw(20,1280);
+  }
+  @include mqSP {
+    padding: calc-vw(20) calc-vw(10) 0 calc-vw(25);
+  }
+}
+.cards_mypage-delivery-status-heading {
+  font-size: 16px;
+  @include mqTB {
+    font-size: calc-vw(16,1280);
+  }
+  @include mqSP {
+    font-size: 15px;
+  }
+}
+.cards_mypage-delivery-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  @include mqSP {
+    position: static;
+    transform: none;
+    margin-top: calc-vw(40);
+    .button_fill {
+      text-align: left;
+      a {
+        padding-right: calc-vw(20);
+        padding-left: calc-vw(20);
+      }
+    }
+  }
+}
+
+.cards_mypage-delivery-status-text {
+  font-size: 12px;
+  @include mqTB {
+    font-size: calc-vw(12,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+  }
+}
+
+// Cards simple
+//
+// ギフトの説明のところ
+//
+// Markup:
+//<ul class="cards_simple">
+//<li>
+//<h2 class="cards_simple-title">ORIDINAL PRODUCT</h2>
+//<div class="cards-img">
+//<img class="js-lazyload" data-src="https://unsplash.it/600/600" alt="">
+//</div>
+//<div class="card-text">
+//<div class="cards-description">簡単なディスクリプション(20文字程度)</div>
+//</div>
+//</li>
+//<li>
+//<h2 class="cards_simple-title">ORIDINAL PRODUCT</h2>
+//<div class="cards-img">
+//<img class="js-lazyload" data-src="https://unsplash.it/600/600" alt="">
+//</div>
+//<div class="card-text">
+//<div class="cards-description">簡単なディスクリプション(20文字程度)</div>
+//</div>
+//</li>
+//<li>
+//<h2 class="cards_simple-title">ORIDINAL PRODUCT</h2>
+//<div class="cards-img">
+//<img class="js-lazyload" data-src="https://unsplash.it/600/600" alt="">
+//</div>
+//<div class="card-text">
+//<div class="cards-description">簡単なディスクリプション(20文字程度)</div>
+//</div>
+//</li>
+//</ul>
+//
+// Styleguide 5.7.0
+.cards_simple {
+  width: 980px;
+  margin: 0 auto 120px;
+  display: flex;
+  justify-content: space-between;
+  @include mqTB {
+    width: calc-vw(980,1280);
+    margin-bottom: calc-vw(120,1280);
+  }
+  @include mqSP {
+    display: block;
+    width: calc(100% - #{calc-vw(120)});
+    margin: 0 auto;
+  }
+  > li {
+    width: 300px;
+    @include mqTB {
+      width: calc-vw(300,1280);
+    }
+    @include mqSP {
+      width: 100%;
+      padding-bottom: calc-vw(70);
+    }
+  }
+  .cards-img {
+    width: 100%;
+    height: 250px;
+    line-height: 0;
+    margin-bottom: 0;
+    @include mqTB {
+      height: calc-vw(250,1280);
+    }
+    @include mqSP {
+      height: calc-vw(433.32);
+    }
+  }
+  .card-text {
+    margin-top: 10px;
+    @include mqTB {
+      margin-top: calc-vw(10,1280);
+    }
+    @include mqSP {
+      
+    }
+  }
+}
+.cards_simple-title {
+  text-align: center;
+  @include f_poppins-b;
+  margin-bottom: 8px;
+  font-size: 20px;
+  @include mqTB {
+    font-size: calc-vw(20,1280);
+  }
+  @include mqSP {
+    font-size: 19px;
+  }
+}
+
+// Cards members
+//
+// メンバーの説明
+//
+// Markup:
+//<ol class="cards_members">
+//<li>
+//<h2 class="cards_members-icon"><i></i><span>GIFT</span></h2>
+//<div class="cards_members-content">
+//<h3 class="cards_members-title">ギフトを受け取れる</h3>
+//<p class="cards_members-text">ああああ</p>
+//</div>
+//</li>
+//<li>
+//<h2 class="cards_members-icon"><i></i><span>GIFT</span></h2>
+//<div class="cards_members-content">
+//<h3 class="cards_members-title">ギフトを受け取れる</h3>
+//<p class="cards_members-text">ああああ</p>
+//</div>
+//</li>
+//<li>
+//<h2 class="cards_members-icon"><i></i><span>GIFT</span></h2>
+//<div class="cards_members-content">
+//<h3 class="cards_members-title">ギフトを受け取れる</h3>
+//<p class="cards_members-text">ああああ</p>
+//</div>
+//</li>
+//<li>
+//<h2 class="cards_members-icon"><i></i><span>GIFT</span></h2>
+//<div class="cards_members-content">
+//<h3 class="cards_members-title">ギフトを受け取れる</h3>
+//<p class="cards_members-text">ああああ</p>
+//</div>
+//</li>
+//</ol>
+//
+// Styleguide 5.8.0
+.cards_members {
+  width: 980px;
+  margin: 0 auto 45px;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 2;
+  justify-content: space-between;
+  counter-reset: number 0;
+  
+  @include mqTB {
+    width: calc-vw(980,1280);
+    margin-bottom: calc-vw(45,1280);
+  }
+  @include mqSP {
+    margin-top: calc-vw(-38);
+    width: calc-vw(580);
+    margin-bottom: calc-vw(45);
+    &:before {
+      content: "";
+      display: block;
+      height: calc-vw(146);
+      width: 100%;
+      background-color: $c_w;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .page-about & {
+    margin-bottom: 70px;
+    @include mqTB {
+      margin-bottom: calc-vw(70,1280);
+    }
+    @include mqSP {
+      margin-bottom: 0;
+      padding: 0 calc-vw(30) calc-vw(60);
+      width: 100%;
+      box-sizing: border-box;
+      background-image: url(../img/about-member-bg.jpg);
+      background-size: auto 100%;
+      background-position: center;
+    }
+  }
+  .gift-members & {
+    @include mqSP {
+      margin-bottom: 0;
+      padding: 0 calc-vw(30) calc-vw(60);
+      width: 100%;
+      box-sizing: border-box;
+      background-image: url(../img/gift-detail-member-bg.jpg);
+      background-size: auto 100%;
+      background-position: center;
+    }
+  }
+  > li {
+    width: 230px;
+    @include mqTB {
+      width: calc-vw(230,1280);
+    }
+    @include mqSP {
+      margin-top: calc-vw(38);
+      width: calc-vw(275);
+    }
+    &:nth-child(1) {
+      .cards_members-icon {
+        i {
+          padding-top: 55px;
+          @include mqTB {
+            padding-top: calc-vw(55,1280);
+          }
+          @include mqSP {
+            padding-top: calc-vw(55);
+          }
+          svg {
+            width: 82px;
+            height: 62px;
+            @include mqTB {
+              width: calc-vw(82,1280);
+              height: calc-vw(62,1280);
+            }
+            @include mqSP {
+              width: calc-vw(85);
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .cards_members-icon {
+        i {
+          padding-top: 47px;
+          @include mqTB {
+            padding-top: calc-vw(47,1280);
+          }
+          @include mqSP {
+            padding-top: calc-vw(45);
+          }
+          svg {
+            width: 98px;
+            height: 72px;
+            @include mqTB {
+              width: calc-vw(98,1280);
+              height: calc-vw(72,1280);
+            }
+            @include mqSP {
+              width: calc-vw(103);
+              height: auto;
+            }
+
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .cards_members-icon {
+        i {
+          padding-top: 38px;
+          @include mqTB {
+            padding-top: calc-vw(38,1280);
+          }
+          @include mqSP {
+            padding-top: calc-vw(40);
+          }
+          svg {
+            width: 85px;
+            height: 65px;
+            @include mqTB {
+              width: calc-vw(85,1280);
+              height: calc-vw(65,1280);
+            }
+            @include mqSP {
+              width: calc-vw(93);
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(4) {
+      .cards_members-icon {
+        i {
+          padding-top: 48px;
+          @include mqTB {
+            padding-top: calc-vw(48,1280);
+          }
+          @include mqSP {
+            padding-top: calc-vw(50);
+          }
+          svg {
+            width: 77px;
+            height: 53px;
+            @include mqTB {
+              width: calc-vw(77,1280);
+              height: calc-vw(53,1280);
+            }
+            @include mqSP {
+              width: calc-vw(83);
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .page-registration & {
+    margin-bottom: 90px;
+    @include mqSP {
+      &:before {
+        content: none;
+      }
+    }
+
+    li{
+      border: 2px solid $c_k;
+      @include mqSP {
+        margin-top: calc-vw(30);
+        width: calc-vw(270);
+      }
+      .cards_members-icon{
+        height: 130px;
+        @include mqTB {
+          height: calc-vw(130,1280);
+        }
+        @include mqSP {
+          height: calc-vw(160);
+        }
+        background-image: inherit;
+        i{
+          padding-top: 45px;
+          @include mqTB {
+            padding-top: calc-vw(45,1280);
+          }
+          @include mqSP {
+            padding-top: calc-vw(45);
+          }
+        }
+      }
+    }
+
+    .cards_members-content{
+      margin-top: 0;
+      padding: 0 30px 30px;
+    }
+    
+    @include mqTB{
+      margin-bottom: calc-vw(90,1280);
+
+      .cards_members-icon{
+        height: calc-vw(140,1280);
+      }
+
+      .cards_members-content{
+        padding: 0 calc-vw(30,1280) calc-vw(40,1280);
+      }
+
+    }
+    @include mqSP{
+      margin-top: 0;
+      margin-bottom: calc-vw(30,320);
+      li{
+        border: 1px solid $c_k;
+        &:first-child,
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+        &:nth-child(1) {
+          .cards_members-icon{
+            svg {
+              width: calc-vw(103);
+            }
+          }
+        }
+        &:nth-child(2) {
+          .cards_members-icon{
+            svg {
+              width: calc-vw(125);
+            }
+          }
+        }
+        &:nth-child(3) {
+          .cards_members-icon{
+            svg {
+              width: calc-vw(110);
+            }
+          }
+        }
+        &:nth-child(4) {
+          .cards_members-icon{
+            svg {
+              width: calc-vw(100);
+            }
+          }
+        }
+      }
+      .cards_members-content{
+        padding: calc-vw(0,320) calc-vw(10,320) calc-vw(20,320);
+      }
+      
+    }
+  }
+}
+
+.cards_members-icon {
+  background-image: url(../img/frame-octagon_fill.svg);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background-size: 200px auto;
+  background-position: center top;
+  box-sizing: border-box;
+  position: relative;
+  @include mqTB {
+    width: calc-vw(200,1280);
+    height: calc-vw(200,1280);
+    background-size: calc-vw(200,1280) auto;
+  }
+  @include mqSP {
+    width: calc-vw(215);
+    height: calc-vw(215);
+    background-size: calc-vw(215) auto;
+  }
+  span {
+    @include f_poppins-b;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+    @include mqTB {
+      bottom: calc-vw(35,1280);
+      font-size: calc-vw(16,1280);
+    }
+    @include mqSP {
+      bottom: calc-vw(25);
+      font-size: 11px;
+    }
+  }
+  i {
+    display: block;
+    line-height: 0;
+  }
+}
+.cards_members-content {
+  background-color: $c_w;
+  padding: 90px 30px 40px;
+  margin-top: -60px;
+  box-sizing: border-box;
+//  height: calc(100% - 138px);
+  height: 384px;
+  .page-registration & {
+    height: auto;
+  }
+  @include mqTB {
+    padding: calc-vw(90,1280) calc-vw(30,1280) calc-vw(40,1280);
+    margin-top: calc-vw(-60,1280);
+//    height: calc(100% - #{calc-vw(138,1280)});
+    height: calc-vw(384,1280);
+    .page-registration & {
+      height: auto;
+    }
+  }
+  @include mqSP {
+    padding: calc-vw(88) calc-vw(20) calc-vw(55);
+    margin-top: calc-vw(-56);
+    height: 280px;
+    .page-registration & {
+      height: auto;
+    }
+  }
+  
+}
+.cards_members-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  font-size: 16px;
+  @include mqTB {
+    margin-bottom: calc-vw(30,1280);
+    font-size: calc-vw(16,1280);
+  }
+  @include mqSP {
+    margin-bottom: calc-vw(30);
+    font-size: calc-vw(26);
+    line-height: 1.5;
+  }
+  &:before {
+    counter-increment: number 1;
+    content: counter(number);
+    font-size: 20px;
+    @include f_poppins;
+    display: block;
+    line-height: 1.5;
+    @include mqTB {
+      font-size: calc-vw(20,1280);
+    }
+    @include mqSP {
+      font-size: calc-vw(30);
+    }
+  }
+}
+
+.cards_members-text {
+  font-size: 14px;
+  line-height: 1.7;
+  @include mqTB {
+    font-size: calc-vw(14,1280);
+  }
+  @include mqSP {
+    font-size: 12px;
+  }
+}
+
+// Cards banner
+//
+// バナー型
+//
+// Markup:
+//<ol class="cards_members">
+//
+// Styleguide 5.9.0
+.cards_banner {
+  width: 980px;
+  margin: 0 auto 60px;
+  @include mqTB {
+    width: calc-vw(980,1280);
+    margin-bottom: calc-vw(60,1280);
+  }
+  @include mqSP {
+    width: 100%;
+    padding: 0 calc-vw(30);
+    box-sizing: border-box;
+    margin-bottom: calc-vw(40);
+  }
+  > a {
+    display: block;
+    .cards-text-heading,
+    .cards-lead {
+      @include transition;
+    }
+    &:hover {
+      .cards-img {
+        img {
+          opacity: 0.7;
+        }
+      }
+      .cards-label {
+        background-color: $c_k;
+        color: $c_w;
+        &:after {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+  .cards-img {
+    width: 100%;
+    height: 380px;
+    margin-bottom: 0;
+    @include mqTB {
+      height: calc-vw(380,1280);
+    }
+    @include mqSP {
+      height: calc-vw(300);
+      position: relative;
+    }
+    &:after {
+      content: "";
+      width: 90px;
+      height: 90px;
+      background-image: url(../img/icon-membersonly.svg);
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-repeat: no-repeat;
+      background-position: 0;
+      background-size: 90px auto;
+      z-index: 3;
+      @include mqTB {
+        width: calc-vw(90,1280);
+        height: calc-vw(90,1280);
+        top: calc-vw(20,1280);
+        right: calc-vw(20,1280);
+        background-size: calc-vw(90,1280) auto;
+      }
+      @include mqSP {
+        width: calc-vw(140);
+        height: calc-vw(140);
+        top: calc-vw(30);
+        right: calc-vw(30);
+        background-size: calc-vw(140) auto;
+      }
+    }
+  }
+  .cards-img-inner {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    img {
+      position: absolute;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      max-width: inherit;
+    }
+  }
+  .cards-label {
+    right: 20px;
+    bottom: -23px;
+    @include transition;
+    &:after {
+      transition-property: transform;
+    }
+    @include mqNotSP{
+      font-size: 21.6px;
+      padding: 8px 30px 12px;
+    }
+    @include mqTB {
+      right: calc-vw(20,1280);
+      bottom: calc-vw(-23,1280);
+      font-size: calc-vw(21.6,1280);
+      padding: calc-vw(8,1280) calc-vw(30,1280) calc-vw(12,1280);
+    }
+    @include mqSP {
+      right: calc-vw(30);
+      bottom: calc-vw(-33);
+    }
+  }
+  .cards-text {
+    padding: 25px 40px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    @include mqTB {
+      padding: calc-vw(25,1280) calc-vw(40,1280);
+    }
+    @include mqSP {
+      display: block;
+      padding: calc-vw(50) calc-vw(30);
+    }
+  }
+  .cards-text-heading {
+    font-size: 48px;
+    width: 205px;
+    @include f_poppins-b;
+    line-height: 1;
+    small {
+      display: block;
+      @include f_base;
+      font-size: 15px;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+    @include mqTB {
+      font-size: calc-vw(48,1280);
+      width: calc-vw(208,1280);
+      small {
+        margin-top: calc-vw(5,1280);
+        font-size: calc-vw(15,1280);
+      }
+    }
+    @include mqSP {
+      font-size: 30px;
+      line-height: 1.2;
+      small {
+        font-size: 11px;
+        margin-top: 0;
+      }
+    }
+  }
+  .cards-lead {
+    padding-top: 25px;
+    width: calc(100% - 205px);
+    @include mqTB {
+      padding-top: calc-vw(25,1280);
+      width: calc(100% - #{calc-vw(208,1280)});
+    }
+    @include mqSP {
+      width: 100%;
+      padding-top: calc-vw(24);
+      font-size: 12px;
+    }
+  }
+}
+
+
+.cards_share {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  @include mqTB {
+    width: calc-vw(980,1280);
+  }
+  @include mqSP {
+    width: calc-vw(580);
+  }
+  .cards-img {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    @include mqTB {
+      height: calc-vw(380,1280);
+    }
+    @include mqSP {
+      height: calc-vw(340);
+      position: relative;
+      img {
+        position: absolute;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+  .cards_share-content {
+    width: 320px;
+    height: 220px;
+    background-color: $c_w;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+    @include mqTB {
+      width: calc-vw(320,1280);
+      height: calc-vw(220,1280);
+      padding: calc-vw(25,1280);
+    }
+    @include mqSP {
+      width: calc-vw(320);
+      height: calc-vw(240);
+      padding: calc-vw(16) calc-vw(40);
+    }
+  }
+}
+.cards_share-heading {
+  font-size: 24px;
+  margin-bottom: -2px;
+  @include f_poppins-b;
+  @include mqTB {
+    font-size: calc-vw(24,1280);
+    margin-bottom: calc-vw(-2,1280);
+  }
+  @include mqSP {
+    font-size: 15px;
+    margin-bottom: calc-vw(0);
+  }
+  
+}
+.cards_share-description {
+  font-size: 13px;
+  color: $c_gray2;
+  margin-bottom: 15px;
+  @include mqTB {
+    font-size: calc-vw(13,1280);
+    margin-bottom: calc-vw(15,1280);
+  }
+  @include mqSP {
+    font-size: 10px;
+    margin-bottom: calc-vw(20);
+  }
+}
+
+// Cards gift
+//
+// ギフト
+//
+// Markup:
+//
+//<div class="cards_gift">
+//<a href="">
+//<img class="js-lazyload" data-src="https://unsplash.it/980/427" alt="">
+//<p class="button_gift"><span href="">今月のギフトを見る</span></p>
+//</a>
+//</div>
+//
+// Styleguide 5.10.0
+
+.cards_gift{
+  width: 980px;
+  height: 427px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  @include mqTB {
+    width: calc-vw(980,1280);
+    height: calc-vw(427,1280);
+  }
+  @include mqSP {
+    margin-bottom: 0;
+    height: calc-vw(254,320);
+    width: calc-vw(290,320);
+  }
+  a {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    &:hover {
+      img {
+        opacity: $tr_opacity;
+      }
+      .button_gift {
+        a,span {
+          background-color: $c_k;
+          color: $c_w;
+        }
+        a,span{
+          &::after {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+  }
+  img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: inherit;
+    @include transition;
+  }
+}
+
+// Cards small
+//
+// 
+//
+// Markup:
+//
+//<div class="cards_gift">
+//<a href="">
+//<img class="js-lazyload" data-src="https://unsplash.it/980/427" alt="">
+//<p class="button_gift"><span href="">今月のギフトを見る</span></p>
+//</a>
+//</div>
+//
+// Styleguide 5.11.0
+
+.cards_small{
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: 0 auto;
+
+  li{
+    width: 230px;
+    border: 1px solid $c_k;
+    height: 380px;
+
+    //icon 共通
+    .cards_small-icon{
+      position: relative;
+      height: 140px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        height: 37px;
+
+      }
+    }
+
+    //ギフトを受け取れる
+    &:nth-child(1) {
+      .cards_small-icon {
+        &:before {
+          top: 30px;
+          height: 37px;
+          background-image: url(../img/icon-gift.svg);
+          background-size: auto 37px;
+          @include mqTB {
+            top: calc-vw(20,1280);
+            height: calc-vw(37,1280);
+            background-size: auto calc-vw(37,1280);
+          }
+          @include mqSP {
+            top: calc-vw(50);
+            height: calc-vw(72);
+            background-size: auto calc-vw(72);
+          }
+        }
+      }
+
+
+    }
+
+    //イベントの先行予約ができる
+    &:nth-child(2) {
+      .cards_small-icon {
+        &:before {
+          top: 30px;
+          height: 37px;
+          background-image: url(../img/icon-event.svg);
+          background-size: auto 37px;
+          @include mqTB {
+            top: calc-vw(20,1280);
+            height: calc-vw(37,1280);
+            background-size: auto calc-vw(37,1280);
+          }
+          @include mqSP {
+            top: calc-vw(50);
+            height: calc-vw(72);
+            background-size: auto calc-vw(72);
+          }
+        }
+      }
+    }
+
+    //会員限定記事が見れる
+    &:nth-child(3) {
+      .cards_small-icon {
+        &:before {
+          top: 30px;
+          height: 37px;
+          background-image: url(../img/icon-book.svg);
+          background-size: auto 37px;
+          @include mqTB {
+            top: calc-vw(20,1280);
+            height: calc-vw(37,1280);
+            background-size: auto calc-vw(37,1280);
+          }
+          @include mqSP {
+            top: calc-vw(50);
+            height: calc-vw(72);
+            background-size: auto calc-vw(72);
+          }
+        }
+      }
+    }
+
+    //メールマガジンが受け取れる
+    &:nth-child(4) {
+      .cards_small-icon {
+        &:before {
+          top: 30px;
+          height: 37px;
+          background-image: url(../img/icon-mail.svg);
+          background-size: auto 37px;
+          @include mqTB {
+            top: calc-vw(20,1280);
+            height: calc-vw(37,1280);
+            background-size: auto calc-vw(37,1280);
+          }
+          @include mqSP {
+            top: calc-vw(50);
+            height: calc-vw(72);
+            background-size: auto calc-vw(72);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.cards_small-num{
+  display: block;
+  text-align: center;
+}
+
+.carcs_small-title{
+  display: block;
+  text-align: center;
+}
+
+.carcs_small-text{
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+// Cards large
+//
+// 
+//
+// Markup:
+//
+//<div class="cards_gift">
+//<a href="">
+//<img class="js-lazyload" data-src="https://unsplash.it/980/427" alt="">
+//<p class="button_gift"><span href="">今月のギフトを見る</span></p>
+//</a>
+//</div>
+//
+// Styleguide 5.12.0
+
+.cards_large_wrap{
+  background:linear-gradient(90deg,#efefef 0%,#efefef 50%,#f7f7f7 50%,#f7f7f7 100%);
+  @include mqSP{
+    background:inherit;
+  }
+}
+
+.cards_large{
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+
+  > li {
+    width: 640px;
+    padding: 60px 0;
+    box-sizing: border-box;
+    > ul {
+      width: 390px;
+      margin: 0 auto;
+      > li {
+        list-style: disc;
+        margin-bottom: 20px;
+        font-size: 15px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  
+  @include mqTB{
+    width: calc-vw(1280,1280);
+
+    > li {
+      width: calc-vw(640,1280);
+      padding: calc-vw(60,1280) 0;
+      > ul {
+        width: calc-vw(390,1280);
+        > li {
+          margin-bottom: calc-vw(20,1280);
+          font-size: calc-vw(15,1280);
+        }
+      }
+    }
+  }
+  @include mqSP{
+    width: 100%;
+    flex-direction: column;
+
+    > li {
+      width: 100%;
+      padding: calc-vw(10,320) 0 calc-vw(30,320) ;
+      &:first-child {
+        background-color: #efefef;
+      }
+      &:nth-child(2) {
+        background-color: #f7f7f7;
+      }
+      > ul {
+        width: calc-vw(250,320);
+        > li {
+          font-size: 14px;
+          line-height: 1.7;
+          margin-bottom: calc-vw(5,320);
+        }
+      }
+    }
+  }
+}
+
+.cards_large-title{
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  @include mqTB{
+    margin-bottom: calc-vw(50,1280) ;
+    font-size: calc-vw(20,1280);
+  }
+  @include mqSP{
+    font-size: 15px;
+    margin: calc-vw(18,320) 0;
+  }
+}

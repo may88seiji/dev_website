@@ -1,0 +1,145 @@
+// Headboard 
+//
+// Markup:
+//<header class="headBoard" style="background-image:url(https://unsplash.it/1200/500)">
+//<p class="headBoard-lead">連載：前田エマ、服にあう</p>
+//<h1 class="headBoard-title">SNEEUWにあいにいく</h1>
+//<p class="headBoard-description">あああああああああああああああああああ</p>
+//</header>
+//
+// Styleguide 18.0.0
+.headBoard {
+  width: 100%;
+  color: $c_w;
+  margin-bottom: 120px;
+  position: relative;
+  @include mqTB {
+    margin-bottom: calc-vw(120,1280);
+  }
+  @include mqSP {
+    margin-top: calc-vw(-30);
+    margin-bottom: calc-vw(55);
+  }
+  &:before {
+    content: "\e90c";
+    @include icofont;
+    color: $c_w;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    font-size: 90px;
+    z-index: 3;
+    @include mqTB {
+      top: calc-vw(50,1280);
+      right: calc-vw(60,1280);
+      font-size: calc-vw(90,1280);
+    }
+    @include mqSP {
+      top: calc-vw(10);
+      right: calc-vw(10);
+      font-size: calc-vw(95);
+    }
+  }
+  a {
+    &:hover {
+      .headBoard-img {
+        &:after {
+          background-color: rgba($c_k,0.45);
+        }
+      }
+    }
+  }
+  
+}
+
+.headBoard-img {
+  height: 490px;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mqNotSP {
+    background-attachment: fixed;
+  }
+  html.use-tablet & {
+    background-attachment: inherit;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($c_k,0.3);
+    @include transition;
+  }
+  @include mqTB {
+    height: calc-vw(490,1280);
+  }
+  @include mqSP {
+    height: calc-vw(340);
+    margin-bottom: calc-vw(20);
+  }
+}
+
+
+.headBoard-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 950px;
+  z-index: 3;
+  @include mqTB {
+    width: calc-vw(950,1280);
+  }
+  @include mqSP {
+    width: 100%;
+  }
+}
+
+.headBoard-lead {
+  font-size: 16px;
+  margin-bottom: 15px;
+  @include mqTB {
+    font-size: calc-vw(16,1280);
+    margin-bottom: calc-vw(15,1280);
+  }
+  @include mqSP {
+    font-size: 11px;
+    margin-top: calc-vw(20,320);
+    margin-bottom: calc-vw(10);
+  }
+}
+.headBoard-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  @include f_chikumin;
+  @include mqTB {
+    font-size: calc-vw(36,1280);
+    margin-bottom: calc-vw(20,1280);
+  }
+  @include mqSP {
+    font-size: 18px;
+  }
+}
+.headBoard-description {
+  font-size: 14px;
+  @include mqTB {
+    font-size: calc-vw(14,1280);
+  }
+  @include mqSP {
+    font-size: 11px;
+    margin: 0 calc-vw(30);
+    color: $c_k;
+  }
+}
+.headBoard-tags {
+  @extend .cards-tags;
+  > .headBoard-date {
+    @extend .cards-date;
+  }
+}

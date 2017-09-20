@@ -1,0 +1,41 @@
+.login-box-wrap {
+  @extend %clearfix;
+  width: 980px;
+  margin: 0 auto;
+  @include mqTB {
+    width: calc-vw(980,1280);
+  }
+  @include mqSP {
+    width: 100%;
+    padding: 0 calc-vw(30);
+    box-sizing: border-box;
+  }
+}
+.login-box_2col {
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  &:nth-child(1) {
+    float: left;
+    margin-right: 40px;
+  }
+  &:nth-child(2) {
+    float: right;
+  }
+  @include mqSP {
+    width: 100%;
+    float: none;
+  }
+}
+.login-box {
+  position: relative;
+  margin-bottom: 30px;
+  border-left: 4px solid $c_k;
+  border-right: 1px solid $c_k;
+  border-top: 2px solid $c_k;
+  @include mqNotSP {
+    padding-bottom: 70px;
+  }
+  @include mqSP {
+    margin-bottom: 20px;
+  }
+}

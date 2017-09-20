@@ -1,0 +1,347 @@
+// Heading
+//
+// Styleguide 2.0.0
+
+// Heading Section
+//
+// セクションタイトル（折れ罫線つき）
+//
+// Markup:
+// <h1 class="heading_section_primary">GIRL FRIENDS</h1>
+//
+// Styleguide 2.1.0
+.heading_section_primary {
+  @include f_poppins-base;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  padding-top: 90px;
+  overflow: hidden;
+  margin-top: -65px;
+  background-image: url(../img/section-line.svg);
+  background-size: 120px auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+  @include mqTB {
+    font-size: calc-vw(30,1280);
+    padding-top: calc-vw(90,1280);
+    margin-top: calc-vw(-65,1280);
+    background-size: calc-vw(120,1280) auto;
+  }
+  @include mqSP {
+    font-size: 20px;
+    padding-top: calc-vw(50);
+    margin-top: calc-vw(-56);
+    background-size: calc-vw(70);
+  }
+  &:before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: $c_k;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 118px;
+    @include mqTB {
+      left: calc(#{calc-vw(120,1280)} - 2px);
+    }
+    @include mqSP {
+      height: 1px;
+      left: calc(#{calc-vw(70)} - 2px);
+      }
+  }
+  
+  .page-about & {
+    margin-top: 0;
+    text-transform: uppercase;
+    .proper {
+      text-transform: none;
+    }
+  }
+}
+
+// Heading Section
+//
+// セクションタイトル
+//
+// Markup:
+// <h1 class="heading_section_secondary">LATEST</h1>
+//
+// Styleguide 2.2.0
+.heading_section_secondary {
+  @include f_poppins-base-b;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 63px;
+  @include mqTB {
+    padding-bottom: calc-vw(76,1280);
+    font-size: calc-vw(24,1280);
+  }
+  @include mqSP {
+    padding-bottom: calc-vw(35,320);
+    font-size: 18px;
+  }
+  .page-mypage & {
+    border-bottom: 0;
+  }
+  .page-top & {
+    padding-bottom: 60px;
+    @include mqTB {
+      padding-bottom: calc-vw(60,1280);
+    }
+    @include mqSP {
+      padding-bottom: calc-vw(28,320);
+    }
+  }
+  
+  .detail_girlfriends_related & {
+    font-family: $f_base;
+    font-size: 20px;
+    padding-bottom: 64px;
+    @include mqSP{
+      font-size: 13px;
+      padding-bottom: 34px;
+    }
+  }
+}
+
+// Heading Detail
+//
+// 詳細タイトル
+//
+// Markup:
+// <h1 class="heading_detail_primary">吉澤嘉代子×たなかみさき対談<br>二人に共通する「性と妄想」の話</h1>
+//
+// Styleguide 2.3.0
+.heading_detail_primary {
+  @include f_chikumin;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+
+  @include mqTB {
+    margin-top: calc-vw(50,1280);
+    font-size: calc-vw(30,1280);
+    margin-bottom: calc-vw(30,1280);
+  }
+  @include mqSP {
+    margin: 0 auto;
+    margin-top: calc-vw(20,320);
+    margin-bottom: calc-vw(12,320);
+    line-height: 1.5;
+    font-size: 18px;
+  }
+}
+
+// Heading Appendix
+//
+// 補足タイトル
+//
+// Markup:
+// <h1 class="heading_appendix">Profile</h1>
+//
+// Styleguide 2.4.0
+
+.heading_appendix{
+  font-size: 18px;
+  margin: 15px 0;
+  font-weight: bold;
+  @include mqTB{
+  }
+  @include mqSP{
+    margin: calc-vw(10,320) 0;
+  }
+}
+
+// Heading Ja
+//
+// 日本語のページ見出し
+//
+// Markup:
+// <h1 class="heading_page_ja">登録が完了しました</h1>
+//
+// Styleguide 2.5.0
+.heading_page_ja {
+  margin-bottom: 40px;
+  @include f_chikumin;
+  font-size: 25px;
+  text-align: center;
+  @include mqTB {
+    font-size: calc-vw(25,1280);
+  }
+  @include mqSP {
+    margin-bottom: calc-vw(60);
+  }
+}
+
+// Heading Form item
+//
+// フォームのタイトル
+//
+// Markup:
+// <p class="heading_formTitle">生年月日<span>＊</span></p>
+//
+// Styleguide 2.6.0
+.heading_formTitle {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  span {
+    color: $c_red_dark;
+  }
+}
+
+// Heading Box Title
+//
+// 小さいタイトル
+//
+// Markup:
+// <h2 class="heading_tertiary">会員登録がお済みの方</h2>
+//
+// Styleguide 2.7.0
+.heading_tertiary {
+  font-size: 20px;
+  text-align: center;
+  padding: 30px 0;
+  font-weight: bold;
+  @include f_base;
+  @include mqTB {
+    font-size: calc-vw(20, 1280);
+    padding: calc-vw(30,1280) 0;
+  }
+  @include mqSP {
+    font-size: 15px;
+    padding: calc-vw(50) 0;
+    .page-detail_gift & {
+      padding: calc-vw(75) 0 calc-vw(30);
+    }
+  }
+  .page-registration & {
+    padding: 55px 0;
+    @include mqTB {
+      padding: calc-vw(55,1280);
+    }
+    @include mqSP {
+      padding: calc-vw(48);
+    }
+  }
+  .registration-schedule & {
+    padding: 55px 0 5px;
+    @include mqTB {
+      padding: calc-vw(55,1280) 0 calc-vw(5,1280);
+    }
+    @include mqSP {
+      padding: calc-vw(65) 0 0;
+    }
+  }
+  .page-detail_gift & {
+    @include mqSP {
+      font-size: 13px;
+      padding-top: 0;
+    }
+  }
+}
+
+// Heading Mypage
+//
+// マイページ内のタイトル
+//
+// Markup:
+// <h2 class="heading_mypage">会員限定記事</h2>
+//
+// Styleguide 2.8.0
+.heading_mypage {
+  @include f_poppins-base_b;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 24px;
+  .l-side & {
+    padding-bottom: 20px;
+  }
+  &:first-child {
+    padding-top: 0;
+  }
+  @include mqTB {
+    font-size: calc-vw(24, 1280);
+    padding: calc-vw(60,1280) 0;
+  }
+  @include mqSP {
+    font-size: 18px;
+    padding: calc-vw(80) 0;
+  }
+}
+.heading_mypage_cancellation {
+  @extend .heading_mypage;
+  font-size: 20px;
+  text-align: center;
+  @include mqTB {
+    font-size: calc-vw(20, 1280);
+  }
+  @include mqSP {
+    font-size: 15px;
+  }
+}
+
+// Heading Billborad
+//
+// 幅100%のページタイトル
+//
+// Markup:
+// <h1 class="heading_billboard">LATEST</h1>
+//
+// Styleguide 2.9.0
+.heading_billboard {
+  @include f_poppins-base-b;
+  padding: 64px 0;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid $c_k;
+  margin: 0;
+  @include mqTB {
+    padding: calc-vw(64,1280) 0;
+    font-size: calc-vw(24,1280);
+  }
+  @include mqSP {
+    padding-top: calc-vw(28,320);
+    padding-bottom: calc-vw(28,320);
+    font-size: 18px;
+  }
+  .page-reminder & {
+    margin-bottom: 60px;
+    @include mqSP {
+      margin: 0;
+    }
+  }
+  .page-login & {
+    border-bottom: 0;
+  }
+}
+
+// Heading quaternary
+//
+// 小さめ見出し
+//
+// Markup:
+// <h1 class="heading_quaternary">解約をご希望の方</h1>
+//
+// Styleguide 2.10.0
+.heading_quaternary {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+  @include mqTB {
+    margin-bottom: calc-vw(10,1280);
+    font-size: calc-vw(15,1280);
+  }
+  @include mqSP {
+    margin-bottom: calc-vw(10);
+    font-size: 13px;
+  }
+}

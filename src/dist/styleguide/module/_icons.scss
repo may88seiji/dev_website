@@ -1,0 +1,75 @@
+.icons_share {
+  font-size: 0;
+  > li {
+    display: inline-block;
+    margin-right: 20px;
+    @include mqTB {
+      margin-right: calc-vw(20,1280);
+    }
+    @include mqSP {
+      margin-right: calc-vw(20);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    > a {
+      height: 60px;
+      width: 60px;
+      display: block;
+      background-image: url(../img/icon-octagon.svg);
+      background-repeat: no-repeat;
+      background-size: 60px auto;
+      position: relative;
+      line-height: 1;
+      @include transition;
+      @include mqTB {
+        height: calc-vw(60,1280);
+        width: calc-vw(60,1280);
+        background-size: calc-vw(60,1280) auto;
+      }
+      @include mqSP {
+        height: calc-vw(58);
+        width: calc-vw(58);
+        background-size: calc-vw(58);
+      }
+      i {
+        color: $c_w;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+        &.icon-twitter {
+          font-size: 20px;
+          @include mqTB {
+            font-size: calc-vw(20,1280);
+          }
+          @include mqSP {
+            font-size: 11px;
+          }
+        }
+        &.icon-facebook {
+          font-size: 24px;
+          @include mqTB {
+            font-size: calc-vw(24,1280);
+          }
+          @include mqSP {
+            font-size: 13px;
+          }
+        }
+        &.icon-line {
+          font-size: 16px;
+          @include mqTB {
+            font-size: calc-vw(16,1280);
+          }
+          @include mqSP {
+            font-size: 15px;
+          }
+        }
+      }
+      &:hover {
+        opacity: $tr_opacity;
+      }
+    }
+  }
+}

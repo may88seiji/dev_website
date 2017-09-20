@@ -1,0 +1,816 @@
+// Header
+//
+// Styleguide 3.0.0
+
+.header-logo {
+  position: relative;
+  z-index: 10;
+  line-height: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 208px;
+  height: 210px;
+  margin: 20px 50px 0 0;
+  box-sizing: border-box;
+  @include mqNotSP {
+    background-image: url(../img/logo-octagon.png);
+    @include transition;
+    transition-property: opacity;
+    &:hover {
+      opacity: $tr_opacity;
+    }
+  }
+  @include mqTB {
+    margin: calc-vw(20,1280) calc-vw(50,1280) 0 0;
+    height: calc-vw(210,1280);
+    width: calc-vw(208,1280);
+    background-size: calc-vw(208,1280) auto;
+  }
+  @include mqSP {
+    height: calc-vw(100);
+    width: calc-vw(180);
+    margin: 0;
+    background-image: url(../img/logo-min.png);
+    background-size: calc-vw(180) auto;
+    .header_top & {
+      margin: calc-vw(30) 0 0 0;
+      height: calc-vw(210);
+      width: calc-vw(208);
+      background-image: url(../img/logo-octagon.png);
+      background-size: calc-vw(208) auto;
+    }
+  }
+  a {
+    display: block;
+    height: 100%;
+  }
+  .header_simple & {
+    margin: 0;
+    padding: 0;
+    width: 184px;
+    height: 48px;
+    background-image: url(../img/logo-min.png);
+    background-size: 100%;
+    @include mqSP {
+      position: absolute;
+      top: 0;
+      width: 92px;
+      height: 100%;
+      background-size: auto 24px;
+    }
+  }
+  .js-fixedNavi.is-fixed & {
+    width: 184px;
+    height: 50px;
+    margin: 0 0 0 16px;
+    background-image: url(../img/logo-min.png);
+    background-size: 100%;
+    @include mqTB {
+      height: calc-vw(50,1280);
+      width: calc-vw(180,1280);
+      margin: 0 0 0 calc-vw(16,1280);
+    }
+    @include mqSP {
+      width: calc-vw(180);
+      background-size: calc-vw(180) auto;
+      height: calc-vw(100);
+      margin: 0;
+    }
+  }
+}
+
+.header-pagetitle {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  @include mqSP {
+    right: 15px;
+    top: 25px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
+.header-navi {
+  width: 515px;
+  @include mqTB {
+    width: calc-vw(515,1280);
+  }
+}
+
+
+// Header navi
+//
+// ヘッダーナビ
+//
+// Markup:
+//<ul class="header-navi-main">
+//<li><a href="">FEATURE</a></li>
+//<li><a href="">GIFT</a></li>
+//<li><a href="">GIRLFRIENDS</a></li>
+//<li><a href="">ABOUT</a></li>
+//</ul>
+//
+// Styleguide 3.1.0
+.header-navi-main {
+  margin: 36px 0 11px;
+  font-size: 0;
+  @include mqTB {
+    margin: calc-vw(36,1280) 0 calc-vw(11,1280);
+  }
+  @include mqSP {
+    margin: 0 0 calc-vw(90) 0;
+  }
+  li {
+    @include f_poppins_b;
+    font-size: 21px;
+    display: inline-block;
+    margin-right: 28px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include mqTB {
+      margin-right: calc-vw(28,1280);
+      font-size: calc-vw(21,1280);
+    }
+    @include mqSP {
+      font-size: calc-vw(32);
+      display: block;
+      margin-bottom: calc-vw(15);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      @include transition;
+      &:hover {
+        color: $c_gray2;
+      }
+    }
+  }
+  .js-spNavi:not(.is-open) & {
+    .js-fixedNavi.is-fixed & {
+      margin: 10px 0;
+      position: absolute;
+      left: 320px;
+      @include mqTB {
+        margin: calc-vw(10,1280) 0;
+        left: calc-vw(320,1280);
+      }
+    }
+  }
+}
+
+
+// Header tags
+//
+// ヘッダー ハッシュタグ
+//
+// Markup:
+//<ul class="header-navi-tags">
+//<li><a href="">#LOVE</a></li>
+//<li><a href="">#WORK</a></li>
+//<li><a href="">#SOCIETY</a></li>
+//<li><a href="">#FASHION</a></li>
+//<li><a href="">#BEAUTY/HEALTH</a></li>
+//<li><a href="">#EAT</a></li>
+//<li><a href="">#TRIP</a></li>
+//<li><a href="">#WORDS</a></li>
+//<li><a href="">#MOVIE</a></li>
+//<li><a href="">#MUSIC</a></li>
+//<li><a href="">#ART</a></li>
+//<li><a href="">#連載</a></li>
+//</ul>
+//
+// Styleguide 3.2.0
+.header-navi-tags {
+  margin-left: -25px;
+  font-size: 0;
+  @include mqTB {
+    margin-left: calc-vw(-25,1280);
+  }
+  @include mqSP {
+    margin-left: calc-vw(-34);
+    margin-bottom: calc-vw(72);
+  }
+  li {
+    @include f_poppins;
+    font-size: 14px;
+    letter-spacing: 0.025em;
+    margin-left: 25px;
+    display: inline-block;
+    
+    @include mqTB {
+      font-size: calc-vw(14,1280);
+      margin-left: calc-vw(25,1280);
+    }
+    @include mqSP {
+      font-size: calc-vw(24);
+      line-height: 2;
+      margin-left: calc-vw(36);
+    }
+    a {
+      @include transition;
+      &:hover {
+        color: $c_gray2;
+      }
+    }
+  }
+  .js-spNavi:not(.is-open) & {
+    .js-fixedNavi.is-fixed & {
+      display: none;
+    }
+  }
+}
+
+// Header register
+//
+// ヘッダー 登録系ナビ（SP）
+//
+// Markup:
+//<ul class="header-navi-register">
+//<li><a href="">ログイン</a></li>
+//<li><a href="">新規登録</a></li>
+//</ul>
+//
+// Styleguide 3.3.0
+.header-navi-register {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc-vw(60);
+  li {
+    @include mqSP {
+      font-size: 13px;
+      font-weight: bold;
+      display: inline-block;
+      a {
+        background-color: $c_w;
+        color: $c_k;
+        padding: calc-vw(14) calc-vw(10) calc-vw(12);
+        display: block;
+        min-width: calc-vw(170);
+        text-align: center;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+// Header register
+//
+// ヘッダー 登録系ナビ（PC）
+//
+// Markup:
+//<ul class="header-utility-register">
+//<li><a href="">ログイン</a></li>
+//<li><a href="">新規登録</a></li>
+//</ul>
+//
+// Styleguide 3.4.0
+.header-utility-register {
+  @include transition;
+  font-size: 0;
+  li {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include mqTB {
+      font-size: calc-vw(14,1280);
+      margin-right: calc-vw(10,1280);
+    }
+    
+  }
+  .js-fixedNavi.is-fixed & {
+    position: absolute;
+    right: 60px;
+    top: 10px;
+    @include mqTB {
+      right: calc-vw(60,1280);
+      top: calc-vw(10,1280);
+    }
+  }
+}
+
+
+
+.header-utility {
+  margin: 20px 0 0 auto;
+  @include mqTB {
+    margin: calc-vw(20,1280) 0 0 auto;
+  }
+  .js-fixedNavi.is-fixed & {
+    margin: 12px 95px 0 auto;
+    @include mqTB {
+      margin: calc-vw(12,1280) calc-vw(95,1280) 0 auto;
+    }
+
+  }
+}
+
+// Header utility-info
+//
+// ヘッダー お知らせ・検索
+//
+// Markup:
+//<ul class="header-utility-info">
+//<li><a href="">お知らせ</a></li>
+//<li><span>SEARCH</span><input type="text" /></li>
+//</ul>
+//
+// Styleguide 3.5.0
+.header-utility-info {
+  font-size: 0;
+  height: 25px;
+  position: relative;
+  margin-bottom: 25px;
+  @include mqTB {
+    height: calc-vw(25,1280);
+    margin-bottom: calc-vw(25,1280);
+  }
+  li {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    border-bottom: 1px solid $c_k;
+    margin-right: 15px;
+    white-space: nowrap;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include mqTB {
+      font-size: calc-vw(14,1280);
+      margin-right: calc-vw(15,1280);
+    }
+    @include mqSP {
+      font-size: 13px;
+      font-weight: bold;
+    }
+    &.header-utility-info-news {
+      right: 75px;
+      top: 0;
+      @include mqTB {
+        right: calc-vw(75,1280);
+      }
+      .js-fixedNavi.is-fixed & {
+        display: none;
+      }
+    }
+    &.header-utility-info-search {
+      right: 0;
+      width: 75px;
+      overflow: hidden;
+      @include transition;
+      transition-property: width;
+      cursor: pointer;
+      @include mqTB {
+        width: calc-vw(75,1280);
+      }
+      input {
+        background-color: transparent;
+        width: 100%;
+        font-size: 14px;
+        box-sizing: border-box;
+        opacity: 0;
+        @include transition;
+        transition-property: opacity;
+        @include mqTB {
+          font-size: calc-vw(14,1280);
+        }
+      }
+      span {
+      }
+      .header-search-button {
+        position: absolute;
+        top: 6px;
+        right: 3px;
+        pointer-events: none;
+        display: inline-block;
+        @include mqTB {
+          top: calc-vw(6,1280);
+          right: 0;
+        }
+        i {
+          &:after {
+            @include icofont;
+            content: "\e907";
+            font-size: 13px;
+            @include mqTB {
+              font-size: calc-vw(13,1280);
+            }          
+          }
+        }
+      }
+      &.is-active {
+        width: 235px;
+        @include mqTB {
+          width: calc-vw(235,1280);
+        }
+        input {
+          opacity: 1;
+        }
+        span {
+          display: none;
+        }
+        .header-search-button {
+          pointer-events: auto;
+        }
+      }
+      .js-fixedNavi.is-fixed & {
+        position: absolute;
+        right: 270px;
+        border-bottom: 0;
+        width: 25px;
+        top: 10px;
+        padding: 3px 0;
+        z-index: 3;
+        html.is-login & {
+          right: 290px;
+        }
+        &:after {
+          content: "";
+          height: 1px;
+          width: 0;
+          background-color: $c_k;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+        @include mqTB {
+          right: calc-vw(280,1280);
+          width: calc-vw(25,1280);
+          top: calc-vw(10,1280);
+          padding: calc-vw(3,1280) 0;
+          html.is-login & {
+            right: calc-vw(310,1280);
+          }
+        }
+        .header-search-button {
+          i {
+            &:after {
+              font-size: 17px;
+              @include mqTB {
+                font-size: calc-vw(17,1280);
+              }
+            }
+          }
+        }
+        span {
+          display: none;
+        }
+        &.is-active {
+          width: 215px;
+          &:after {
+            width: 100%;
+          }
+          @include mqTB {
+            width: calc-vw(200,1280);
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .js-fixedNavi.is-fixed & {
+    position: static;
+  }
+}
+
+// Header sns
+//
+// ヘッダー SNS（PC）
+//
+// Markup:
+//<ul class="header-utility-sns">
+//<li><a href=""><i class="icon-tw"></i></a></li>
+//<li><a href=""><i class="icon-inst"></i></a></li>
+//<li><a href=""><i class="icon-fb"></i></a></li>
+//</ul>
+//
+// Styleguide 3.6.0
+.header-utility-sns {
+  margin-bottom: 23px;
+  font-size: 0;
+  text-align: right;
+  @include mqTB {
+    margin-bottom: calc-vw(23,1280);
+  }
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 1;
+    @include mqTB {
+      margin-right: calc-vw(20,1280);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      @include transition;
+      display: block;
+      &:hover {
+        color: $c_gray2;
+      }
+      i {
+        font-size: 23px;
+        @include mqTB {
+          font-size: calc-vw(23,1280);
+        }
+        &.icon-twitter {
+          font-size: 21px;
+          @include mqTB {
+            font-size: calc-vw(21,1280);
+          }
+        }
+      }
+
+    }
+  }
+  .js-fixedNavi.is-fixed & {
+    display: none;
+  }
+}
+
+// Header sp-navi
+//
+// ヘッダー SPナビ
+//
+// Markup:
+//<div class="header-humberger"><i></i></div>
+//<div class="header-navi js-spNavi">
+//<ul class="header-navi-main">
+//<li><a href="">FEATURE</a></li>
+//<li><a href="">GIFT</a></li>
+//<li><a href="">GIRLFRIENDS</a></li>
+//<li><a href="">ABOUT</a></li>
+//</ul>
+//<ul class="header-navi-tags">
+//<li><a href="">#LOVE</a></li>
+//<li><a href="">#WORK</a></li>
+//<li><a href="">#SOCIETY</a></li>
+//<li><a href="">#FASHION</a></li>
+//<li><a href="">#BEAUTY/HEALTH</a></li>
+//<li><a href="">#EAT</a></li>
+//<li><a href="">#TRIP</a></li>
+//<li><a href="">#WORDS</a></li>
+//<li><a href="">#MOVIE</a></li>
+//<li><a href="">#MUSIC</a></li>
+//<li><a href="">#ART</a></li>
+//<li><a href="">#連載</a></li>
+//</ul>
+//<div class="header-navi-search pc-hide"><input type="text" /></div>
+//<ul class="header-navi-sns pc-hide">
+//<li><a href=""><i class="icon-tw"></i></a></li>
+//<li><a href=""><i class="icon-inst"></i></a></li>
+//<li><a href=""><i class="icon-fb"></i></a></li>
+//<li><a href="">お知らせ</a></li>
+//</ul>
+//<ul class="header-navi-register pc-hide">
+//<li><a href="">ログイン</a></li>
+//<li><a href="">新規登録</a></li>
+//</ul>
+//</div>
+//
+// Styleguide 3.7.0
+.header-humberger {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: calc-vw(100);
+  height: calc-vw(100);
+  .header_top & {
+    top: 13px;
+  }
+  .js-fixedNavi.is-fixed & {
+    top: 0;
+  }
+  @include mqNotSP {
+    display: none;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $c_k;
+  }
+  &:before {
+    top: 17px;
+  }
+  &:after {
+    top: 24px;
+   
+  }
+  i {
+    display: block;
+    position: absolute;
+    top: 31px;
+    width: 25px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $c_k;
+    
+  }
+}
+
+.header-navi_feature {
+  font-size: 0;
+  position: absolute;
+  top: calc-vw(32);
+  left: calc-vw(260);
+  li {
+    font-size: 14px;
+    @include f_poppins-b;
+    display: inline-block;
+    margin-right: 16px;
+    &:last-child{
+      margin-right: 0;
+    }
+    @include mqTB {
+      font-size: calc-vw(14,1280);
+      margin-right: calc-vw(16,1280);
+    }
+    @include mqSP {
+      font-size: calc-vw(28);
+    }
+  }
+  .header_top & {
+    left: calc-vw(275);
+    top: calc-vw(60);
+  }
+  .js-fixedNavi.is-fixed & {
+    top: calc-vw(32);
+    left: calc-vw(260);
+  }
+}
+
+
+
+.header-navi-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  &:before,
+  &:after {
+    @include transition;
+    transition-delay: 0.1s;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: $c_w;
+    position: absolute;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    top: 25px;
+    left: 17px;
+  }
+  i {
+    @include transition;
+    transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    height: 3px;
+    width: 25px;
+    display: block;
+    background-color: $c_w;
+    position: absolute;
+    top: 14px;
+    transition-duration: $tr_speed;
+  }
+  .is-open &{
+    position: fixed;
+    &:before {
+      transform-origin: left top;
+      transform: rotate(45deg);
+      top: 17px;
+      left: 22px;
+    }
+    &:after {
+      opacity: 0;
+    }
+    
+    i {
+      transform-origin: left top;
+      transform: rotate(-45deg);
+      top: 35px;
+      left: 20px;
+    }
+  }
+}
+
+.header-navi-search {
+  margin-bottom: calc-vw(60);
+  border: 2px solid $c_w;
+  box-sizing: border-box;
+  position: relative;
+  input {
+    background-color: transparent;
+    width: 100%;
+    height: calc-vw(72);
+    font-size: 15px;
+    color: #fff;
+    padding: calc-vw(10);
+    box-sizing: border-box;
+  }
+  .header-search-button {
+    position: absolute;
+    right: calc-vw(10);
+    top: 50%;
+    transform: translateY(-50%);  
+    i {
+      &:after {
+        @include icofont;
+        content: "\e907";
+        color: $c_w;
+        font-size: calc-vw(46);
+      } 
+    }
+  }
+}
+
+.header-navi-sns {
+  font-size: 0;
+  margin-bottom: calc-vw(60);
+  li {
+    display: inline-block;
+    font-size: 13px;
+    @include f_base;
+    margin-right: calc-vw(30);
+    &:last-child {
+      margin-right: 0;
+      
+    }
+    i {
+      font-size: 17px;
+    }
+    &.header-navi-sns-info {
+      position: relative;
+      top: -3px;
+      left: 10px;
+      a {
+        border-bottom: 1px solid $c_w;
+      }
+    }
+  }
+}
+
+.js-spNavi {
+  @include mqSP {
+    background-color: $c_k;
+    color: $c_w;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    width: calc-vw(490);
+    height: 100vh;
+    z-index: 10;
+    box-sizing: border-box;
+    right: calc-vw(-490);
+    overflow-y: auto;
+    box-sizing: border-box;
+    @include transition;
+    .header-navi-inner {
+      padding: calc-vw(115) calc-vw(60);
+      margin-bottom: calc-vw(115);
+    }
+    &.is-open {
+      right: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.js-header_ghost {
+  height: 180px;
+  width: 100%;
+  display: none;
+  @include mqTB {
+    height: calc-vw(180,1280);
+  }
+  @include mqSP {
+    height: calc-vw(160);
+  }
+  &.is-show {
+    display: block;
+  }
+}

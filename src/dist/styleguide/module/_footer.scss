@@ -1,0 +1,735 @@
+// Footer
+//
+// Styleguide 4.0.0
+
+.footer-inner {
+  width: $w_PC-inner + px;
+  margin: 0 auto;
+  position: relative;
+  @include mqTB {
+    width: calc-vw($w_PC-inner,1280);
+  }
+  @include mqSP {
+    width: 100%;
+  }
+}
+
+.footer-main {
+  padding: 110px 0 140px;
+  background-image: url(../img/footer-main-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include mqTB {
+    padding: calc-vw(110,1280) 0 calc-vw(140,1280);
+  }
+  @include mqSP {
+    padding: calc-vw(42) 0 calc-vw(35);
+    background-image: url(../img/footer-main-bg-sp.jpg);
+  }
+}
+
+.footer-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mqSP {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+  a {
+    display: block;
+    height: 100%;
+    @include transition;
+    transition-property: opacity;
+    &:hover {
+      opacity: $tr_opacity;
+    }
+  }
+  svg {
+    width: 185px;
+    height: 188px;
+    @include mqTB {
+      width: calc-vw(185,1280);
+      height: calc-vw(188,1280);
+    }
+    @include mqSP {
+      width: calc-vw(260);
+      height: auto;
+    }
+  }
+  .footer_simple & {
+    left: calc(50% - 36px);
+    top: 160px;
+    svg {
+      width: 72px;
+      height: 73px;
+    }
+    @include mqSP {
+      left: calc(50% - 32px);
+      svg {
+        width: 64px;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Footer about
+//
+// フッター About
+//
+// Markup:
+//<div class="footer-about">
+//<h2 class="footer-about-heading">What's "She is"?</h2>
+//<p class="footer-about-description">"She is"は</p>
+//<p class="button_fill"><a href="">About "She is"</a></p>
+//</div>
+//
+// Styleguide 4.1.0
+.footer-about {
+  padding-top: 40px;
+  margin-left: 300px;
+  @include mqTB {
+    padding-top: calc-vw(40,1280);
+    margin-left: calc-vw(300,1280);
+  }
+  @include mqSP {
+    padding-top: calc-vw(30);
+    margin-left: 0;
+  }
+}
+.footer-about-heading {
+  @include f_poppins-b;
+  font-size: 30px;
+  @include mqTB {
+    font-size: calc-vw(30,1280);
+  }
+  @include mqSP {
+    font-size: 19px;
+    text-align: center;
+  }
+}
+.footer-about-description {
+  @include f_base;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 25px;
+  @include mqTB {
+    font-size: calc-vw(14,1280);
+    margin-bottom: calc-vw(25);
+  }
+  @include mqSP {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+// Footer feature
+//
+// Markup:
+//<div class="footer-feature">
+//<h3 class="footer-feature-heading">Feature<span>毎月特集する</span></h3>
+//<ul class="footer-feature-way">
+//<li>
+//<a href="">
+//<h4 class="footer-feature-way-heading">WEB<br />MAGAZINE</h4>
+//<p class="footer-feature-way-text">日常に発見を</p>
+//</a>
+//</li>
+//<li>
+//<a href="">
+//<h4 class="footer-feature-way-heading">GIFT</h4>
+//<p class="footer-feature-way-text">日々を祝福する</p>
+//</a>
+//</li>
+//</ul>
+//</div>
+//
+// Styleguide 4.2.0
+.footer-feature {
+  margin: 60px 0 0 300px;
+  border: 2px solid $c_w;
+  padding: 20px 18px 18px;
+  width: 660px;
+  box-sizing: border-box;
+  @include mqTB {
+    margin: calc-vw(60,1280) 0 0 calc-vw(300,1280);
+    padding: calc-vw(20,1280) calc-vw(18,1280) calc-vw(18,1280);
+    width: calc-vw(660,1280);
+  }
+  @include mqSP {
+    margin: calc-vw(37) calc-vw(30) 0;
+    padding: calc-vw(37) calc-vw(25);
+    width: calc(100% - #{calc-vw(60)});
+    box-sizing: border-box;
+  }
+}
+.footer-feature-heading {
+  @include f_apple;
+  font-size: 21px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  @include mqTB {
+    font-size: calc-vw(21,1280);
+    margin-bottom: calc-vw(10,1280);
+    margin-right: calc-vw(5,1280);
+  }
+  @include mqSP {
+    text-align: center;
+    margin-bottom: calc-vw(30);
+    margin-right: 0;
+  }
+  span {
+    margin-left: 15px;
+    font-size: 13px;
+    @include mqTB {
+      margin-left: calc-vw(15,1280);
+      font-size: calc-vw(13,1280);
+    }
+    @include f_base;
+    @include mqSP {
+      display: block;
+      margin-left: 0;
+    }
+  }
+}
+.footer-feature-way {
+  display: flex;
+  justify-content: space-between;
+  @include mqSP {
+    flex-direction: column;
+  }
+  li {
+    width: 303px;
+    position: relative;
+    box-sizing: border-box;
+    a {
+      display: block;
+      background-color: $c_w;
+      @include transition;
+      position: relative;
+      height: 94px;
+      @include mqTB {
+        height: calc-vw(94,1280);
+      }
+      @include mqSP {
+        height: inherit;
+      }
+      &:after {
+        @include icofont;
+        content: "\e901";
+        position: absolute;
+        right: 15px;
+        bottom: 23px;
+        font-size: 10px;
+        @include transition;
+        @include mqTB {
+          right: calc-vw(10,1280);
+          bottom: calc-vw(23,1280);
+        }
+        @include mqSP {
+          bottom: calc-vw(30);
+          right: calc-vw(30);
+        }
+      }
+      &:hover {
+        background-color: $c_k;
+        svg {
+          fill: $c_w; 
+        }
+        &:after {
+          color: $c_w;
+          transform: translateX(5px);
+        }
+        .footer-feature-way-heading,
+        .footer-feature-way-text {
+          color: $c_w;
+        }
+      }
+    }
+    @include mqTB {
+      width: calc-vw(304,1280);
+    }
+    @include mqSP {
+      width: 100%;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    svg {
+      position: absolute;
+      @include transition;
+    }
+    &.footer-feature-way-magazine {
+      a {
+        padding: 22px 10px 22px 127px;
+        @include mqTB {
+          padding: calc-vw(22,1280) calc-vw(10,1280) calc-vw(22,1280) calc-vw(127,1280);
+        }
+        @include mqSP {
+          padding: 18px 10px 18px 120px;
+        }
+      }
+
+      svg {
+        width: 77px;
+        height: 115px;
+        top: 14px;
+        left: 30px;
+        @include mqTB {
+          width: calc-vw(77,1280);
+          height: calc-vw(115,1280);
+          top: calc-vw(14,1280);
+          left: calc-vw(30,1280);
+        }
+        @include mqSP {
+          width: 64px;
+          height: auto;
+          top: 15px;
+          left: 28px;
+        }
+      }
+    }
+    &.footer-feature-way-gift {
+      a {
+        padding: 22px 10px 22px 148px;
+        @include mqTB {
+          padding: calc-vw(22,1280) calc-vw(10,1280) calc-vw(22,1280) calc-vw(148,1280);
+        }
+        @include mqSP {
+          padding: 18px 10px 18px 120px;
+        }
+      }
+
+      svg {
+        top: 32px;
+        left: 22px;
+        width: 107px;
+        height: 75px;
+        @include mqTB {
+          top: calc-vw(32,1280);
+          left: calc-vw(22,1280);
+          width: calc-vw(107,1280);
+          height: calc-vw(75,1280);
+        }
+        @include mqSP {
+          width: 88px;
+          height: auto;
+          top: 26px;
+          left: 17px;
+        }
+      }
+    }
+  }
+}
+
+.footer-feature-way-heading {
+  @include f_poppins-b;
+  font-size: 21px;
+  line-height: 1.25;
+  @include transition;
+  @include mqTB {
+    font-size: calc-vw(21,1280);
+  }
+
+  @include mqSP {
+    font-size: 17px;
+  }
+}
+.footer-feature-way-text {
+  @include f_base;
+  font-size: 13px;
+  line-height: 1.6;
+  @include transition;
+  @include mqTB {
+    font-size: calc-vw(13,1280);
+  }
+
+  @include mqSP {
+    font-size: 12px;
+  }
+}
+
+// Footer SNS
+//
+// Markup:
+//<ul class="footer-sns">
+//<li><a href=""><i class="icon-tw"></i>Twitter</a></li>
+//<li><a href=""><i class="icon-inst"></i>Instagram</a></li>
+//<li><a href=""><i class="icon-fb"></i>Facebook</a></li>
+//</ul>
+//
+// Styleguide 4.3.0
+.footer-sns {
+  padding-top: 268px;
+  float: left;
+  font-size: 0;
+  @include mqSP {
+    text-align: center;
+  }
+  > li {
+    font-size: 14px;
+    margin-bottom: 15px;
+    @include f_poppins-b;
+    &:first-child {
+      @include mqSP {
+        i {
+          font-size: calc-vw(41);
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+      i {
+        @include mqSP {
+          margin-right: 0;
+        }
+      }
+    }
+    span {
+      @include transition;
+    }
+    @include mqTB {
+      font-size: calc-vw(14,1280);
+      margin-bottom: calc-vw(15,1280);
+    }
+    @include mqSP {
+      display: inline-block;
+      margin-bottom: 0;
+      span {
+        display: none;
+      }
+    }
+    a {
+      display: block;
+      &:hover {
+        span {
+          color: $c_gray2;
+        }
+        i {
+          &:before {
+            color: $c_gray2;
+          }
+        }
+      }
+    }
+  }
+  i {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url(../img/icon-octagon_w.svg);
+    background-size: 50px auto;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 20px;
+    @include mqTB {
+      height: calc-vw(50,1280);
+      width: calc-vw(50,1280);
+      background-size: calc-vw(50,1280) auto;
+      margin-right: calc-vw(10,1280);
+      font-size: calc-vw(20,1280);
+    }
+    @include mqSP {
+      height: calc-vw(100);
+      width: calc-vw(100);
+      background-size: calc-vw(100) auto;
+      margin-right: calc-vw(30);
+      font-size: calc-vw(48);
+    }
+    &:before {
+      @include transition;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  @include mqTB {
+    padding-top: calc-vw(268,1280);
+  }
+  @include mqSP {
+    float: none;
+    padding-top: calc-vw(30);
+  }
+}
+
+
+// Footer Navi
+//
+// Markup:
+//<div class="footer-navi">
+//<ul class="footer-navi-link">
+//<li><a href="">プライバシーポリシー</a></li>
+//<li><a href="">利用規約</a></li>
+//<li><a href="">特定取引法に基づく表記</a></li>
+//<li><a href="">サイトマップ</a></li>
+//<li><a href="">お問い合わせ</a></li>
+//<li><a href="">よくあるご質問</a></li>
+//</ul>
+//</div>
+//
+// Styleguide 4.5.0
+.footer-navi {
+  background-color: $c_w;
+  text-align: center;
+  padding: 20px 0;
+  @include mqTB {
+    padding: calc-vw(20,1280);
+  }
+  .footer_simple & {
+    padding: 30px 0;
+  }
+}
+
+.footer-navi-link {
+  font-size: 0;
+  @include mqSP{
+    margin: 0 calc-vw(20,320);
+  }
+  li {
+    display: inline-block;
+    font-size: 11px;
+    @include f_base;
+    margin-right: 22px;
+    @include mqTB {
+      font-size: calc-vw(11,1280);
+      margin-right: calc-vw(22,1280);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    @include mqSP {
+      line-height: 2;
+    }
+    a {
+      border-bottom: 1px solid $c_k;
+      @include transition;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+// Footer conduct
+//
+// 運営・メディア
+//
+// Markup:
+//<div class="footer-conduct">
+//<div class="footer-inner">
+//<p class="footer-conduct-cinra">Powerd by <svg viewBox="0 0 42.37 12.14"><use xlink:href="#s-logo_cinra"></use></svg></p>
+//<ul class="footer-conduct-media">
+//<li><a href="">CINRA.NET</a></li>
+//<li><a href="">CINRA.JOB</a></li>
+//<li><a href="">CINRA.STORE</a></li>
+//<li><a href="">exPoP!!!!!</a></li>
+//<li><a href="">HereNow</a></li>
+//</ul>
+//<p class="footer-conduct-copyright">Copyright CINRA. inc, All Rights Reserved</p>
+//</div>
+//</div>
+//
+// Styleguide 4.6.0
+.footer-conduct {
+  color: $c_w;
+  background-color: $c_k;
+  padding: 30px 0;
+  @include mqTB {
+    padding: calc-vw(30,1280) 0;
+  }
+  @include mqSP {
+    padding: 40px 0;
+  }
+  .footer-inner {
+    @extend %clearfix;
+  }
+}
+.footer-conduct-cinra {
+  @include f_poppins;
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mqTB {
+    font-size: calc-vw(11,1280);
+  }
+  @include mqSP {
+    position: static;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+  svg {
+    width: 90px;
+    height: 26px;
+    fill: $c_w;
+    display: block;
+    margin-top: 5px;
+    @include mqTB {
+      width: calc-vw(90,1280);
+      height: calc-vw(26,1280);
+    }
+    @include mqSP {
+      width: 72px;
+      height: auto;
+      margin: 5px auto 0;
+    }
+  }
+}
+
+.footer-conduct-media {
+  font-size: 0;
+  text-align: right;
+  margin-bottom: 15px;
+  @include mqTB {
+    margin-bottom: calc-vw(15,1280);
+  }
+  @include mqSP {
+    text-align: center;
+    padding: 0 calc-vw(110);
+  }
+  @media screen and (max-width: 320px) {
+    padding: 0 calc-vw(75);
+  }
+  li {
+    display: inline-block;
+    @include f_poppins-b;
+    font-size: 13px;
+    letter-spacing: normal;
+    @include mqTB {
+      font-size: calc-vw(13,1280);
+    }
+
+    @include mqSP {
+      line-height: 2;
+      font-size: 12px;
+    }
+
+    &:after {
+      content: "";
+      height: 1em;
+      width: 1px;
+      background-color: $c_w;
+      margin: 0 12px;
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      @include mqTB {
+        margin: 0 calc-vw(10,1280);
+        top: calc-vw(5,1280);
+      }
+
+    }
+    &:last-child {
+      &:after {
+        margin-right: 0;
+        padding-right: 0;
+        content: none;
+      }
+    }
+    &:nth-child(2) {
+      &:after {
+        @include mqSP {
+          margin-right: 0;
+          padding-right: 0;
+          content: none;
+        }
+      }
+    }
+    a {
+      border-bottom: 1px solid $c_w;
+      @include transition;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+.footer-conduct-copyright {
+  text-align: right;
+  @include f_poppins;
+  font-size: 12px;
+  color: $c_gray2;
+  @include mqTB {
+    font-size: calc-vw(12,1280);
+  }
+  @include mqSP {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+
+// Footer crumb
+//
+// フッター ぱんくず
+//
+// Markup:
+//<div class="footer-crumb">
+//<ul class="footer-crumb-list">
+//<li><a href="">HOME</a></li>
+//<li><a href="">特集一覧</a></li>
+//<li><a href="">8月の特集</a></li>
+//</ul>
+//</div>
+//
+// Styleguide 4.7.0
+.footer-crumb {
+  border-top: 1px solid $c_gray;
+  background-color: $c_w;
+}
+.footer-crumb-list {
+  padding: 15px 0;
+  width: $w_PC-inner + px;
+  margin: 0 auto;
+  font-size: 0;
+  box-sizing: border-box;
+  @include mqTB {
+    width: calc-vw($w_PC-inner,1280);
+    padding: calc-vw(15,1280) 0;
+  }
+  @include mqSP {
+    width: 100%;
+    padding: calc-vw(10) calc-vw($w_SP-padding);
+  }
+  li {
+    color: $c_gray3;
+    display: inline-block;
+    font-size: 13px;
+    @include mqTB {
+      font-size: calc-vw(13,1280);
+    }
+    @include mqSP {
+      font-size: 10px;
+    }
+
+    &:after {
+      content: ">";
+      display: inline-block;
+      margin: 0 15px;
+      @include mqTB {
+        margin: 0 calc-vw(15,1280);
+      }
+    }
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+    &.is-current {
+      a {
+        pointer-events: none;
+      }
+    }
+    a {
+      color: $c_gray3;
+    }
+  }
+}
