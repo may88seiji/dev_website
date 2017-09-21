@@ -646,14 +646,6 @@ a.pseudo-class-hover .cards_mypage-delivery-schedule {
   color: #000;
 }
 
-.side-girlfriends li.pseudo-class-hover {
-  opacity: 0.7;
-}
-
-.side-girlfriends li > a.pseudo-class-hover {
-  opacity: 0.7;
-}
-
 .registration-status li.pseudo-class-first-child {
   margin-left: 0;
 }

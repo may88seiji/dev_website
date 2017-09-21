@@ -47,41 +47,7 @@ $f_chikumin: 'FOT-筑紫B丸ゴシック Std D', serif;
 
 @mixin f_base {
   font-family: $f_base;
-  letter-spacing: 0.025em;
-}
-
-@mixin f_poppins {
-  font-family: $f_poppins;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-@mixin f_poppins_b {
-  font-family: $f_poppins;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-@mixin f_poppins-base {
-  font-family: $f_poppins,$f_base;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-@mixin f_poppins-base_b {
-  font-family: $f_poppins,$f_base;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-@mixin f_apple {
-  font-family: $f_apple;
-  letter-spacing: normal;
-}
-
-@mixin f_chikumin {
-  font-family: $f_chikumin;
-  letter-spacing: normal;
+//  letter-spacing: 0.025em;
 }
 
 
