@@ -646,6 +646,11 @@ a.pseudo-class-hover .cards_mypage-delivery-schedule {
   color: #000;
 }
 
+.side-navi-main li a.pseudo-class-hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
 .registration-status li.pseudo-class-first-child {
   margin-left: 0;
 }

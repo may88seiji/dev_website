@@ -8413,6 +8413,21 @@ input:-webkit-autofill {
   font-size: 14px; }
   .side-navi-main li {
     margin-bottom: 12px; }
+    .side-navi-main li a {
+      transition: 0.3s;
+      padding-bottom: 2px; }
+      .side-navi-main li a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid; }
+  .side-navi-main .is-current > a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 2px; }
+
+.side-utility-sns li {
+  display: inline-block;
+  font-size: 10px;
+  margin-right: 12px; }
 
 .registration-status {
   display: flex;
