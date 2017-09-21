@@ -645,8 +645,8 @@ input:-webkit-autofill {
     font-size: 20px;
     margin-bottom: 1.5em;
     line-height: 1.8;
-    font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-    letter-spacing: normal; }
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em; }
     .about-lead > p:last-of-type {
       margin-bottom: 0; }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -720,8 +720,8 @@ input:-webkit-autofill {
       background-size: 41.71875vw auto; } }
 
 .about-whats-feature-heading {
-  font-family: "Homemade Apple", cursive;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 24px;
   padding-top: 50px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -846,9 +846,8 @@ input:-webkit-autofill {
         padding-bottom: 7.8125vw; } }
 
 .about-heading_secondary {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 28px;
   text-align: center;
   text-transform: uppercase; }
@@ -1523,9 +1522,8 @@ input:-webkit-autofill {
     padding: 10px 0;
     border-radius: 20px;
     transition: 0.3s;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     line-height: 1; }
     .appendix-follow-content a i {
       margin-right: 10px;
@@ -1865,8 +1863,8 @@ input:-webkit-autofill {
   margin-bottom: 5px;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .billboard-textBox-title {
       font-size: 2.8125vw;
@@ -1924,8 +1922,8 @@ input:-webkit-autofill {
 
 .billboard_feature-title {
   font-size: 36px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   text-align: center;
   margin-bottom: 35px;
   line-height: 1.5; }
@@ -1940,8 +1938,8 @@ input:-webkit-autofill {
 
 .billboard_feature-text {
   font-size: 21px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   text-align: center; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .billboard_feature-text {
@@ -2103,8 +2101,8 @@ input:-webkit-autofill {
 
 .billboard-gift-text-lead {
   font-size: 24px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-weight: bold;
   text-align: center;
   transition-duration: 0.3s;
@@ -2196,9 +2194,8 @@ input:-webkit-autofill {
         line-height: 1.7; } }
 
 .button_fill a, .button_fill_block a, .button_fill span, .button_fill_block span, .button_fill input[type="button"], .button_fill_block input[type="button"] {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
@@ -2346,9 +2343,8 @@ input:-webkit-autofill {
       padding: 0; } }
 
 .button_border, .button_border_block {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 16px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .button_border, .button_border_block {
@@ -2425,9 +2421,8 @@ input:-webkit-autofill {
   padding: 0 15px;
   font-size: 18px;
   color: #fff;
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
   .button_back:before, .button_back:after,
   .button_next:before,
@@ -2522,9 +2517,8 @@ input:-webkit-autofill {
       box-sizing: border-box; } }
 
 .button_text {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 14px;
   text-align: center; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -2665,9 +2659,8 @@ input:-webkit-autofill {
       transform: translateX(5px); }
 
 .button_lineWhite {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 16px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .button_lineWhite {
@@ -2733,8 +2726,8 @@ input:-webkit-autofill {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-weight: bold;
   font-size: 18px;
   transition-duration: 0.3s;
@@ -2951,9 +2944,8 @@ input:-webkit-autofill {
   margin-top: 15px;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   .cards_highlight .cards-tags, .cards_highlight .headBoard-tags {
     margin-top: 12px; }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -3144,8 +3136,8 @@ input:-webkit-autofill {
       margin-bottom: 0.46875vw; } }
 
 .cards_rect-title {
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 32px;
   line-height: 1.4;
   background-color: #fff;
@@ -3304,9 +3296,8 @@ input:-webkit-autofill {
     width: 90%; }
   .cards_highlight .cards-img-date {
     color: #fff;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     text-align: center;
     font-size: 13px;
     margin-bottom: 10px; }
@@ -3320,8 +3311,8 @@ input:-webkit-autofill {
         margin-bottom: 0.78125vw; } }
   .cards_highlight .cards-img-title {
     color: #fff;
-    font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-    letter-spacing: normal;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     text-align: center;
     font-size: 24px; }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -3357,8 +3348,8 @@ input:-webkit-autofill {
   line-height: 1;
   padding: 8px 5px 10px;
   font-size: 18px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-weight: bold;
   min-width: 220px;
   text-align: center;
@@ -3464,17 +3455,16 @@ input:-webkit-autofill {
 .cards_mypage-name {
   font-size: 25px;
   margin-bottom: 10px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .cards_mypage-name {
       font-size: 1.95312vw; } }
 
 .cards_mypage-mail {
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .cards_mypage-mail {
       font-size: 1.17188vw; } }
@@ -3824,9 +3814,8 @@ input:-webkit-autofill {
 
 .cards_simple-title {
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   margin-bottom: 8px;
   font-size: 20px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -4050,9 +4039,8 @@ input:-webkit-autofill {
       height: 33.59375vw;
       background-size: 33.59375vw auto; } }
   .cards_members-icon span {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     position: absolute;
     bottom: 35px;
     left: 50%;
@@ -4113,9 +4101,8 @@ input:-webkit-autofill {
     counter-increment: number 1;
     content: counter(number);
     font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     display: block;
     line-height: 1.5; }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -4247,9 +4234,8 @@ input:-webkit-autofill {
   .cards_banner .cards-text-heading {
     font-size: 48px;
     width: 205px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     line-height: 1; }
     .cards_banner .cards-text-heading small {
       display: block;
@@ -4337,9 +4323,8 @@ input:-webkit-autofill {
 .cards_share-heading {
   font-size: 24px;
   margin-bottom: -2px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .cards_share-heading {
       font-size: 1.875vw;
@@ -4693,7 +4678,7 @@ input:-webkit-autofill {
   color: #999;
   font-size: 18px;
   margin-top: 24px;
-  font-family: "Homemade Apple", cursive;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
   margin-bottom: -12px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .detail_girlfriend-furigana {
@@ -4703,7 +4688,7 @@ input:-webkit-autofill {
 
 .detail_girlfriend-name {
   font-size: 34px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif; }
   @media screen and (max-width: 767px) {
     .detail_girlfriend-name {
       font-size: 7.5vw;
@@ -4802,8 +4787,8 @@ input:-webkit-autofill {
   font-size: 21px;
   text-align: center;
   padding-bottom: 20px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .featureOfTheMonth-title {
       font-size: 1.64062vw;
@@ -4953,9 +4938,8 @@ input:-webkit-autofill {
       margin-left: 0; } }
 
 .footer-about-heading {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 30px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .footer-about-heading {
@@ -5000,8 +4984,8 @@ input:-webkit-autofill {
       box-sizing: border-box; } }
 
 .footer-feature-heading {
-  font-family: "Homemade Apple", cursive;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 21px;
   margin-bottom: 10px;
   margin-left: 5px; }
@@ -5153,9 +5137,8 @@ input:-webkit-autofill {
           left: 17px; } }
 
 .footer-feature-way-heading {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 21px;
   line-height: 1.25;
   transition-duration: 0.3s;
@@ -5191,9 +5174,8 @@ input:-webkit-autofill {
   .footer-sns > li {
     font-size: 14px;
     margin-bottom: 15px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em; }
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em; }
     @media screen and (max-width: 767px) {
       .footer-sns > li:first-child i {
         font-size: 6.40625vw; } }
@@ -5309,9 +5291,8 @@ input:-webkit-autofill {
       padding: 40px 0; } }
 
 .footer-conduct-cinra {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 11px;
   position: absolute;
   top: 0;
@@ -5356,9 +5337,8 @@ input:-webkit-autofill {
       padding: 0 11.71875vw; } }
   .footer-conduct-media li {
     display: inline-block;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     font-size: 13px;
     letter-spacing: normal; }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -5399,9 +5379,8 @@ input:-webkit-autofill {
 
 .footer-conduct-copyright {
   text-align: right;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 12px;
   color: #999; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -5510,8 +5489,8 @@ input:-webkit-autofill {
     margin-left: 0; }
 
 .form-item-inline span {
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 25px; }
 
 @media screen and (max-width: 767px) {
@@ -5631,8 +5610,8 @@ input:-webkit-autofill {
     height: 50px;
     border-radius: 8px;
     border: 2px dashed #b2b2b2;
-    font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-    letter-spacing: normal;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     font-size: 20px;
     color: #b2b2b2;
     text-align: center;
@@ -5690,8 +5669,8 @@ input:-webkit-autofill {
     z-index: 1;
     height: 50px;
     padding: 0 0 0 60px;
-    font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-    letter-spacing: normal;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     font-size: 16px;
     cursor: pointer;
     position: relative; }
@@ -5783,8 +5762,8 @@ input:-webkit-autofill {
   line-height: 50px;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   background: transparent; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .form-item_select {
@@ -5860,8 +5839,8 @@ input:-webkit-autofill {
 
 .form-item-confirm {
   font-size: 25px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   word-break: break-all; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .form-item-confirm {
@@ -5869,8 +5848,8 @@ input:-webkit-autofill {
 
 .form-item-confirm_s {
   font-size: 15px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   word-break: break-all; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .form-item-confirm_s {
@@ -5945,8 +5924,8 @@ input:-webkit-autofill {
 .gift-description-heading {
   font-size: 36px;
   text-align: center;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-weight: bold; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .gift-description-heading {
@@ -6092,8 +6071,8 @@ input:-webkit-autofill {
 .headBoard-title {
   font-size: 36px;
   margin-bottom: 20px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .headBoard-title {
       font-size: 2.8125vw;
@@ -6215,9 +6194,8 @@ input:-webkit-autofill {
     .header-navi-main {
       margin: 0 0 14.0625vw 0; } }
   .header-navi-main li {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     font-size: 21px;
     display: inline-block;
     margin-right: 28px; }
@@ -6236,7 +6214,9 @@ input:-webkit-autofill {
           margin-bottom: 0; } }
     .header-navi-main li a {
       transition-duration: 0.3s;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+      letter-spacing: 0.025em; }
       .header-navi-main li a:hover {
         color: #999; }
   .js-fixedNavi.is-fixed .js-spNavi:not(.is-open) .header-navi-main {
@@ -6259,9 +6239,8 @@ input:-webkit-autofill {
       margin-left: -5.3125vw;
       margin-bottom: 11.25vw; } }
   .header-navi-tags li {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     font-size: 14px;
     letter-spacing: 0.025em;
     margin-left: 25px;
@@ -6554,9 +6533,8 @@ input:-webkit-autofill {
   left: 40.625vw; }
   .header-navi_feature li {
     font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    letter-spacing: 0.025em;
     display: inline-block;
     margin-right: 16px; }
     .header-navi_feature li:last-child {
@@ -6714,9 +6692,8 @@ input:-webkit-autofill {
     display: block; }
 
 .heading_section_primary {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
@@ -6763,9 +6740,8 @@ input:-webkit-autofill {
       text-transform: none; }
 
 .heading_section_secondary {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 24px;
   text-align: center;
   padding-bottom: 63px; }
@@ -6797,8 +6773,8 @@ input:-webkit-autofill {
         padding-bottom: 34px; } }
 
 .heading_detail_primary {
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 30px;
   letter-spacing: 0.05em;
   text-align: center;
@@ -6828,8 +6804,8 @@ input:-webkit-autofill {
 
 .heading_page_ja {
   margin-bottom: 40px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   font-size: 25px;
   text-align: center; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -6886,9 +6862,8 @@ input:-webkit-autofill {
       padding-top: 0; } }
 
 .heading_mypage, .heading_mypage_cancellation {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   padding: 60px 0;
   text-align: center;
   font-size: 24px; }
@@ -6916,9 +6891,8 @@ input:-webkit-autofill {
       font-size: 15px; } }
 
 .heading_billboard {
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   padding: 64px 0;
   font-size: 24px;
   text-align: center;
@@ -7203,8 +7177,8 @@ input:-webkit-autofill {
 
 .list_octagon-text {
   font-size: 18px;
-  font-family: "FOT-筑紫B丸ゴシック Std D", serif;
-  letter-spacing: normal;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   margin-top: 15px;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
@@ -7480,9 +7454,8 @@ input:-webkit-autofill {
 
 .list_mypage-news-date {
   font-size: 11px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .list_mypage-news-date {
       font-size: 0.85938vw; } }
@@ -8153,9 +8126,8 @@ input:-webkit-autofill {
   height: 50px;
   line-height: 2.2;
   text-align: center;
-  font-family: "Poppins", sans-serif, "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em; }
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .pager-numPC li,
     .pager-numSP li {
@@ -8538,9 +8510,8 @@ input:-webkit-autofill {
 
 .search-gcs .gsc-results .gsc-cursor-box .gsc-cursor-page {
   font-size: 24px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  letter-spacing: 0.025em;
   width: 50px;
   height: 50px;
   margin-right: 0;
@@ -8701,7 +8672,7 @@ input:-webkit-autofill {
 
 .side-girlfriends-title {
   font-size: 24px;
-  font-family: "Poppins", sans-serif;
+  font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
   font-weight: bold; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .side-girlfriends-title {
@@ -8760,9 +8731,8 @@ input:-webkit-autofill {
       font-size: 22px;
       text-align: center;
       color: #999;
-      font-family: "Poppins", sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-family: "NotoSansCJKjp", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+      letter-spacing: 0.025em;
       line-height: 44px; }
     .registration-status li:after {
       content: "";

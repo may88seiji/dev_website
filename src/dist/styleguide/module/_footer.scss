@@ -101,7 +101,7 @@
   }
 }
 .footer-about-heading {
-  @include f_poppins-b;
+  @include f_base;
   font-size: 30px;
   @include mqTB {
     font-size: calc-vw(30,1280);
@@ -168,7 +168,7 @@
   }
 }
 .footer-feature-heading {
-  @include f_apple;
+  @include f_base;
   font-size: 21px;
   margin-bottom: 10px;
   margin-left: 5px;
@@ -328,7 +328,7 @@
 }
 
 .footer-feature-way-heading {
-  @include f_poppins-b;
+  @include f_base;
   font-size: 21px;
   line-height: 1.25;
   @include transition;
@@ -374,7 +374,7 @@
   > li {
     font-size: 14px;
     margin-bottom: 15px;
-    @include f_poppins-b;
+    @include f_base;
     &:first-child {
       @include mqSP {
         i {
@@ -552,7 +552,7 @@
   }
 }
 .footer-conduct-cinra {
-  @include f_poppins;
+  @include f_base;
   font-size: 11px;
   position: absolute;
   top: 0;
@@ -599,7 +599,7 @@
   }
   li {
     display: inline-block;
-    @include f_poppins-b;
+    @include f_base;
     font-size: 13px;
     letter-spacing: normal;
     @include mqTB {
@@ -654,7 +654,7 @@
 
 .footer-conduct-copyright {
   text-align: right;
-  @include f_poppins;
+  @include f_base;
   font-size: 12px;
   color: $c_gray2;
   @include mqTB {

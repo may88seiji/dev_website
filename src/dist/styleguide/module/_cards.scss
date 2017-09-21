@@ -275,7 +275,7 @@
   font-size: 11px;
   margin-top: 15px;
   @include transition;
-  @include f_poppins;
+  @include f_base;
   .cards_highlight & {
     margin-top: 12px;
     @include mqTB {
@@ -535,7 +535,7 @@
 }
 
 .cards_rect-title{
-  @include f_chikumin;
+  @include f_base;
   font-size: 32px;
   line-height: 1.4;
   background-color: $c_w;
@@ -802,7 +802,7 @@
   }
   .cards-img-date {
     color: $c_w;
-    @include f_poppins;
+    @include f_base;
     text-align: center;
     font-size: 13px;
     margin-bottom: 10px;
@@ -817,7 +817,7 @@
   }
   .cards-img-title {
     color: $c_w;
-    @include f_chikumin;
+    @include f_base;
     text-align: center;
     font-size: 24px;
     @include mqTB {
@@ -859,7 +859,7 @@
   line-height: 1;
   padding: 8px 5px 10px;
   font-size: 18px;
-  @include f_chikumin;
+  @include f_base;
   font-weight: bold;
   min-width: 220px;
   text-align: center;
@@ -989,14 +989,14 @@
 .cards_mypage-name {
   font-size: 25px;
   margin-bottom: 10px;
-  @include f_chikumin;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(25, 1280);
   }
 }
 .cards_mypage-mail {
   font-size: 15px;
-  @include f_poppins;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(15, 1280);
   }
@@ -1528,7 +1528,7 @@
 }
 .cards_simple-title {
   text-align: center;
-  @include f_poppins-b;
+  @include f_base;
   margin-bottom: 8px;
   font-size: 20px;
   @include mqTB {
@@ -1863,7 +1863,7 @@
     background-size: calc-vw(215) auto;
   }
   span {
-    @include f_poppins-b;
+    @include f_base;
     position: absolute;
     bottom: 35px;
     left: 50%;
@@ -1932,7 +1932,7 @@
     counter-increment: number 1;
     content: counter(number);
     font-size: 20px;
-    @include f_poppins;
+    @include f_base;
     display: block;
     line-height: 1.5;
     @include mqTB {
@@ -2089,7 +2089,7 @@
   .cards-text-heading {
     font-size: 48px;
     width: 205px;
-    @include f_poppins-b;
+    @include f_base;
     line-height: 1;
     small {
       display: block;
@@ -2186,7 +2186,7 @@
 .cards_share-heading {
   font-size: 24px;
   margin-bottom: -2px;
-  @include f_poppins-b;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(24,1280);
     margin-bottom: calc-vw(-2,1280);

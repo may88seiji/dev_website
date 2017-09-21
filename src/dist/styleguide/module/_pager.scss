@@ -234,7 +234,7 @@
     height: 50px;
     line-height: 2.2;
     text-align: center;
-    @include f_poppins-base_b;
+    @include f_base
     @include mqTB{
       width: calc-vw(50,1280);
       height: calc-vw(50,1280);

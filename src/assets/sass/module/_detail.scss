@@ -137,7 +137,7 @@
   color: $c_gray2;
   font-size: 18px;
   margin-top: 24px;
-  font-family: $f_apple;
+  font-family: $f_base;
   margin-bottom: -12px;
   @include mqTB{
     font-size: calc-vw(18,1280);
@@ -148,7 +148,7 @@
 
 .detail_girlfriend-name{
   font-size: 34px;
-  font-family: $f_chikumin;
+  font-family: $f_base;
   @include mqSP{
     font-size: calc-vw(24,320);
     margin-top: calc-vw(10, 320);

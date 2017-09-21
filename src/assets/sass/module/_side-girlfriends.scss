@@ -94,7 +94,7 @@
 
 .side-girlfriends-title{
   font-size: 24px;
-  font-family: $f_poppins;
+  font-family: $f_base;
   font-weight: bold;
   @include mqTB{
     font-size: calc-vw(24,1280);

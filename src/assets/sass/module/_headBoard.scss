@@ -117,7 +117,7 @@
 .headBoard-title {
   font-size: 36px;
   margin-bottom: 20px;
-  @include f_chikumin;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(36,1280);
     margin-bottom: calc-vw(20,1280);

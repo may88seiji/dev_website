@@ -197,7 +197,7 @@
   font-size: 36px;
   margin-bottom: 5px;
   @include transition;
-  @include f_chikumin;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(36,1280);
     margin-bottom: calc-vw(5,1280);
@@ -258,7 +258,7 @@
 }
 .billboard_feature-title {
   font-size: 36px;
-  @include f_chikumin;
+  @include f_base;
   text-align: center;
   margin-bottom: 35px;
   line-height: 1.5;
@@ -273,7 +273,7 @@
 }
 .billboard_feature-text {
   font-size: 21px;
-  @include f_chikumin;
+  @include f_base;
   text-align: center;
   @include mqTB {
     font-size: calc-vw(21,1280);
@@ -441,7 +441,7 @@
 
 .billboard-gift-text-lead {
   font-size: 24px;
-  @include f_chikumin;
+  @include f_base;
   font-weight: bold;
   text-align: center;
   @include transition;

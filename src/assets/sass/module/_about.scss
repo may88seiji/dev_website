@@ -51,7 +51,7 @@
     &:last-of-type {
       margin-bottom: 0;
     }
-    @include f_chikumin;
+    @include f_base;
     @include mqTB {
       font-size: calc-vw(20,1280);
     }
@@ -129,7 +129,7 @@
   }
 }
 .about-whats-feature-heading {
-  @include f_apple;
+  @include f_base;
   font-size: 24px;
   padding-top: 50px;
   @include mqTB {
@@ -263,7 +263,7 @@
 }
 
 .about-heading_secondary {
-  @include f_poppins-b;
+  @include f_base;
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;

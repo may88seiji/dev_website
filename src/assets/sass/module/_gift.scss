@@ -96,7 +96,7 @@
 .gift-description-heading {
   font-size: 36px;
   text-align: center;
-  @include f_chikumin;
+  @include f_base;
   font-weight: bold;
   @include mqTB {
     font-size: calc-vw(36,1280);

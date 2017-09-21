@@ -16,7 +16,7 @@
 // Styleguide 6.1.0
 .button_fill {
   a,span,input[type="button"] {
-    @include f_poppins-base_b;
+    @include f_base
     @include transition;
     display: inline-block;
     background-color: $c_k;
@@ -185,7 +185,7 @@
 //
 // Styleguide 6.2.0
 .button_border {
-  @include f_poppins-base_b;
+  @include f_base
   font-size: 16px;
   @include mqTB {
     font-size: calc-vw(16,1280);
@@ -293,7 +293,7 @@
   padding: 0 15px;
   font-size: 18px;
   color: $c_w;
-  @include f_poppins-base_b;
+  @include f_base
   transition: all .3s $tr_easing;
   &:before,
   &:after {
@@ -387,7 +387,7 @@
 //
 // Styleguide 6.4.0
 .button_text {
-  @include f_poppins-base_b;
+  @include f_base
   font-size: 14px;
   text-align: center;
   @include mqTB {
@@ -529,7 +529,7 @@
 // Styleguide 6.6.0
 
 .button_lineWhite {
-  @include f_poppins-base_b;
+  @include f_base
   font-size: 16px;
   @include mqTB {
     font-size: calc-vw(16,1280);
@@ -612,7 +612,7 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
-    @include f_chikumin;
+    @include f_base;
     font-weight: bold;
     font-size: 18px;
     @include transition;

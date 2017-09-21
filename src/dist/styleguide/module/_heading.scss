@@ -11,7 +11,7 @@
 //
 // Styleguide 2.1.0
 .heading_section_primary {
-  @include f_poppins-base;
+  @include f_base;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
@@ -71,7 +71,7 @@
 //
 // Styleguide 2.2.0
 .heading_section_secondary {
-  @include f_poppins-base-b;
+  @include f_base;
   font-size: 24px;
   text-align: center;
   padding-bottom: 63px;
@@ -116,7 +116,7 @@
 //
 // Styleguide 2.3.0
 .heading_detail_primary {
-  @include f_chikumin;
+  @include f_base;
   font-size: 30px;
   letter-spacing: 0.05em;
   text-align: center;
@@ -168,7 +168,7 @@
 // Styleguide 2.5.0
 .heading_page_ja {
   margin-bottom: 40px;
-  @include f_chikumin;
+  @include f_base;
   font-size: 25px;
   text-align: center;
   @include mqTB {
@@ -257,7 +257,7 @@
 //
 // Styleguide 2.8.0
 .heading_mypage {
-  @include f_poppins-base_b;
+  @include f_base
   padding: 60px 0;
   text-align: center;
   font-size: 24px;
@@ -297,7 +297,7 @@
 //
 // Styleguide 2.9.0
 .heading_billboard {
-  @include f_poppins-base-b;
+  @include f_base;
   padding: 64px 0;
   font-size: 24px;
   text-align: center;

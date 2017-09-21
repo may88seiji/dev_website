@@ -125,7 +125,7 @@
     margin: 0 0 calc-vw(90) 0;
   }
   li {
-    @include f_poppins_b;
+    @include f_base;
     font-size: 21px;
     display: inline-block;
     margin-right: 28px;
@@ -146,6 +146,7 @@
     }
     a {
       @include transition;
+      @include f_base;
       &:hover {
         color: $c_gray2;
       }
@@ -197,7 +198,7 @@
     margin-bottom: calc-vw(72);
   }
   li {
-    @include f_poppins;
+    @include f_base;
     font-size: 14px;
     letter-spacing: 0.025em;
     margin-left: 25px;
@@ -634,7 +635,7 @@
   left: calc-vw(260);
   li {
     font-size: 14px;
-    @include f_poppins-b;
+    @include f_base;
     display: inline-block;
     margin-right: 16px;
     &:last-child{

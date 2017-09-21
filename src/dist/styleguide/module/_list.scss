@@ -224,7 +224,7 @@
 }
 .list_octagon-text {
   font-size: 18px;
-  @include f_chikumin;
+  @include f_base;
   margin-top: 15px;
   @include transition;
   @include mqTB {
@@ -611,7 +611,7 @@
 }
 .list_mypage-news-date {
   font-size: 11px;
-  @include f_poppins;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(11, 1280);
   }

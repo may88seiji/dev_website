@@ -53,7 +53,7 @@
       font-size: 22px;
       text-align: center;
       color: $c_gray2;
-      @include f_poppins_b;
+      @include f_base;
       line-height: 44px;
     }
     &:after {

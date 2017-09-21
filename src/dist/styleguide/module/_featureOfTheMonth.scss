@@ -52,7 +52,7 @@
   font-size: 21px;
   text-align: center;
   padding-bottom: 20px;
-  @include f_chikumin;
+  @include f_base;
   @include mqTB {
     font-size: calc-vw(21,1280);
     padding-bottom: calc-vw(20,1280);

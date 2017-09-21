@@ -77,7 +77,7 @@
     }
   }
   span {
-    @include f_chikumin;
+    @include f_base;
     font-size: 25px;
   }
   @include mqSP {
@@ -230,7 +230,7 @@
     height: 50px;
     border-radius: 8px;
     border: 2px dashed $c_gray_placeholder;
-    @include f_chikumin;
+    @include f_base;
     font-size: 20px;
     color: $c_gray_placeholder;
     text-align: center;
@@ -335,7 +335,7 @@
     z-index: 1;
     height: 50px;
     padding: 0 0 0 60px;
-    @include f_chikumin;
+    @include f_base;
     font-size: 16px;
     // line-height: 50px;
     cursor: pointer;
@@ -526,7 +526,7 @@
   font-size: 25px;
   line-height: 50px;
   @include transition;
-  @include f_chikumin;
+  @include f_base;
   background: transparent;
   @include mqTB {
     font-size: calc-vw(25, 1280);
@@ -634,7 +634,7 @@
 // Styleguide 15.6.0
 .form-item-confirm {
   font-size: 25px;
-  @include f_chikumin;
+  @include f_base;
   word-break: break-all;
   @include mqTB {
     font-size: calc-vw(25, 1280);
@@ -642,7 +642,7 @@
 }
 .form-item-confirm_s {
   font-size: 15px;
-  @include f_chikumin;
+  @include f_base;
   word-break: break-all;
   @include mqTB {
     font-size: calc-vw(15, 1280);
