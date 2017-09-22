@@ -1,0 +1,147 @@
+input[type="button"]:.pseudo-class-focus,
+input[type="submit"]:.pseudo-class-focus,
+button:.pseudo-class-focus {
+  outline-offset: -2px;
+}
+
+.page-detail_feature .l-aside .l-section.pseudo-class-first-child {
+  border-top: 0;
+}
+
+.footer-logo a.pseudo-class-hover {
+  opacity: 0.7;
+}
+
+.footer-feature-way li a.pseudo-class-hover {
+  background-color: #000;
+}
+
+.footer-feature-way li a.pseudo-class-hover svg {
+  fill: #fff;
+}
+
+.footer-feature-way li a.pseudo-class-hover:after {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.footer-feature-way li a.pseudo-class-hover .footer-feature-way-heading,
+.footer-feature-way li a.pseudo-class-hover .footer-feature-way-text {
+  color: #fff;
+}
+
+.footer-sns > li.pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
+.footer-sns > li a.pseudo-class-hover span {
+  color: #999;
+}
+
+.footer-sns > li a.pseudo-class-hover i:before {
+  color: #999;
+}
+
+.footer-navi-link li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.footer-navi-link li a.pseudo-class-hover {
+  border-bottom-color: transparent;
+}
+
+.footer-conduct-media li.pseudo-class-last-child:after {
+  margin-right: 0;
+  padding-right: 0;
+  content: none;
+}
+
+.footer-conduct-media li a.pseudo-class-hover {
+  border-bottom-color: transparent;
+}
+
+.footer-crumb-list li.pseudo-class-last-child:after {
+  content: none;
+}
+
+.header-navi-main li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.header-navi-main li a.pseudo-class-hover {
+  color: #999;
+}
+
+.header-navi-tags li a.pseudo-class-hover {
+  color: #999;
+}
+
+.header-utility-register li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.header-utility-info li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.header-utility-sns li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.header-utility-sns li a.pseudo-class-hover {
+  color: #999;
+}
+
+.header-navi_feature li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.header-navi-sns li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.heading_mypage.pseudo-class-first-child,
+.heading_mypage_cancellation.pseudo-class-first-child {
+  padding-top: 0;
+}
+
+.icons_share > li.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.icons_share > li > a.pseudo-class-hover {
+  opacity: 0.7;
+}
+
+.side-navi-main li a.pseudo-class-hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.wysiwyg p.pseudo-class-empty {
+  line-height: 0;
+  font-size: 0;
+  margin-bottom: 0;
+}
+
+.wysiwyg :not(.button_fill) a.pseudo-class-hover {
+  border-bottom: none;
+  opacity: 0.7;
+}
+
+.wysiwyg td.pseudo-class-last-child {
+  border: inherit;
+  border-bottom: 1px solid #ccc;
+}
+
+.wysiwyg .borderBox p.pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg ol > li.pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg ul > li.pseudo-class-last-child {
+  margin-bottom: 0;
+}

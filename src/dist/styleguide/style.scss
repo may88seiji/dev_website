@@ -7,8 +7,4 @@
 @import 'layout';
 @import 'page';
 @import 'module/*';
-
-// なぜかインポートしてくれないので取り急ぎ直書き
-@import 'module/page-mypage';
-
 @import 'helper';

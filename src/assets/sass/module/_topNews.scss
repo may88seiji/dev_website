@@ -1,0 +1,16 @@
+.topNews{
+  li{
+    margin-bottom: 8px;
+    position: relative;
+    &::before {
+      content: "";
+      border-left: 1px solid;
+      position: absolute;
+      height: 40px;
+    }
+  }
+  a{
+    padding-left: 15px;
+    display: inline-block;
+  }
+}
