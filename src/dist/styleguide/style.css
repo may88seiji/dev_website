@@ -280,20 +280,11 @@ input:-webkit-autofill {
   height: 100vh;
   max-width: 1120px;
   background-image: url(../img/mv_03.jpg);
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
   @media screen and (max-width: 767px) {
     .l-main {
       margin-bottom: 18.75vw; } }
-
-.l-topArticle {
-  display: inline-block;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  float: right;
-  font-size: 16px;
-  line-height: 1.6;
-  padding: 60px 60px 0 0; }
 
 .main-inner {
   width: 600px;
@@ -310,6 +301,22 @@ input:-webkit-autofill {
       width: 100%;
       margin: 0 auto;
       padding-top: 9.375vw; } }
+
+.l-topArticle {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  float: right;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 60px 60px 0 0; }
+
+.l-topNews {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  font-size: 12px; }
 
 .l-side-inner {
   width: 110px;

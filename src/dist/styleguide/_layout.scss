@@ -89,21 +89,11 @@
   max-width: 1120px;
   background-image: url(../img/mv_03.jpg);
   background-size: cover;
+  position: relative;
 
   @include mqSP{
     margin-bottom: calc-vw(120);
   }
-}
-
-.l-topArticle{
-  display: inline-block;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  float: right;
-  font-size: 16px;
-  line-height: 1.6;
-  padding: 60px 60px 0 0;
 }
 
 .main-inner {
@@ -124,6 +114,23 @@
   }
 }
 
+.l-topArticle{
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  float: right;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 60px 60px 0 0;
+}
+
+.l-topNews{
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  font-size: 12px;
+}
 //.l-side {
 //  width: 340px;
 //  background-color: $c_gray;
