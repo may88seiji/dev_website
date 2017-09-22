@@ -30,13 +30,8 @@
 ├── .git
 ├── .gitignore
 ├── .vagrant
-├── site.yml（VCCWの設定ファイル）
 ├── README.md
-├── Vagrantfile
-├── Movefile
 ├── gulpfile.js
-├── provision/ # VCCWのplaybook
-├── sql/ # SQLを収める
 ├── src/ # プリプロセッサ系のソースファイル（SassやCofeescript）を収める
 │   └── node_modules/ # npmインストールしたファイル（gitignore対象）
 │   └── package.json # node.js用設定ファイル
