@@ -85,11 +85,25 @@
 
 .l-main {
   width: 100%;
-  margin-bottom: 100px;
+  height: 100vh;
+  max-width: 1120px;
+  background-image: url(../img/mv_03.jpg);
+  background-size: cover;
 
   @include mqSP{
     margin-bottom: calc-vw(120);
   }
+}
+
+.l-topArticle{
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  float: right;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 60px 60px 0 0;
 }
 
 .main-inner {
@@ -206,74 +220,7 @@
       padding-bottom: calc-vw(90);
     }
   }
-
-  .page-detail .l-aside &,
-  .page-404 .l-aside &,
-  .page-list_girlfriends .l-aside &,
-  .page-detail_girlfriends .l-aside &,
-  &.gift-timeline{
-    border-top: 1px solid $c_k;
-  }
-  .page-registration .l-main &,
-  .page-404 .l-main &,
-  .page-list .l-main &,
-  .page-list_gift .l-main &,
-  .page-top .l-main & {
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-  .page-registration .l-main & {
-    &:nth-child(2) {
-      @include mqSP {
-        padding-top: 0;
-      }
-    }
-  }
   
-  .page-list_girlfriends .l-main & {
-    padding-bottom: 0;
-  }
-  
-  &.detail_girlfriends{
-    padding-bottom: 0;
-  }
-  &.detail_girlfriends_other{
-    width: 980px;
-    margin: 0 auto;
-    border-top: 1px solid $c_gray;
-    padding-bottom: 0;
-    @include mqTB{
-      width: calc-vw(980,1280);
-    }
-    @include mqSP{
-      width: calc-vw(290,320);
-      padding-bottom: calc-vw(15,320);
-    }
-  }
-  
-  &.detail_girlfriends_related{
-    padding: 60px 0;
-    @include mqTB{
-      padding: calc-vw(36,1280) 0;
-    }
-    @include mqSP{
-      padding: calc-vw(36,320) 0;
-    }
-  }
-  .page-contact & {
-    padding-bottom: 0;
-  }
-  .page-search & {
-    width: 980px;
-    margin: 0 auto;
-    @include mqTB {
-      width: calc-vw(980,1280);
-    }
-    @include mqSP {
-      width: 100%;
-    }
-  }
   .section-content {
     width: 780px;
     margin: 0 auto;
@@ -288,19 +235,6 @@
   }
 }
 
-.l-appendix{
-  width: 600px;
-  margin: 0 auto;
-  border-top: 6px solid $c_k;
-  @include mqTB{
-    width: calc-vw(600,1280);
-
-  }
-  @include mqSP{
-    width: calc-vw(290,320);
-    margin: 0 auto;
-  }
-}
 
 .l-aside {
   .page-list &,

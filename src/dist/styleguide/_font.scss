@@ -41,9 +41,6 @@
 }
 
 $f_base: 'NotoSansCJKjp','Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
-$f_poppins: 'Poppins', sans-serif;
-$f_apple: 'Homemade Apple', cursive;
-$f_chikumin: 'FOT-筑紫B丸ゴシック Std D', serif;
 
 @mixin f_base {
   font-family: $f_base;

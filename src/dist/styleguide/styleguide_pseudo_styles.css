@@ -8,14 +8,6 @@ button:.pseudo-class-focus {
   border-top: 0;
 }
 
-.page-registration .l-main .l-section.pseudo-class-last-child,
-.page-404 .l-main .l-section.pseudo-class-last-child,
-.page-list .l-main .l-section.pseudo-class-last-child,
-.page-list_gift .l-main .l-section.pseudo-class-last-child,
-.page-top .l-main .l-section.pseudo-class-last-child {
-  padding-bottom: 0;
-}
-
 .page-about .l-main > section.pseudo-class-last-child {
   margin-bottom: 0;
 }
