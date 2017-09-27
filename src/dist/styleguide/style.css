@@ -262,11 +262,12 @@ input:-webkit-autofill {
   width: 100%;
   height: 100vh;
   min-height: 500px;
-  background-image: url(../img/mv_03.jpg);
-  background-size: cover;
   margin: 0 auto;
   display: flex;
   position: relative; }
+  .top .l-content {
+    background-image: url(../img/mv_03.jpg);
+    background-size: cover; }
 
 .l-main {
   position: relative;
