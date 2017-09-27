@@ -4,47 +4,6 @@ button:.pseudo-class-focus {
   outline-offset: -2px;
 }
 
-.header-navi-main li.pseudo-class-last-child {
-  margin-right: 0;
-}
-
-.header-navi-main li a.pseudo-class-hover {
-  color: #999;
-}
-
-.header-navi-tags li a.pseudo-class-hover {
-  color: #999;
-}
-
-.header-utility-register li.pseudo-class-last-child {
-  margin-right: 0;
-}
-
-.header-utility-info li.pseudo-class-last-child {
-  margin-right: 0;
-}
-
-.header-utility-sns li.pseudo-class-last-child {
-  margin-right: 0;
-}
-
-.header-utility-sns li a.pseudo-class-hover {
-  color: #999;
-}
-
-.header-navi_feature li.pseudo-class-last-child {
-  margin-right: 0;
-}
-
-.header-navi-sns li.pseudo-class-last-child {
-  margin-right: 0;
-}
-
-.heading_mypage.pseudo-class-first-child,
-.heading_mypage_cancellation.pseudo-class-first-child {
-  padding-top: 0;
-}
-
 .icons_share > li.pseudo-class-last-child {
   margin-right: 0;
 }
@@ -60,32 +19,4 @@ button:.pseudo-class-focus {
 
 .topNews li.pseudo-class-first-child {
   margin-bottom: 8px;
-}
-
-.wysiwyg p.pseudo-class-empty {
-  line-height: 0;
-  font-size: 0;
-  margin-bottom: 0;
-}
-
-.wysiwyg :not(.button_fill) a.pseudo-class-hover {
-  border-bottom: none;
-  opacity: 0.7;
-}
-
-.wysiwyg td.pseudo-class-last-child {
-  border: inherit;
-  border-bottom: 1px solid #ccc;
-}
-
-.wysiwyg .borderBox p.pseudo-class-last-child {
-  margin-bottom: 0;
-}
-
-.wysiwyg ol > li.pseudo-class-last-child {
-  margin-bottom: 0;
-}
-
-.wysiwyg ul > li.pseudo-class-last-child {
-  margin-bottom: 0;
 }

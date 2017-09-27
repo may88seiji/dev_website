@@ -20,37 +20,21 @@
   display: flex;
   position: relative;
 
-  @include mqSP{
-    flex-direction: column;
-    width: 100%;
-  }
 }
 
 .l-main {
   position: relative;
   width: calc(100% - 330px);
-
-  @include mqSP{
-    margin-bottom: calc-vw(120);
-  }
 }
 
 .main-inner {
   width: 600px;
   margin: 0 auto;
-  @include mqSP{
-    width: calc-vw(290,320);
-  }
 }
 
 .l-side {
   width: 270px;
   padding-top: 48px;
-  @include mqSP{
-    width: 100%;
-    margin: 0 auto;
-    padding-top: calc-vw(60);
-  }
 }
 
 .l-side-inner{
