@@ -2,6 +2,8 @@
 
 - [Staging](http://stg.takedasei.com/)
 
+`cd web/www/dev_website/`
+
 ---
 
 ## Dependencies

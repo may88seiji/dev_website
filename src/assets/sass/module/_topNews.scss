@@ -1,12 +1,14 @@
 .topNews{
   li{
-    margin-bottom: 8px;
     position: relative;
     &::before {
       content: "";
       border-left: 1px solid;
       position: absolute;
       height: 40px;
+    }
+    &:first-child {
+      margin-bottom: 8px;
     }
   }
   a{

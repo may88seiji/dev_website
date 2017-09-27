@@ -13,12 +13,12 @@
   width: 100%;
   height: 100vh;
   min-height: 500px;
-  
   background-image: url(../img/mv_03.jpg);
   background-size: cover;
   
   margin: 0 auto;
   display: flex;
+  position: relative;
 
   @include mqSP{
     flex-direction: column;
@@ -53,6 +53,12 @@
   }
 }
 
+.l-side-inner{
+  width: 110px;
+  margin: 0 0 0 60px;
+  padding-bottom: 70px;
+}
+
 .l-topArticle{
   display: inline-block;
   -webkit-writing-mode: vertical-rl;
@@ -71,120 +77,8 @@
   font-size: 12px;
 }
 
-.l-side-inner{
-  width: 110px;
-  margin: 0 0 0 50px;
-  padding-bottom: 70px;
-
-  @include mqSP{
-    width: calc-vw(290,320);
-    margin: 0 auto;
-    padding-bottom: calc-vw(44,320);
-
-  }
-  .page-mypage & {
-    background-color: transparent;
-  }
-}
-
-.l-section {
-  padding: 65px 0 100px;
-  @include mqTB {
-    padding: calc-vw(65,1280) 0 calc-vw(100,1280);
-  }
-  @include mqSP {
-    padding: calc-vw(56) 0 calc-vw(90);
-    .page-faq &{
-      padding-bottom: 0;
-    }
-  }
-  &.gift-description {
-    padding: 120px 0 0;
-    @include mqTB {
-      padding-top: calc-vw(120,1280);
-    }
-    @include mqSP {
-      padding-top: calc-vw(90);
-    }
-  }
-  .page-top & {
-    background-color: $c_w;
-  }
-  .page-top .l-main & {
-    &:nth-child(3) {
-      padding-bottom: 0;
-    }
-  }
-  .page-detail_feature & {
-    border-top: 1px solid $c_k;
-    padding-bottom: 60px;
-    @include mqTB {
-      padding-bottom: calc-vw(60,1280);
-    }
-    @include mqSP {
-      padding-bottom: calc-vw(90);
-    }
-  }
-  .page-detail_feature .l-aside & {
-    background-color: $c_w;
-    padding-bottom: 100px;
-    &:first-child {
-      border-top: 0;
-    }
-    @include mqTB {
-      padding-bottom: calc-vw(100,1280);
-    }
-    @include mqSP {
-      padding-bottom: calc-vw(90);
-    }
-  }
-  
-  .section-content {
-    width: 780px;
-    margin: 0 auto;
-    @include mqTB {
-      width: calc-vw(780,1280);
-    }
-    @include mqSP {
-      width: 100%;
-      padding: 0 calc-vw(30);
-      box-sizing: border-box;
-    }
-  }
-}
-
-
-.l-aside {
-  .page-list &,
-  .page-list_feature &{
-    padding-top: 10px;
-    @include mqTB {
-      padding-top: calc-vw(10,1280);
-    }
-    @include mqSP{
-      padding-top: 0;
-    }
-  }
-}
-
 .l-footer {
-  position: relative;
-  z-index: 1;
-  
-  &.footer_simple {
-    position: relative;
-    padding-top: 230px;
-    &:after {
-      content: "";
-      position: absolute;
-      top: 30px;
-      left: 50%;
-      width: 1px;
-      height: 100px;
-      background: $c_k;
-    }
-    @include mqSP {
-      padding-top: 160px;
-    }
-  }
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
 }
