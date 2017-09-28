@@ -1,0 +1,17 @@
+h1{
+  
+}
+
+h2{
+  font-size: 18px;
+  margin-bottom: 40px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 35px;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+}

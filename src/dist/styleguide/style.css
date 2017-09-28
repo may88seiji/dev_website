@@ -271,7 +271,9 @@ input:-webkit-autofill {
 
 .l-main {
   position: relative;
-  width: calc(100% - 330px); }
+  width: calc(100% - 330px);
+  margin-top: 120px;
+  overflow-y: scroll; }
 
 .main-inner {
   width: 600px;
@@ -279,7 +281,8 @@ input:-webkit-autofill {
 
 .l-side {
   width: 270px;
-  padding-top: 48px; }
+  padding-top: 48px;
+  overflow-y: scroll; }
 
 .l-side-inner {
   width: 110px;
@@ -291,16 +294,22 @@ input:-webkit-autofill {
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-  float: right;
   font-size: 16px;
   line-height: 1.6;
-  padding: 60px 0 0 0; }
+  position: absolute;
+  top: 60px;
+  right: 60px; }
 
 .l-topNews {
   position: absolute;
   bottom: 60px;
   right: 0;
   font-size: 12px; }
+
+.l-currentPage {
+  position: absolute;
+  right: 60px;
+  top: 52px; }
 
 .l-footer {
   position: absolute;
@@ -335,6 +344,18 @@ input:-webkit-autofill {
 
 .copyright {
   font-size: 12px; }
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 40px;
+  position: relative; }
+  h2::after {
+    content: "";
+    width: 35px;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    bottom: -10px;
+    left: 0; }
 
 .icons_share {
   font-size: 0; }
@@ -403,6 +424,18 @@ input:-webkit-autofill {
               font-size: 15px; } }
       .icons_share > li > a:hover {
         opacity: 0.7; }
+
+.about p {
+  margin-bottom: 30px; }
+
+.introduction {
+  margin-bottom: 50px; }
+
+.news ul li {
+  font-size: 16px; }
+
+.news span {
+  font-size: 12px; }
 
 .side-logo {
   font-size: 20px;
