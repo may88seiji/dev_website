@@ -5,7 +5,7 @@ var make = {
         srcDir: 'assets'
       , dstDir: 'dist'
       , sgDir : 'dist/styleguide'
-      , prdDir: '../www/html/assets/themes/sheis/assets'
+      , prdDir: '../www/html/assets/themes/takedasei/assets'
     },
     ports = {
         static: 8000
