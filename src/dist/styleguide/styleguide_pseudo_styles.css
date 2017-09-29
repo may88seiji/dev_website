@@ -12,6 +12,15 @@ button:.pseudo-class-focus {
   opacity: 0.7;
 }
 
+.pager i.pseudo-class-first-child {
+  width: 16px;
+}
+
+.pager i::before.pseudo-class-first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .side-navi-main li a.pseudo-class-hover {
   text-decoration: none;
   border-bottom: 1px solid;
