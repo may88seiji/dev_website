@@ -1,4 +1,5 @@
 .pager{
+  line-height: 0;
   li{
     display: inline-block;
     background-color: $c_gray_bg;
@@ -13,16 +14,16 @@
   }
   i{
     width: 12px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     &:first-child {
       width: 16px;
     }
     &::before {
       font-size: 18px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       &:first-child {
         font-weight: bold;
         font-size: 16px;
