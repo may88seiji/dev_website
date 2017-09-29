@@ -50,11 +50,11 @@ $f_base: 'NotoSansCJKjp','Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', Meir
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ldgpku');
-  src:  url('fonts/icomoon.eot?ldgpku#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ldgpku') format('truetype'),
-    url('fonts/icomoon.woff?ldgpku') format('woff'),
-    url('fonts/icomoon.svg?ldgpku#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?lf0tss');
+  src:  url('fonts/icomoon.eot?lf0tss#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lf0tss') format('truetype'),
+    url('fonts/icomoon.woff?lf0tss') format('woff'),
+    url('fonts/icomoon.svg?lf0tss#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -73,6 +73,7 @@ $f_base: 'NotoSansCJKjp','Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', Meir
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 @mixin icofont {
   font-family: 'icomoon' !important;
   speak: none;
@@ -87,39 +88,22 @@ $f_base: 'NotoSansCJKjp','Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', Meir
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-line:before {
-  content: "\e90a";
-}
-.icon-pocket:before {
+.icon-arrow_left:before {
   content: "\e900";
 }
 .icon-arrow_right:before {
   content: "\e901";
 }
-.icon-arrow_under:before {
+.icon-arrow:before {
   content: "\e902";
+  color: #000;
 }
-.icon-blank:before {
+.icon-dots:before {
   content: "\e903";
 }
-.icon-facebook:before {
+.icon-instagram:before {
   content: "\e904";
 }
-.icon-home:before {
-  content: "\e905";
-}
-.icon-instagram:before {
-  content: "\e906";
-}
-.icon-search:before {
-  content: "\e907";
-}
-.icon-share:before {
-  content: "\e908";
-}
 .icon-twitter:before {
-  content: "\e909";
-}
-.icon-pickup:before {
-  content: "\e90c";
+  content: "\e905";
 }
