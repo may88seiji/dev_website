@@ -256,7 +256,7 @@ input:-webkit-autofill {
   @media screen and (max-width: 767px) {
     .l-content {
       min-height: inherit;
-      height: calc(100vh - 55px); } }
+      height: calc(100% - 55px); } }
   .top .l-content {
     background-image: url(../img/mv_03.jpg);
     background-size: cover; }
