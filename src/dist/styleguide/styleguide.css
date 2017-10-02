@@ -574,12 +574,13 @@ h2 {
     .menu-content {
       position: fixed;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       color: #000;
       background-color: #fff;
       top: 54px; }
       .menu-content ul {
-        font-size: 16px; }
+        font-size: 16px;
+        height: 50%; }
       .menu-content li:not(:last-child) {
         margin-bottom: 16px; }
       .is-active .menu-content {
