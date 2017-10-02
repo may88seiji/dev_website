@@ -116,7 +116,7 @@
     .is-active &{
       height: calc(100% - 55px);
       border-top: 1px solid #f2f2f2;
-      padding-top: 100px;
+      padding-top: 50px;
       opacity: .9;
     }
     
@@ -129,7 +129,7 @@
     }
     .copyright{
       position: absolute;
-      top: 480px;
+      top: 420px;
     }
   }
 }
