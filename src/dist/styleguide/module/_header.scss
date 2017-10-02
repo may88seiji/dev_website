@@ -1,4 +1,9 @@
 .header-inner{
   height: 55px;
-  width: 100%;
+  width: calc-vw(280,320);
+  margin: 0 auto;
+  a{
+    margin-top: 10px;
+    display: inline-block;
+  }
 }

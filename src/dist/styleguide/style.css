@@ -333,7 +333,15 @@ input:-webkit-autofill {
 
 .header-inner {
   height: 55px;
-  width: 100%; }
+  width: 87.5vw;
+  margin: 0 auto; }
+  .header-inner a {
+    margin-top: 10px;
+    display: inline-block; }
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 20px; } }
 
 h2 {
   font-size: 18px;
@@ -465,6 +473,14 @@ h2 {
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
       letter-spacing: -5px; }
+
+.wysiwyg p {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 16px;
+  line-height: 1.6; }
 
 .pager {
   line-height: 0; }
