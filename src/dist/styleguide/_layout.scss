@@ -2,21 +2,26 @@
   overflow: hidden;
 }
 .l-header {
+  position: relative;
+  z-index: $l-header;
 }
 
 .l-container {
   position: relative;
-  z-index: 0;
+  z-index: $l-container;
 }
 
 .l-content {
   width: 100%;
   height: 100vh;
   min-height: 500px;
-
   margin: 0 auto;
   display: flex;
   position: relative;
+  @include mqSP{
+    min-height: inherit;
+    height: calc(100vh - 55px);
+  }
   
   .top & {
     background-image: url(../img/mv_03.jpg);
@@ -25,7 +30,6 @@
       background-position: 50% 50%;
     }
   }
-
 }
 
 .l-main {
@@ -81,4 +85,12 @@
   position: absolute;
   bottom: 60px;
   left: 60px;
+}
+
+@include mqSP{
+  .l-menu{
+    position: absolute;
+    right: 0;
+    top: 2px;
+  }
 }

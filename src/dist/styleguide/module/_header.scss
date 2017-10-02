@@ -2,8 +2,12 @@
   height: 55px;
   width: calc-vw(280,320);
   margin: 0 auto;
-  a{
-    margin-top: 10px;
+  position: relative;
+  h1{
     display: inline-block;
+    a{
+      display: inline-block;
+      margin-top: 10px;
+    }
   }
 }

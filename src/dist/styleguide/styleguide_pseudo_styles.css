@@ -12,6 +12,10 @@ button:.pseudo-class-focus {
   opacity: 0.7;
 }
 
+.menu-content a.pseudo-class-hover {
+  opacity: .6;
+}
+
 .pager i.pseudo-class-first-child {
   width: 16px;
 }

@@ -1,10 +1,134 @@
-.wysiwyg{
-  p{
-    display: inline-block;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    font-size: 16px;
-    line-height: 1.6;
+/* ----------------------------
+* trigger
+* -------------------------- */
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  float: right;
+  margin-top: 20px;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $c_k;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 7px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.menu-trigger.is-active span:nth-of-type(1) {
+  -webkit-transform: translateY(7px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
+}
+.menu-trigger.is-active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-trigger.is-active span:nth-of-type(3) {
+  -webkit-transform: translateY(-7px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
+}
+
+/* ----------------------------
+* content
+* -------------------------- */
+.menu-content{
+  background-color: #fff;
+//  height: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s;
+  .is-active &{
+//    height: calc(100vh - 120px);
+    opacity: 1;
+  }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    pointer-events: none;
+    .is-open &{
+      pointer-events: inherit;
+    }
+  }
+  li{
+//    opacity: 0;
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+  a{
+    color: #000;
+    line-height: 1.25;
+    transition: opacity .2s ease;
+    span{
+      display: inline;
+      margin: 0 auto;
+      position: relative;
+    }
+    &:hover,
+    &.touch,
+    &.active {
+      opacity: .6;
+    }
+  }
+
+  @include mqSP{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    color: $c_k;
+    background-color: $c_w;
+    
+    top: 54px;
+    ul{
+      font-size: 16px;
+    }
+    li{
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    a{
+    }
+    .is-active &{
+      height: calc(100% - 55px);
+      border-top: 1px solid #f2f2f2;
+      padding-top: 100px;
+      opacity: .9;
+    }
+    
+    .menu-utility-sns{
+      li{
+        display: inline-block;
+        font-size: 16px;
+        margin: 7px;
+      }
+    }
+    .copyright{
+      position: absolute;
+      top: 480px;
+    }
   }
 }
