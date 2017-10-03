@@ -35,7 +35,7 @@ p{
     background-color: $c_gray_bg;
     position: relative;
     &:nth-child(3) {
-      margin-right: 0;
+//      margin-right: 0;
     }
     &::before {
       counter-increment: item -1;
@@ -49,6 +49,15 @@ p{
       -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+    }
+    &::after {
+      content: "\e902";
+      @include icofont;
+      font-family: icomoon;
+      font-size: 10px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
     }
 
     a{

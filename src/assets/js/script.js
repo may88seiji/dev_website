@@ -35,10 +35,6 @@ $(document)
 
 $(window)
   .on('load',function(){
-//    $(".js-navi").on('click',function(){
-//      console.log("toggleNavi");
-//      $(this).toggleClass("is-open");
-//    })
   SpNavi.toggleNavi();
   
   })

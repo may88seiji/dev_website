@@ -37,6 +37,10 @@
   width: calc(100% - 270px);
   margin-top: 120px;
   overflow-y: scroll;
+  @include mqSP{
+    width: calc-vw(280,320);
+    margin: 0 auto
+  }
 }
 
 .main-inner {
@@ -47,6 +51,9 @@
   width: 270px;
   padding-top: 48px;
   overflow-y: scroll;
+  @include mqSP{
+    display: none;
+  }
 }
 
 .l-side-inner{
@@ -72,6 +79,9 @@
   position: absolute;
   right: 60px;
   top:52px;
+  @include mqSP{
+    display: none;
+  }
 }
 
 .l-pager{
@@ -85,6 +95,9 @@
   position: absolute;
   bottom: 60px;
   left: 60px;
+  @include mqSP{
+    display: none;
+  }
 }
 
 @include mqSP{
