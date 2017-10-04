@@ -241,6 +241,9 @@ input:-webkit-autofill {
 .l-header {
   position: relative;
   z-index: 10; }
+  @media screen and (max-width: 767px) {
+    .l-header {
+      border-bottom: 1px solid #f2f2f2; } }
 
 .l-container {
   position: relative;
@@ -271,11 +274,15 @@ input:-webkit-autofill {
   overflow-y: scroll; }
   @media screen and (max-width: 767px) {
     .l-main {
-      width: 87.5vw;
+      width: 100%;
       margin: 0 auto; } }
 
 .main-inner {
   width: calc(100% - 60px); }
+  @media screen and (max-width: 767px) {
+    .main-inner {
+      width: 87.5vw;
+      margin: 0 auto; } }
 
 .l-side {
   width: 270px;
@@ -384,6 +391,10 @@ h2 {
     position: absolute;
     bottom: -10px;
     left: 0; }
+  @media screen and (max-width: 767px) {
+    h2 {
+      padding-bottom: 12px;
+      margin-bottom: 28px; } }
 
 .icons_share {
   font-size: 0; }
@@ -464,6 +475,14 @@ h2 {
 
 .news span {
   font-size: 12px; }
+  @media screen and (max-width: 767px) {
+    .news span {
+      margin-bottom: 10px;
+      display: block; } }
+
+@media screen and (max-width: 767px) {
+  .news {
+    margin-top: 20px; } }
 
 .olWorks {
   counter-reset: item;

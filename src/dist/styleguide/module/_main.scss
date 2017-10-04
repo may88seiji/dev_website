@@ -20,6 +20,13 @@ p{
   }
   span{
     font-size: 12px;
+    @include mqSP{
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+  @include mqSP{
+    margin-top: 20px;
   }
 }
 

@@ -16,4 +16,8 @@ h2{
     bottom: -10px;
     left: 0;
   }
+  @include mqSP{
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+  }
 }
