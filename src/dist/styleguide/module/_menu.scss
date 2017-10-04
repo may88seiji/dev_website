@@ -69,6 +69,9 @@
     color: $c_k;
     background-color: $c_w;
     pointer-events: none;
+    .is-open & {
+      pointer-events: inherit;
+    }
     
     top: 54px;
     
@@ -77,7 +80,7 @@
       margin: 0;
       padding: 0;
       font-size: 14px;
-      pointer-events: none;
+//      pointer-events: none;
       font-size: 16px;
       height: 50%;
         

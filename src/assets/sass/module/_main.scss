@@ -6,6 +6,9 @@ p{
 
 .introduction{
   margin-bottom: 50px;
+  @include mqSP{
+    margin-bottom: 30px;
+  }
 }
 
 .profile{
@@ -25,9 +28,6 @@ p{
       display: block;
     }
   }
-  @include mqSP{
-    margin-top: 20px;
-  }
 }
 
 .olWorks{
@@ -41,8 +41,10 @@ p{
     margin-right: 40px;
     background-color: $c_gray_bg;
     position: relative;
-    &:nth-child(3) {
-//      margin-right: 0;
+    @include mqSP{
+      width: calc-vw(280,320);
+      margin-bottom: 20px;
+      margin-right: 0px;
     }
     &::before {
       counter-increment: item -1;

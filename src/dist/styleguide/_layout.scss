@@ -51,6 +51,7 @@
   @include mqSP{
     width: calc-vw(280,320);
     margin: 0 auto;
+    margin-top: 20px;
   }
 }
 
@@ -80,6 +81,10 @@
   bottom: 60px;
   right: 60px;
   font-size: 12px;
+  @include mqSP{
+    bottom: 60px;
+    right: inherit;
+  }
 }
 
 .l-currentPage{

@@ -282,7 +282,8 @@ input:-webkit-autofill {
   @media screen and (max-width: 767px) {
     .main-inner {
       width: 87.5vw;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      margin-top: 20px; } }
 
 .l-side {
   width: 270px;
@@ -307,6 +308,10 @@ input:-webkit-autofill {
   bottom: 60px;
   right: 60px;
   font-size: 12px; }
+  @media screen and (max-width: 767px) {
+    .l-topNews {
+      bottom: 60px;
+      right: inherit; } }
 
 .l-currentPage {
   position: absolute;
@@ -393,8 +398,9 @@ h2 {
     left: 0; }
   @media screen and (max-width: 767px) {
     h2 {
-      padding-bottom: 12px;
-      margin-bottom: 28px; } }
+      margin-bottom: 28px; }
+      .news h2 {
+        padding-bottom: 12px; } }
 
 .icons_share {
   font-size: 0; }
@@ -469,6 +475,9 @@ h2 {
 
 .introduction {
   margin-bottom: 50px; }
+  @media screen and (max-width: 767px) {
+    .introduction {
+      margin-bottom: 30px; } }
 
 .news ul li {
   font-size: 16px; }
@@ -479,10 +488,6 @@ h2 {
     .news span {
       margin-bottom: 10px;
       display: block; } }
-
-@media screen and (max-width: 767px) {
-  .news {
-    margin-top: 20px; } }
 
 .olWorks {
   counter-reset: item;
@@ -495,6 +500,11 @@ h2 {
     margin-right: 40px;
     background-color: #f2f2f2;
     position: relative; }
+    @media screen and (max-width: 767px) {
+      .olWorks li {
+        width: 87.5vw;
+        margin-bottom: 20px;
+        margin-right: 0px; } }
     .olWorks li::before {
       counter-increment: item -1;
       content: counter(item, decimal-leading-zero) " ";
@@ -600,12 +610,13 @@ h2 {
     background-color: #fff;
     pointer-events: none;
     top: 54px; }
+    .is-open .menu-content {
+      pointer-events: inherit; }
     .menu-content ul {
       list-style: none;
       margin: 0;
       padding: 0;
       font-size: 14px;
-      pointer-events: none;
       font-size: 16px;
       height: 50%; }
       .is-open .menu-content ul {
