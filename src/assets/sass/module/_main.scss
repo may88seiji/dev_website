@@ -41,6 +41,11 @@ p{
     margin-right: 40px;
     background-color: $c_gray_bg;
     position: relative;
+    @include mqTB{
+      width: calc-vw(290,1280);
+      height: calc-vw(264,1280);
+      margin: 0 calc-vw(40,1280) calc-vw(40,1280) 0;
+    }
     @include mqSP{
       width: calc-vw(280,320);
       margin-bottom: 20px;

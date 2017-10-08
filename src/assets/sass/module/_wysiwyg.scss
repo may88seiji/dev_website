@@ -1,4 +1,18 @@
 .wysiwyg{
+  height: 810px;
+  width: 850px;
+  margin: 0 auto;
+  writing-mode: vertical-rl;
+  columns: 20rem;
+  @include mqTB{
+    width: calc-vw(800,1280);
+  }
+  @include mqSP{
+    width: 850px;
+    margin: 0 auto;
+    writing-mode: inherit;
+    columns: inherit;
+  }
   p{
     display: inline-block;
     -webkit-writing-mode: vertical-rl;
@@ -6,5 +20,9 @@
     writing-mode: vertical-rl;
     font-size: 16px;
     line-height: 1.6;
+    @include mqTB{
+      font-size: calc-vw(16,1280);
+      unicode-bidi: bidi-override;
+    }
   }
 }

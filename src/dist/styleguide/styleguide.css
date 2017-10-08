@@ -252,7 +252,7 @@ input:-webkit-autofill {
 .l-content {
   width: 100%;
   height: 100vh;
-  min-height: 500px;
+  min-height: 650px;
   margin: 0 auto;
   display: flex;
   position: relative; }
@@ -270,8 +270,10 @@ input:-webkit-autofill {
 .l-main {
   position: relative;
   width: calc(100% - 270px);
+  min-height: 500px;
   margin-top: 120px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  margin-bottom: 100px; }
   @media screen and (max-width: 767px) {
     .l-main {
       width: 100%;
@@ -324,7 +326,7 @@ input:-webkit-autofill {
 .l-pager {
   position: absolute;
   bottom: 60px;
-  right: 0;
+  right: 60px;
   font-size: 12px; }
 
 .l-footer {
@@ -407,7 +409,7 @@ h2 {
   .icons_share > li {
     display: inline-block;
     margin-right: 20px; }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       .icons_share > li {
         margin-right: 1.5625vw; } }
     @media screen and (max-width: 767px) {
@@ -426,7 +428,7 @@ h2 {
       line-height: 1;
       transition-duration: 0.3s;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-      @media screen and (min-width: 768px) and (max-width: 1279px) {
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
         .icons_share > li > a {
           height: 4.6875vw;
           width: 4.6875vw;
@@ -445,7 +447,7 @@ h2 {
         font-size: 20px; }
         .icons_share > li > a i.icon-twitter {
           font-size: 20px; }
-          @media screen and (min-width: 768px) and (max-width: 1279px) {
+          @media screen and (min-width: 768px) and (max-width: 1023px) {
             .icons_share > li > a i.icon-twitter {
               font-size: 1.5625vw; } }
           @media screen and (max-width: 767px) {
@@ -453,7 +455,7 @@ h2 {
               font-size: 11px; } }
         .icons_share > li > a i.icon-facebook {
           font-size: 24px; }
-          @media screen and (min-width: 768px) and (max-width: 1279px) {
+          @media screen and (min-width: 768px) and (max-width: 1023px) {
             .icons_share > li > a i.icon-facebook {
               font-size: 1.875vw; } }
           @media screen and (max-width: 767px) {
@@ -461,7 +463,7 @@ h2 {
               font-size: 13px; } }
         .icons_share > li > a i.icon-line {
           font-size: 16px; }
-          @media screen and (min-width: 768px) and (max-width: 1279px) {
+          @media screen and (min-width: 768px) and (max-width: 1023px) {
             .icons_share > li > a i.icon-line {
               font-size: 1.25vw; } }
           @media screen and (max-width: 767px) {
@@ -500,6 +502,11 @@ h2 {
     margin-right: 40px;
     background-color: #f2f2f2;
     position: relative; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .olWorks li {
+        width: 22.65625vw;
+        height: 20.625vw;
+        margin: 0 3.125vw 3.125vw 0; } }
     @media screen and (max-width: 767px) {
       .olWorks li {
         width: 87.5vw;
@@ -723,13 +730,32 @@ h2 {
   padding-left: 15px;
   display: inline-block; }
 
-.wysiwyg p {
-  display: inline-block;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
+.wysiwyg {
+  height: 810px;
+  width: 850px;
+  margin: 0 auto;
   writing-mode: vertical-rl;
-  font-size: 16px;
-  line-height: 1.6; }
+  columns: 20rem; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .wysiwyg {
+      width: 62.5vw; } }
+  @media screen and (max-width: 767px) {
+    .wysiwyg {
+      width: 850px;
+      margin: 0 auto;
+      writing-mode: inherit;
+      columns: inherit; } }
+  .wysiwyg p {
+    display: inline-block;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    line-height: 1.6; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .wysiwyg p {
+        font-size: 1.25vw;
+        unicode-bidi: bidi-override; } }
 
 .inlineBlock {
   display: inline-block; }
