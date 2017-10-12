@@ -3,6 +3,9 @@
   width: calc-vw(280,320);
   margin: 0 auto;
   position: relative;
+  @include mqSP{
+    background-color: #fff;
+  }
   h1{
     display: inline-block;
     a{
