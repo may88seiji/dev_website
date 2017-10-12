@@ -28,7 +28,7 @@
   position: relative;
   @include mqSP{
     min-height: inherit;
-    height: calc(100vh - 55px);
+    height: 100%;
   }
   
   .top & {
@@ -36,6 +36,7 @@
     background-size: cover;
     @include mqSP{
       background-position: 50% 50%;
+      height: calc(100vh - 55px);
     }
   }
 }

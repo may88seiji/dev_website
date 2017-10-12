@@ -264,13 +264,14 @@ input:-webkit-autofill {
   @media screen and (max-width: 767px) {
     .l-content {
       min-height: inherit;
-      height: calc(100vh - 55px); } }
+      height: 100%; } }
   .top .l-content {
     background-image: url(../img/mv_03.jpg);
     background-size: cover; }
     @media screen and (max-width: 767px) {
       .top .l-content {
-        background-position: 50% 50%; } }
+        background-position: 50% 50%;
+        height: calc(100vh - 55px); } }
 
 .l-main {
   position: relative;
@@ -384,9 +385,6 @@ input:-webkit-autofill {
   width: 87.5vw;
   margin: 0 auto;
   position: relative; }
-  @media screen and (max-width: 767px) {
-    .header-inner {
-      background-clor: #fff; } }
   .header-inner h1 {
     display: inline-block; }
     .header-inner h1 a {
