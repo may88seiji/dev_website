@@ -271,7 +271,7 @@ input:-webkit-autofill {
     @media screen and (max-width: 767px) {
       .top .l-content {
         background-position: 50% 50%;
-        height: calc(100vh - 55px); } }
+        margin-top: 55px; } }
 
 .l-main {
   position: relative;
