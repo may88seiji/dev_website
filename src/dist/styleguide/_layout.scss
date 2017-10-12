@@ -50,6 +50,7 @@
   @include mqSP{
     width: 100%;
     margin: 0 auto;
+    overflow-y: inherit;
   }
 }
 
@@ -68,6 +69,7 @@
   overflow-y: scroll;
   @include mqSP{
     display: none;
+    overflow-y: inherit;
   }
 }
 

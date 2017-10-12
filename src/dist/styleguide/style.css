@@ -282,7 +282,8 @@ input:-webkit-autofill {
   @media screen and (max-width: 767px) {
     .l-main {
       width: 100%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      overflow-y: inherit; } }
 
 .main-inner {
   width: calc(100% - 60px); }
@@ -298,7 +299,8 @@ input:-webkit-autofill {
   overflow-y: scroll; }
   @media screen and (max-width: 767px) {
     .l-side {
-      display: none; } }
+      display: none;
+      overflow-y: inherit; } }
 
 .l-side-inner {
   width: 110px;
