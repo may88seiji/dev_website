@@ -243,7 +243,12 @@ input:-webkit-autofill {
   z-index: 10; }
   @media screen and (max-width: 767px) {
     .l-header {
-      border-bottom: 1px solid #f2f2f2; } }
+      border-bottom: 1px solid #f2f2f2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff; } }
 
 .l-container {
   position: relative;
@@ -377,6 +382,9 @@ input:-webkit-autofill {
   width: 87.5vw;
   margin: 0 auto;
   position: relative; }
+  @media screen and (max-width: 767px) {
+    .header-inner {
+      background-clor: #fff; } }
   .header-inner h1 {
     display: inline-block; }
     .header-inner h1 a {
