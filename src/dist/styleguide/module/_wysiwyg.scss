@@ -27,7 +27,7 @@
     }
     @include mqSP{
       .detail &{
-        margin-right: 20px;
+        margin:0 calc-vw(145,320);
       }
     }
   }

@@ -9,6 +9,9 @@
   font-size: 16px;
   line-height: 1.6;
   @include mqSP{
+    top: calc-vw(20,320);
+    left: calc-vw(20,320);
+    right: inherit;
     font-size: 12px;
     line-height: 1.4;
   }
