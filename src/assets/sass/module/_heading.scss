@@ -17,6 +17,7 @@ h2{
     left: 0;
   }
   @include mqSP{
+    font-size: 14px;
     margin-bottom: 28px;
     .news & {
       padding-bottom: 12px;
