@@ -5,6 +5,9 @@
     background-color: $c_gray_bg;
     width: 40px;
     height: 40px;
+    @include mqSP{
+      width: calc-vw(200,320);
+    }
   }
   a{
     display: block;

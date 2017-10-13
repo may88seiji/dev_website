@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 import * as SpNavi from './app/sp-navi';
 import * as SpGetInnerHeight from './app/sp-innerHeight';
+import * as SpStartRight from './app/sp-startRight';
 
 const ua = require('./lib/uaCheck.js');
 
@@ -44,6 +45,7 @@ $(window)
   //sp
   if(ua.device === 'sp') {
     SpGetInnerHeight.getInnerHeight();
+    SpStartRight.startRight();
     }
   })
 

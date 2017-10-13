@@ -9,6 +9,7 @@
   }
   @include mqSP{
     width: 850px;
+    height: inherit;
     margin: 0 auto;
     writing-mode: inherit;
     columns: inherit;
@@ -23,6 +24,11 @@
     @include mqTB{
       font-size: calc-vw(16,1280);
       unicode-bidi: bidi-override;
+    }
+    @include mqSP{
+      .detail &{
+        margin-right: 20px;
+      }
     }
   }
 }

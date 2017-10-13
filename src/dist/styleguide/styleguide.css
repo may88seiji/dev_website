@@ -286,7 +286,11 @@ input:-webkit-autofill {
       width: 100%;
       margin: 0 auto;
       margin-top: 55px;
-      overflow-y: inherit; }
+      overflow-y: inherit;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      right: 0;
+      min-height: inherit; }
       .l-main.is-fix {
         position: fixed; } }
 
@@ -312,14 +316,10 @@ input:-webkit-autofill {
   margin: 0 0 0 60px;
   padding-bottom: 70px; }
 
-.l-topArticle {
-  position: absolute;
-  top: 60px;
-  right: 60px; }
-  @media screen and (max-width: 767px) {
-    .l-topArticle {
-      top: 6.25vw;
-      left: 6.25vw; } }
+@media screen and (max-width: 767px) {
+  .l-topArticle {
+    top: 6.25vw;
+    left: 6.25vw; } }
 
 .l-topNews {
   position: absolute;
@@ -347,6 +347,12 @@ input:-webkit-autofill {
   bottom: 60px;
   right: 60px;
   font-size: 12px; }
+  @media screen and (max-width: 767px) {
+    .l-pager {
+      bottom: 40px;
+      right: 0;
+      left: 0;
+      text-align: center; } }
 
 .l-footer {
   position: absolute;
@@ -686,6 +692,9 @@ h2 {
     background-color: #f2f2f2;
     width: 40px;
     height: 40px; }
+    @media screen and (max-width: 767px) {
+      .pager li {
+        width: 62.5vw; } }
   .pager a {
     display: block;
     width: 100%;
@@ -730,6 +739,9 @@ h2 {
   margin-right: 12px; }
 
 .topArticle {
+  position: absolute;
+  top: 60px;
+  right: 60px;
   display: inline-block;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
@@ -771,6 +783,7 @@ h2 {
   @media screen and (max-width: 767px) {
     .wysiwyg {
       width: 850px;
+      height: inherit;
       margin: 0 auto;
       writing-mode: inherit;
       columns: inherit; } }
@@ -785,6 +798,9 @@ h2 {
       .wysiwyg p {
         font-size: 1.25vw;
         unicode-bidi: bidi-override; } }
+    @media screen and (max-width: 767px) {
+      .detail .wysiwyg p {
+        margin-right: 20px; } }
 
 .inlineBlock {
   display: inline-block; }
