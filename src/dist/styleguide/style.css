@@ -730,6 +730,10 @@ h2 {
   writing-mode: vertical-rl;
   font-size: 16px;
   line-height: 1.6; }
+  @media screen and (max-width: 767px) {
+    .topArticle {
+      font-size: 12px;
+      line-height: 1.4; } }
 
 .topNews li {
   position: relative; }

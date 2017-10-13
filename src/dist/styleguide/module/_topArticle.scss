@@ -5,4 +5,8 @@
   writing-mode: vertical-rl;
   font-size: 16px;
   line-height: 1.6;
+  @include mqSP{
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
