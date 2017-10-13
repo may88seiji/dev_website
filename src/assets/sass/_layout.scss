@@ -52,7 +52,11 @@
   @include mqSP{
     width: 100%;
     margin: 0 auto;
+    margin-top: 55px;
     overflow-y: inherit;
+    &.is-fix {
+      position: fixed;
+    }
   }
 }
 

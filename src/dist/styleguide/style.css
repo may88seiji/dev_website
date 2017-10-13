@@ -285,7 +285,10 @@ input:-webkit-autofill {
     .l-main {
       width: 100%;
       margin: 0 auto;
-      overflow-y: inherit; } }
+      margin-top: 55px;
+      overflow-y: inherit; }
+      .l-main.is-fix {
+        position: fixed; } }
 
 .main-inner {
   width: calc(100% - 60px); }
@@ -570,6 +573,9 @@ h2 {
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
       letter-spacing: -5px; }
+      @media screen and (max-width: 767px) {
+        .olWorks li p {
+          letter-spacing: 0; } }
 
 /* ----------------------------
 * trigger

@@ -91,6 +91,9 @@ p{
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
       letter-spacing: -5px;
+      @include mqSP{
+        letter-spacing: 0;
+      }
     }
   }
 }
