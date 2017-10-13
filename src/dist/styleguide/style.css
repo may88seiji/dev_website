@@ -667,7 +667,7 @@ h2 {
       margin: 7px; }
     .menu-content .copyright {
       position: absolute;
-      top: 420px; }
+      bottom: 70px; }
     .menu-content .is-current > a {
       text-decoration: none;
       border-bottom: 1px solid;
