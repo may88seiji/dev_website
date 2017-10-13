@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import * as SpNavi from './app/sp-navi';
+import * as SpGetInnerHeight from './app/sp-innerHeight';
 
 const ua = require('./lib/uaCheck.js');
 
@@ -36,7 +37,7 @@ $(document)
 $(window)
   .on('load',function(){
   SpNavi.toggleNavi();
-  
+  SpGetInnerHeight.getInnerHeight();
   })
 
   .on('scroll',function(){
