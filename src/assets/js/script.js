@@ -27,6 +27,9 @@ $(document)
     if(ua.device === 'tablet') {
       $('html').addClass('use-tablet');
     }
+    if(ua.device === 'sp') {
+      $('html').addClass('use-sp');
+    }
     if(ua.browser === 'ie') {
       $('html').addClass('use-ie');
       $('html').addClass('use-ie' + ua.ieVersion);
@@ -37,7 +40,11 @@ $(document)
 $(window)
   .on('load',function(){
   SpNavi.toggleNavi();
-  SpGetInnerHeight.getInnerHeight();
+  
+  //sp
+  if(ua.device === 'sp') {
+    SpGetInnerHeight.getInnerHeight();
+    }
   })
 
   .on('scroll',function(){
