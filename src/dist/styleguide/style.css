@@ -313,6 +313,10 @@ input:-webkit-autofill {
   position: absolute;
   top: 60px;
   right: 60px; }
+  @media screen and (max-width: 767px) {
+    .l-topArticle {
+      top: 6.25vw;
+      left: 6.25vw; } }
 
 .l-topNews {
   position: absolute;
@@ -321,8 +325,11 @@ input:-webkit-autofill {
   font-size: 12px; }
   @media screen and (max-width: 767px) {
     .l-topNews {
-      bottom: 60px;
-      right: inherit; } }
+      bottom: 15px;
+      right: 0;
+      left: 0;
+      width: 87.5vw;
+      margin: 0 auto; } }
 
 .l-currentPage {
   position: absolute;
@@ -738,6 +745,9 @@ h2 {
 .topNews a {
   padding-left: 15px;
   display: inline-block; }
+  @media screen and (max-width: 767px) {
+    .topNews a {
+      padding-left: 10px; } }
 
 .wysiwyg {
   height: 810px;

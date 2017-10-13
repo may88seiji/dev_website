@@ -15,5 +15,8 @@
   a{
     padding-left: 15px;
     display: inline-block;
+    @include mqSP{
+      padding-left: 10px;
+    }
   }
 }

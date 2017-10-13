@@ -85,6 +85,10 @@
   position: absolute;
   top: 60px;
   right: 60px;
+  @include mqSP{
+    top: calc-vw(20,320);
+    left: calc-vw(20,320);
+  }
 }
 
 .l-topNews{
@@ -93,8 +97,11 @@
   right: 60px;
   font-size: 12px;
   @include mqSP{
-    bottom: 60px;
-    right: inherit;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    width: calc-vw(280,320);
+    margin: 0 auto;
   }
 }
 
