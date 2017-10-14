@@ -4,6 +4,7 @@
   margin: 0 auto;
   writing-mode: vertical-rl;
   columns: 20rem;
+  pointer-events: none;
   @include mqTB{
     width: calc-vw(800,1280);
   }
