@@ -1,5 +1,4 @@
 export function startRight(){
-//  let w = $(".js-startRight").outerWidth(true);
-//  console.log(w);
-  $(".js-startRight").scrollLeft(9999);
+  let w = $(".wysiwyg p").width();
+  $(".js-startRight").scrollLeft(w);
 }
