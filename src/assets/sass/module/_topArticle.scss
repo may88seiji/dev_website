@@ -15,4 +15,10 @@
     font-size: 12px;
     line-height: 1.4;
   }
+  a{
+    @include mqSP{
+      display: block;
+      width: 80px;
+    }
+  }
 }

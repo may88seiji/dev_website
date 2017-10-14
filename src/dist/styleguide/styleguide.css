@@ -710,7 +710,7 @@ h2 {
     height: 40px; }
     @media screen and (max-width: 767px) {
       .pager li {
-        width: 62.5vw; } }
+        width: 200px; } }
   .pager a {
     display: block;
     width: 100%;
@@ -771,6 +771,10 @@ h2 {
       right: inherit;
       font-size: 12px;
       line-height: 1.4; } }
+  @media screen and (max-width: 767px) {
+    .topArticle a {
+      display: block;
+      width: 80px; } }
 
 .topNews li {
   position: relative; }

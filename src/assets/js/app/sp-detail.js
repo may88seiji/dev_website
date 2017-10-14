@@ -9,7 +9,7 @@ export function init(){
   
   $('.js-scrollX').on('scroll',function(){
     let scrollX = $(this).scrollLeft();
-    if(scrollX <= 30 ){
+    if(scrollX <= 20 ){
       $header.css("opacity","1")
       $pager.css("opacity","1")
     }else{
