@@ -4,7 +4,7 @@ export function init(){
   let $header = $detail.prev('.l-header');
   let $pager = $detail.find('.l-pager');
   let init = {'opacity' :'0', 'pointer-events': 'none'};
-  let hide = {'opacity' :'0', 'pointer-events': 'none','transition': '1000ms'}};
+  let hide = {'opacity' :'0', 'pointer-events': 'none','transition': '1000ms'};
   let show = {'opacity' :'1', 'pointer-events': 'inherit', 'transition': '1500ms'};
   
   $header.css(init);
