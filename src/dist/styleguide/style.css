@@ -266,8 +266,7 @@ input:-webkit-autofill {
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #fff;
-      transition: 800; } }
+      background-color: #fff; } }
 
 .l-container {
   position: relative;

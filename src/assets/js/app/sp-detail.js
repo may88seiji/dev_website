@@ -3,8 +3,9 @@ export function init(){
   let w = $(".wysiwyg p").width();
   let $header = $detail.prev('.l-header');
   let $pager = $detail.find('.l-pager');
+  let init = {'opacity' :'0', 'pointer-events': 'none'};
   let hide = {'opacity' :'0', 'pointer-events': 'none'};
-  let show = {'opacity' :'1', 'pointer-events': 'inherit'};
+  let show = {'opacity' :'1', 'pointer-events': 'inherit', 'transition': '1000ms'};
   
   $header.css(hide);
   $pager.css(hide);
