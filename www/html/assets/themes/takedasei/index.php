@@ -1,3 +1,123 @@
-<?php
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title><?php wp_title('', true, 'right')?></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-get_template_part('front-page');
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="Takeda Sei">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="Takeda Sei">
+  <meta property="og:type" content="website">
+  <meta property="fb:app_id" content="">
+  <meta name="twitter:site" content="site">
+  <meta name="twitter:title" content="Takeda Sei">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="ogimg.png">
+  <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/css/style.css' type='text/css' media='all' />
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="/touch-icon.png">
+  <style>
+  </style>
+</head>
+<body>
+  <div class="l-wrapper">
+    <header class="l-header pc-hide">
+      <div class="header-inner">
+        <h1 class="header-logo"><a href="/">Takeda Sei</a></h1>
+        
+        <div class="l-menu pc-hide js-navi">
+          <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          
+          <div class="menu-content">
+            <ul>
+              <li class="is-current"><a href="index.html">home</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="news.html">news</a></li>
+              <li><a href="works.html">works</a></li>
+              <li><a href="mailto:takedasei.ishere@gmail.com">contact</a></li>
+              <ul class="menu-utility-sns">
+                <li><a href=""><i class="icon-twitter"></i></a></li>
+                <li><a href=""><i class="icon-instagram"></i></a></li>
+              </ul>
+            </ul>
+            
+            <div class="copyright">© Takeda Sei.</div>
+
+          </div>
+        </div>
+        
+      </div>
+    </header>
+
+
+<div class="l-container top">
+  <div class="l-content js-getInnerHeight">
+
+    <div class="l-side">
+      <div class="l-side-inner">
+        <div class="side-navi">
+  <div class="side-navi-inner">
+    <h1 class="side-logo"><a href="/">Takeda Sei</a></h1>
+    <ul class="side-navi-main">
+      <li class="is-current"><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="news.html">news</a></li>
+      <li><a href="works.html">works</a></li>
+      <li><a href="mailto:takedasei.ishere@gmail.com">contact</a></li>
+    </ul>
+  </div>
+</div>
+<div class="side-utility">
+  <ul class="side-utility-sns">
+    <li><a href=""><i class="icon-twitter"></i></a></li>
+    <li><a href=""><i class="icon-instagram"></i></a></li>
+  </ul>
+</div>
+      </div>
+    </div>
+    
+    <div class="l-topNews">
+      <ul class="topNews">
+        <li><a href=""><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
+        <li><a href=""><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
+      </ul>
+    </div>
+    
+    
+    <div class="l-main">
+      <div class="main-inner">
+      </div>
+    </div>
+    
+    <div class="l-topArticle">
+      <div class="topArticle">
+        <a href="detail.html"><p>傷のかたち<br><br>ひかりは傷をつくると<br>昨日まで<br>忘れていた</p></a>
+      </div>
+    </div>
+    
+    <footer class="l-footer sp-hide">
+      <div class="copyright">© Takeda Sei.</div>
+    </footer>
+
+
+  </div>
+</div>
+
+
+</div>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/build.js"></script>
+</body>
+</html>
