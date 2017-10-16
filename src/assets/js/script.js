@@ -60,16 +60,3 @@ $(window)
 
   })
 ;
-
-//window.onload = function () {
-//  document.getElementById( "js-scrollX" ).onscroll = function(){
-//    getTheScrollPosition( this );
-//  };
-//}
-//function getTheScrollPosition( $event ) {
-//  var $scrollTop = $event.scrollTop;
-//  var $scrollLeft = $event.scrollLeft;
-//  console.log($scrollLeft);
-//  document.getElementById( "scrollTopOutput" ).innerHTML = $scrollTop + "px";
-//  document.getElementById( "scrollLeftOutput" ).innerHTML = $scrollLeft + "px";
-//}

@@ -80,29 +80,9 @@ add_filter('manage_posts_columns', 'custom_columns');
 add_action('wp_enqueue_scripts', function()
 {
   wp_deregister_script('jquery');
-  wp_enqueue_script('fontplus', '//webfont.fontplus.jp/accessor/script/fontplus.js?fgjNLi9Uupw%3D&aa=1&ab=2');
   wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/build.js', array(), null, true);
 
   wp_enqueue_style('style', get_template_directory_uri().'/assets/css/style.css', array(), null);
-  wp_enqueue_style('fontplus', 'https://fonts.googleapis.com/css?family=Homemade+Apple|Poppins:500,600', array(), null);
-
-  $custom_style[] = '.list_octagon-img image,.list_octagon-img img {clip-path: url(#clip-octagon);}';
-  if($color_set = get_field('colorset', 'options'))
-  {
-    foreach($color_set as $key => $value)
-    {
-      if($value['base'] && $value['font'])
-      {
-        $custom_style[] = '.c-bg-b_'. $key. '{background-color:'.$value['base']. '}';
-        $custom_style[] = '.c-bd-b_'. $key. '{border-color:'.$value['base']. '}';
-        $custom_style[] = '.c-cl-b_'. $key. '{color:'.$value['base']. '}';
-        $custom_style[] = '.c-bg-f_'. $key. '{background-color:'.$value['font']. '}';
-        $custom_style[] = '.c-bd-f_'. $key. '{border-color:'.$value['font']. '}';
-        $custom_style[] = '.c-cl-f_'. $key. '{color:'.$value['font']. '}';
-      }
-    }
-    wp_add_inline_style('style', implode('', $custom_style));
-  }
 
 });
 /* ----------------------------------------------------------
@@ -145,60 +125,6 @@ function is_external_url($url)
   return !preg_match('/^' . preg_quote(get_bloginfo('url'), '/') . '/', $url);
 }
 
-function get_pref()
-{
-  return array(
-              '北海道',
-              '青森県',
-              '岩手県',
-              '宮城県',
-              '秋田県',
-              '山形県',
-              '福島県',
-              '茨城県',
-              '栃木県',
-              '群馬県',
-              '埼玉県',
-              '千葉県',
-              '東京都',
-              '神奈川県',
-              '新潟県',
-              '富山県',
-              '石川県',
-              '福井県',
-              '山梨県',
-              '長野県',
-              '岐阜県',
-              '静岡県',
-              '愛知県',
-              '三重県',
-              '滋賀県',
-              '京都府',
-              '大阪府',
-              '兵庫県',
-              '奈良県',
-              '和歌山県',
-              '鳥取県',
-              '島根県',
-              '岡山県',
-              '広島県',
-              '山口県',
-              '徳島県',
-              '香川県',
-              '愛媛県',
-              '高知県',
-              '福岡県',
-              '佐賀県',
-              '長崎県',
-              '熊本県',
-              '大分県',
-              '宮崎県',
-              '鹿児島県',
-              '沖縄県',
-              '海外',
-               );
-}
-
 function switch_selected_form($field = null, $value = null, $default = null)
 {
   if(!$field || !$value) return false;
@@ -219,22 +145,5 @@ function switch_selected_form($field = null, $value = null, $default = null)
 function get_tw_url()
 {
   $title = (get_field('og_title')) ? get_field('og_title') : strip_tags(get_the_title());
-  return "https://twitter.com/share?shareUrl=". rawurlencode(get_the_permalink()) ."&text=". rawurlencode ($title. ' @sheis_jp #sheisjp');
-}
-
-function get_fb_url()
-{
-  $title = (get_field('og_title')) ? get_field('og_title') : strip_tags(get_the_title());
-  return "https://www.facebook.com/sharer/sharer.php?u=". rawurlencode(get_the_permalink()) ."&t=". rawurlencode($title);
-}
-
-function get_pocket_url()
-{
-  return "http://getpocket.com/edit?url=". rawurlencode(get_the_permalink());
-}
-
-function get_line_url()
-{
-  $title = (get_field('og_title')) ? get_field('og_title') : strip_tags(get_the_title());
-  return "http://line.me/R/msg/text/?". rawurlencode($title) ."%0D%0A". rawurlencode(get_the_permalink());
+//  return "https://twitter.com/share?shareUrl=". rawurlencode(get_the_permalink()) ."&text=". rawurlencode ($title. ' @sheis_jp #sheisjp');
 }

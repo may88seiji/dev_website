@@ -1,0 +1,39 @@
+<?php get_header(); ?>
+
+<div class="l-container top">
+  <div class="l-content js-getInnerHeight">
+
+    <div class="l-side">
+      <div class="l-side-inner">
+        <?php get_sidebar(); ?>
+      </div>
+    </div>
+    
+    <div class="l-topNews">
+      <ul class="topNews">
+        <li><a href=""><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
+        <li><a href=""><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
+      </ul>
+    </div>
+    
+    
+    <div class="l-main">
+      <div class="main-inner">
+      </div>
+    </div>
+    
+    <div class="l-topArticle">
+      <div class="topArticle">
+        <a href="detail.html"><p>傷のかたち<br><br>ひかりは傷をつくると<br>昨日まで<br>忘れていた</p></a>
+      </div>
+    </div>
+    
+    <footer class="l-footer sp-hide">
+      <div class="copyright">© Takeda Sei.</div>
+    </footer>
+
+
+  </div>
+</div>
+
+<? get_footer(); ?>
