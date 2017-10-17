@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <div class="l-container about">
+<div class="l-container detail js-detail">
     <div class="l-content">
       <div class="l-currentPage">works</div>
 

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <div class="l-container about">
     <div class="l-content">
-      <div class="l-currentPage">about</div>
+      <div class="l-currentPage">news</div>
 
 
       <div class="l-side">
@@ -15,7 +15,8 @@
           <ul class="news">
 
             <?php while( have_posts() ): the_post();?>
-            <li>              <span class="date">2017/00/00 Tue</span>
+            <li>
+              <span class="date">2017/00/00 Tue</span>
               <h2><?php
                 $this_content= wpautop($post->post_content);
                 echo $this_content;?>
