@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <div class="l-container about">
     <div class="l-content">
-      <div class="l-currentPage">about</div>
+      <div class="l-currentPage">works</div>
 
 
       <div class="l-side">
@@ -42,4 +42,4 @@
       </div>
     </div>
 
-<? get_footer(); ?>
+<? get_footer();
