@@ -4,8 +4,8 @@
     <ul class="side-navi-main">
       <li class="is-current"><a href="<?php echo home_url('');?>">home</a></li>
       <li><a href="<?php echo home_url('');?>/about">about</a></li>
-      <li><a href="news.html">news</a></li>
-      <li><a href="works.html">works</a></li>
+      <li><a href="<?php echo home_url('');?>/news">news</a></li>
+      <li><a href="<?php echo home_url('');?>/works">works</a></li>
       <li><a href="mailto:takedasei.ishere@gmail.com">contact</a></li>
     </ul>
   </div>

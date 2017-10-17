@@ -2,6 +2,8 @@
 
 require_once( WP_CONTENT_DIR . '/includes/add_taxonomy.php' );
 require_once( WP_CONTENT_DIR . '/includes/acf.php' );
+require_once( WP_CONTENT_DIR . '/includes/init.php' );
+
 
 /* ----------------------------------------------------------
 

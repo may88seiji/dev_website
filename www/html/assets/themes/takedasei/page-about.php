@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: about
+*/
+?>
+
+ <?php get_header(); ?>
   <div class="l-container about">
     <div class="l-content">
       <div class="l-currentPage">about</div>
