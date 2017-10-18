@@ -14,9 +14,10 @@
         <div class="main-inner">
           <div class="l-works_detail">
             <div class="wysiwyg">
-              <p ><span><?php the_title(); ?></span><br><br>
-                <br><?php
-                $this_content= wpautop($post->post_content);
+              <p >
+                <span class="title"><?php the_title(); ?></span>
+                <?php
+                $this_content= $post->post_content;
                 echo $this_content;
                 ?>
               </p>
