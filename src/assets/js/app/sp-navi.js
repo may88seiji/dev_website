@@ -1,5 +1,5 @@
 export function toggleNavi(){
-  $(".js-navi").on('click',function(){
+  $(".js-navi").on('touchend',function(){
     $(this).toggleClass("is-open");
     
     if($('.js-navi').hasClass("is-open")){
