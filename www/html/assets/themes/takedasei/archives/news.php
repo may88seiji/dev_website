@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php 
+$time = get_post_time('Y/n/j D'); 
+
+get_header(); ?>
   <div class="l-container about">
     <div class="l-content">
       <div class="l-currentPage">news</div>
@@ -16,7 +19,7 @@
 
             <?php while( have_posts() ): the_post();?>
             <li>
-              <span class="date">2017/00/00 Tue</span>
+              <span class="date"><?php echo $time ?></span>
               <h2><?php
                 $this_content= wpautop($post->post_content);
                 echo $this_content;?>
@@ -36,4 +39,4 @@
       </div>
     </div>
 
-<? get_footer(); ?>
+<? get_footer();
