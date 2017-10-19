@@ -597,7 +597,9 @@ h2 {
   width: 20px;
   height: 15px;
   float: right;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 20px; }
 
 .menu-trigger span {
   position: absolute;
