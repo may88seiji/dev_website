@@ -11,15 +11,9 @@
     
     <div class="l-topNews">
       <ul class="topNews">
-        <li><a href=""><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
-        <li><a href=""><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
+        <li><a href="/"><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
+        <li><a href="/"><span>2017.9.1(Fri) - 9.10(Sun)</span><br>Takeda Sei個展「ああああ展」 @寿パークビル5F</a></li>
       </ul>
-    </div>
-    
-    
-    <div class="l-main">
-      <div class="main-inner">
-      </div>
     </div>
     
     <div class="l-topArticle">

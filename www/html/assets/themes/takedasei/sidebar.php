@@ -17,7 +17,7 @@ $pt = get_post_type( $post );;
 </div>
 <div class="side-utility">
   <ul class="side-utility-sns">
-    <li><a href=""><i class="icon-twitter"></i></a></li>
-    <li><a href=""><i class="icon-instagram"></i></a></li>
+    <li><a href="https://twitter.com/?request_context=signup"><i class="icon-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com/takedasei.ishere/?hl=ja"><i class="icon-instagram"></i></a></li>
   </ul>
 </div>
