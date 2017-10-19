@@ -306,6 +306,9 @@ input:-webkit-autofill {
   width: 270px;
   padding-top: 48px;
   overflow-y: scroll; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .l-side {
+      width: 21.09375vw; } }
   @media screen and (max-width: 767px) {
     .l-side {
       display: none;
@@ -715,6 +718,9 @@ h2 {
 .side-logo {
   font-size: 20px;
   margin-bottom: 35px; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .side-logo {
+      font-size: 1.5625vw; } }
 
 .side-navi-main {
   font-size: 14px; }

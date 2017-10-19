@@ -22,7 +22,6 @@
     <meta name="twitter:url" content="">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="ogimg.png">
-    <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/css/style.css' type='text/css' media='all' />
     <link rel="icon" href="favicon.ico"/>
     <link rel="apple-touch-icon" href="/touch-icon.png">
     <style>
@@ -30,7 +29,6 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div class="hoge"></div>
     <?php if(!IS_LOCAL) get_template_part('partial/ga');?>
     <div class="l-wrapper">
       <header class="l-header pc-hide">

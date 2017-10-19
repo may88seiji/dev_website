@@ -1,18 +1,25 @@
 .side-logo{
   font-size: 20px;
   margin-bottom: 35px;
+  @include mqTB{
+    font-size: calc-vw(20,1280);
+  }
 }
 
 .side-navi-main{
   font-size: 14px;
+  @include mqTB{
+//    font-size: calc-vw(14,1280);
+  }
   li{
     margin-bottom: 12px;
+    @include mqTB{
+//      margin-bottom: calc-vw(12,1280);
+    }
     a{
-//      transition: $tr_speed;
       padding-bottom: 2px;
       &:hover {
         text-decoration: none;
-//        opacity: .6;
         border-bottom: 1px solid;
       }
     }

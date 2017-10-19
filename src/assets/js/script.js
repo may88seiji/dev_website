@@ -6,6 +6,9 @@ import * as SpStartRight from './app/sp-startRight';
 import * as SpDetail from './app/sp-detail';
 
 const ua = require('./lib/uaCheck.js');
+const mqSP = 768;
+let timer = false,
+    iw = window.innerWidth;
 
 // ハッシュを取得して削除する
 var hash = location.hash ? location.hash : null;
@@ -43,20 +46,40 @@ $(window)
   .on('load',function(){
   SpNavi.toggleNavi();
   
-    //sp
-    if(ua.device === 'sp') {
+//    //sp
+//    if(ua.device === 'sp') {
+//      SpGetInnerHeight.getInnerHeight();
+//      SpStartRight.startRight();
+//      if ( $('.js-detail').length ) {
+//        SpDetail.init();
+//      }
+//    }
+    iw = window.innerWidth;
+    if( mqSP > iw ){
       SpGetInnerHeight.getInnerHeight();
       SpStartRight.startRight();
-    
       if ( $('.js-detail').length ) {
         SpDetail.init();
       }
     }
+  
   })
   .on('scroll',function(){
   
   })
   .on('resize',function(){
-
+    if (timer !== false) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+      iw = window.innerWidth;
+      if( mqSP > iw ){
+        SpGetInnerHeight.getInnerHeight();
+        SpStartRight.startRight();
+        if ( $('.js-detail').length ) {
+          SpDetail.init();
+        }
+      }
+    }, 200);
   })
 ;

@@ -1,4 +1,4 @@
 export function getInnerHeight(){
-  let ih = $(window).innerHeight();
+  var ih = $(window).innerHeight();
   $(".js-getInnerHeight").css('height',ih - 55);
 }
