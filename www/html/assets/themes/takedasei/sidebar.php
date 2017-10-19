@@ -1,7 +1,6 @@
 <?php 
 $pt = get_post_type( $post );;
 ?>
- 
 
    <div class="side-navi">
   <div class="side-navi-inner">
