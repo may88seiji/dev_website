@@ -59,7 +59,8 @@
     right: 0;
     min-height: inherit;
     &.is-fix {
-      position: fixed;
+      overflow: hidden;
+      height: 100%;
     }
   }
 }

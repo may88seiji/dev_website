@@ -292,7 +292,8 @@ input:-webkit-autofill {
       right: 0;
       min-height: inherit; }
       .l-main.is-fix {
-        position: fixed; } }
+        overflow: hidden;
+        height: 100%; } }
 
 .main-inner {
   width: calc(100% - 60px); }
