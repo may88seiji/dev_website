@@ -224,6 +224,9 @@ body {
   line-height: 1.75;
   counter-reset: number 0;
   /* number のカウンタを 0 にセット */ }
+  body.is-fix {
+    overflow: hidden;
+    height: 100%; }
 
 img {
   max-width: 100%; }
@@ -290,10 +293,7 @@ input:-webkit-autofill {
       overflow-x: scroll;
       -webkit-overflow-scrolling: touch;
       right: 0;
-      min-height: inherit; }
-      .l-main.is-fix {
-        overflow: hidden;
-        height: 100%; } }
+      min-height: inherit; } }
 
 .main-inner {
   width: calc(100% - 60px); }

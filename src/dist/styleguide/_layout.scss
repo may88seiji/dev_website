@@ -58,10 +58,6 @@
     -webkit-overflow-scrolling: touch;
     right: 0;
     min-height: inherit;
-    &.is-fix {
-      overflow: hidden;
-      height: 100%;
-    }
   }
 }
 

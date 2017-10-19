@@ -1,18 +1,15 @@
 export function toggleNavi(){
   $(".js-navi").on('click',function(){
-    let st = $(window).scrollTop();
-    
+    let st = $(window).scrollTop(),
+        keep = $("html,body").animate({scrollTop:st});
     $(this).toggleClass("is-open");
     
     if($('.js-navi').hasClass("is-open")){
       $('body').addClass("is-fix");
-//      $('.l-main').css({'top': -st});
-//      window.scrollTop(0,st);
-      $("html,body").animate({scrollTop:st});
+      keep
     }else{
       $('body').removeClass("is-fix");
-//      $('.l-main').css({'top': 0});
-//      window.scrollTop(0,st);
+      keep
     }
   })
 }
