@@ -746,25 +746,29 @@ h2 {
 
 .topArticle {
   position: absolute;
-  top: 60px;
-  right: 60px;
+  top: 190px;
+  right: -70px;
   display: inline-block;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   font-size: 16px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  transform: rotate(90deg); }
   @media screen and (max-width: 767px) {
     .topArticle {
-      top: 6.25vw;
-      left: 6.25vw;
+      top: 40.625vw;
+      left: -25vw;
       right: inherit;
       font-size: 12px;
       line-height: 1.4; } }
   @media screen and (max-width: 767px) {
     .topArticle a {
-      display: block;
-      width: 80px; } }
+      display: block; } }
 
 .topNews li {
   position: relative; }

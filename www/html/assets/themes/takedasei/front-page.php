@@ -1,5 +1,6 @@
 <?php 
-$customPosts = get_custom_post(2, 'news');
+$customPosts_news = get_custom_post(2, 'news');
+$customPosts_works = get_custom_post(1, 'works');
 $time = get_post_time('Y/n/j D'); 
 
 get_header(); 
@@ -16,7 +17,7 @@ get_header();
     
     <div class="l-topNews">
       <ul class="topNews">
-        <?php if($customPosts) : foreach($customPosts as $post) : setup_postdata( $post ); ?>
+        <?php if($customPosts_news) : foreach($customPosts_news as $post) : setup_postdata( $post ); ?>
           <li>
             <a href="<?php echo home_url('');?>/news"><span class="date"><?php echo $time ?></span><br>
               <?php the_excerpt(); ?>
@@ -28,7 +29,13 @@ get_header();
     
     <div class="l-topArticle">
       <div class="topArticle">
-        <a href="detail.html"><p>傷のかたち<br><br>ひかりは傷をつくると<br>昨日まで<br>忘れていた</p></a>
+        <?php if($customPosts_works) : foreach($customPosts_works as $post) : setup_postdata( $post ); ?>
+        <a href="<?php the_permalink(); ?>">
+          <p><span class="title"><?php the_title(); ?></span><br><br>
+           <?php  $this_content = $post->post_content;  echo $this_content;  ?>
+          </p>
+        </a>
+        <?php endforeach; endif; wp_reset_postdata(); ?>
       </div>
     </div>
     

@@ -1,16 +1,21 @@
 .topArticle{
   position: absolute;
-  top: 60px;
-  right: 60px;
+  top: 190px;
+  right: -70px;
   display: inline-block;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   font-size: 16px;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  transform: rotate(90deg);
   @include mqSP{
-    top: calc-vw(20,320);
-    left: calc-vw(20,320);
+    top: calc-vw(130,320);
+    left: calc-vw(-80,320);
     right: inherit;
     font-size: 12px;
     line-height: 1.4;
@@ -18,7 +23,6 @@
   a{
     @include mqSP{
       display: block;
-      width: 80px;
     }
   }
 }

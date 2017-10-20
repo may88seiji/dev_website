@@ -17,7 +17,7 @@
               <p >
                 <span class="title"><?php the_title(); ?></span>
                 <?php
-                $this_content= $post->post_content;
+                $this_content = $post->post_content;
                 echo $this_content;
                 ?>
               </p>
