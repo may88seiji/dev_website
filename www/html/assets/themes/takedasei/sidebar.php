@@ -2,7 +2,7 @@
 $pt = get_post_type( $post );;
 ?>
 
-   <div class="side-navi">
+<div class="side-navi">
   <div class="side-navi-inner">
     <h1 class="side-logo"><a href="/">Takeda Sei</a></h1>
     <ul class="side-navi-main">

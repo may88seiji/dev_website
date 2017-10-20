@@ -151,3 +151,14 @@ function get_tw_url()
   $title = (get_field('og_title')) ? get_field('og_title') : strip_tags(get_the_title());
 //  return "https://twitter.com/share?shareUrl=". rawurlencode(get_the_permalink()) ."&text=". rawurlencode ($title. ' @sheis_jp #sheisjp');
 }
+
+function get_custom_post($pp = null, $type = null)
+{
+  $args = array(
+    'posts_per_page' => $pp, //表示する記事の数
+    'post_type' => $type //投稿タイプ名
+  );
+  $customPosts = get_posts($args);
+  
+  return $customPosts;
+}

@@ -1,9 +1,5 @@
 <?php 
-$args = array(
-  'posts_per_page' => 2, //表示する記事の数
-  'post_type' => 'news' //投稿タイプ名
-);
-$customPosts = get_posts($args);
+$customPosts = get_custom_post(2, 'news');
 $time = get_post_time('Y/n/j D'); 
 
 get_header(); 
@@ -26,10 +22,7 @@ get_header();
               <?php the_excerpt(); ?>
             </a>
           </li>
-        <?php endforeach; ?>
-        <?php else : //記事が無い場合 ?>
-        <?php endif;
-        wp_reset_postdata(); //クエリのリセット ?>
+        <?php endforeach; endif; wp_reset_postdata(); //クエリのリセット ?>
       </ul>
     </div>
     
