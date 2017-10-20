@@ -759,6 +759,10 @@ h2 {
   -webkit-line-clamp: 5;
   overflow: hidden;
   transform: rotate(90deg); }
+  .topArticle p::after {
+    content: "-read more";
+    display: block;
+    position: absolute; }
   @media screen and (max-width: 767px) {
     .topArticle {
       top: 40.625vw;

@@ -50,8 +50,8 @@
                 <li class="<?php if ( $pt == 'works') { echo 'is-current'; } ?>"><a href="<?php echo home_url('');?>/works">works</a></li>
                 <li><a href="mailto:takedasei.ishere@gmail.com">contact</a></li>
                 <ul class="menu-utility-sns">
-                  <li><a href=""><i class="icon-twitter"></i></a></li>
-                  <li><a href=""><i class="icon-instagram"></i></a></li>
+                  <li><a href="https://twitter.com/takedaseiishere"><i class="icon-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/takedasei.ishere/?hl=ja"><i class="icon-instagram"></i></a></li>
                 </ul>
               </ul>
 

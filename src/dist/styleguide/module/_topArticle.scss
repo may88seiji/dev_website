@@ -13,6 +13,13 @@
   -webkit-line-clamp: 5;
   overflow: hidden;
   transform: rotate(90deg);
+  p{
+    &::after {
+      content: "-read more";
+      display: block;
+      position: absolute;
+    }
+  }
   @include mqSP{
     top: calc-vw(130,320);
     left: calc-vw(-80,320);
