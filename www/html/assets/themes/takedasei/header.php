@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="ogimg.png">
     <link rel="icon" href="favicon.ico"/>
-    <link rel="apple-touch-icon" href="/touch-icon.png">
+    <link rel="apple-touch-icon" href="touch-icon.png">
     <style>
     </style>
     <?php wp_head(); ?>
