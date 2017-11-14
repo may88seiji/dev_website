@@ -767,8 +767,7 @@ h2 {
   @media screen and (max-width: 767px) {
     .topArticle {
       top: 25vw;
-      left: inherit;
-      right: 200px;
+      left: -20px;
       font-size: 12px;
       line-height: 1.4;
       width: 200px; } }
