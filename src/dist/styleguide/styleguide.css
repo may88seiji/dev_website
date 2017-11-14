@@ -766,11 +766,12 @@ h2 {
     position: absolute; }
   @media screen and (max-width: 767px) {
     .topArticle {
-      top: 50px;
+      top: 25vw;
       left: inherit;
-      right: 180px;
+      right: 68.75vw;
       font-size: 12px;
-      line-height: 1.4; } }
+      line-height: 1.4;
+      width: 200px; } }
   @media screen and (max-width: 767px) {
     .topArticle a {
       display: block; } }

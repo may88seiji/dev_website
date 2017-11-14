@@ -21,11 +21,12 @@
     }
   }
   @include mqSP{
-    top: 50px;
+    top: calc-vw(80,320);
     left: inherit;
-    right: 180px;
+    right: calc-vw(220,320);
     font-size: 12px;
     line-height: 1.4;
+    width: 200px;
   }
   a{
     @include mqSP{
