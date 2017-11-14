@@ -10,7 +10,7 @@
   }
   @include mqSP{
     width: auto;
-    height: inherit;
+    height: 440px;
     margin: 0 auto;
     writing-mode: inherit;
     columns: inherit;
@@ -31,7 +31,7 @@
       unicode-bidi: bidi-override;
     }
     @include mqSP{
-      height: 440px;
+//      height: 440px;
       .detail &{
         margin:0 calc-vw(145,320);
       }

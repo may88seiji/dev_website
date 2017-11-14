@@ -805,7 +805,7 @@ h2 {
   @media screen and (max-width: 767px) {
     .wysiwyg {
       width: auto;
-      height: inherit;
+      height: 440px;
       margin: 0 auto;
       writing-mode: inherit;
       columns: inherit; } }
@@ -824,10 +824,8 @@ h2 {
         font-size: 1.25vw;
         unicode-bidi: bidi-override; } }
     @media screen and (max-width: 767px) {
-      .wysiwyg p {
-        height: 440px; }
-        .detail .wysiwyg p {
-          margin: 0 45.3125vw; } }
+      .detail .wysiwyg p {
+        margin: 0 45.3125vw; } }
 
 .inlineBlock {
   display: inline-block; }
