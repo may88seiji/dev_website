@@ -793,7 +793,7 @@ h2 {
       padding-left: 10px; } }
 
 .wysiwyg {
-  height: 810px;
+  height: 850px;
   width: 860px;
   margin: 0 auto;
   writing-mode: vertical-rl;
@@ -824,8 +824,10 @@ h2 {
         font-size: 1.25vw;
         unicode-bidi: bidi-override; } }
     @media screen and (max-width: 767px) {
-      .detail .wysiwyg p {
-        margin: 0 45.3125vw; } }
+      .wysiwyg p {
+        height: 440px; }
+        .detail .wysiwyg p {
+          margin: 0 45.3125vw; } }
 
 .inlineBlock {
   display: inline-block; }
