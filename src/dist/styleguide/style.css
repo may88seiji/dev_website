@@ -766,8 +766,8 @@ h2 {
     position: absolute; }
   @media screen and (max-width: 767px) {
     .topArticle {
-      top: 40.625vw;
-      left: -25vw;
+      top: 120px;
+      left: -80px;
       right: inherit;
       font-size: 12px;
       line-height: 1.4; } }
