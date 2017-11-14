@@ -1,7 +1,7 @@
 .topArticle{
   position: absolute;
-  top: 50px;
-  right: 190px;
+  top: 190px;
+  right: -70px;
   display: inline-block;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
@@ -21,9 +21,9 @@
     }
   }
   @include mqSP{
-    top: 120px;
-    left: -80px;
-    right: inherit;
+    top: 50px;
+    left: inherit;
+    right: 180px;
     font-size: 12px;
     line-height: 1.4;
   }
