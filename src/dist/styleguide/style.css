@@ -270,7 +270,8 @@ input:-webkit-autofill {
       height: 100%; } }
   .top .l-content {
     background-image: url(../img/mv_03.jpg);
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
     @media screen and (max-width: 767px) {
       .top .l-content {
         background-position: 50% 50%;

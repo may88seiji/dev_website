@@ -34,6 +34,7 @@
   .top & {
     background-image: url(../img/mv_03.jpg);
     background-size: cover;
+    background-position: center;
     @include mqSP{
       background-position: 50% 50%;
       margin-top: 55px;
