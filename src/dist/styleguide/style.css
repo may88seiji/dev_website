@@ -768,7 +768,7 @@ h2 {
     .topArticle {
       top: 25vw;
       left: inherit;
-      right: 68.75vw;
+      right: 200px;
       font-size: 12px;
       line-height: 1.4;
       width: 200px; } }
