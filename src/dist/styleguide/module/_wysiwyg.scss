@@ -10,7 +10,8 @@
   }
   @include mqSP{
     width: auto;
-    height: 440px;
+//    height: 440px;
+    height: inherit;
     margin: 0 auto;
     writing-mode: inherit;
     columns: inherit;

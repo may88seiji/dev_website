@@ -805,7 +805,7 @@ h2 {
   @media screen and (max-width: 767px) {
     .wysiwyg {
       width: auto;
-      height: 440px;
+      height: inherit;
       margin: 0 auto;
       writing-mode: inherit;
       columns: inherit; } }
