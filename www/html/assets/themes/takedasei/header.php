@@ -12,7 +12,7 @@
     <meta property="og:title" content="Takeda Sei">
     <meta property="og:description" content="">
     <meta property="og:url" content="">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="ogimg.png">
     <meta property="og:site_name" content="Takeda Sei">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="">
