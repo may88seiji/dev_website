@@ -748,7 +748,7 @@ h2 {
 .topArticle {
   position: absolute;
   top: 240px;
-  right: -110px;
+  right: -140px;
   display: inline-block;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
