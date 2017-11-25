@@ -226,7 +226,8 @@ body {
   /* number のカウンタを 0 にセット */ }
   body.is-fix {
     overflow: hidden;
-    height: 100%; }
+    height: 100%;
+    position: fixed; }
 
 img {
   max-width: 100%; }
