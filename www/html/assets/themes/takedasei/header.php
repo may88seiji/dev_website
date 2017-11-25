@@ -6,20 +6,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="takedaseiのウェブサイトです">
+    <meta name="keywords" content="takedasei 詩">
     <meta name="format-detection" content="telephone=no">
     <meta property="og:title" content="Takeda Sei">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
+    <meta property="og:description" content="takedaseiのウェブサイトです">
+    <meta property="og:url" content="http://takedasei.com/">
     <meta property="og:image" content="ogimg.png">
     <meta property="og:site_name" content="Takeda Sei">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="">
     <meta name="twitter:site" content="site">
     <meta name="twitter:title" content="Takeda Sei">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:url" content="">
+    <meta name="twitter:description" content="takedaseiのウェブサイトです。">
+    <meta name="twitter:url" content="http://takedasei.com/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="ogimg.png">
     <link rel="icon" href="favicon.ico"/>
