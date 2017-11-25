@@ -800,15 +800,14 @@ h2 {
   margin: 0 auto;
   writing-mode: vertical-rl;
   columns: 20rem;
-  pointer-events: none; }
-  @media screen and (min-width: 768px) {
-    .wysiwyg {
-      letter-spacing: -5px; } }
+  pointer-events: none;
+  letter-spacing: -5px; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .wysiwyg {
       width: 62.5vw; } }
   @media screen and (max-width: 767px) {
     .wysiwyg {
+      letter-spacing: inherit;
       width: auto;
       height: 350px;
       margin: 0 auto;

@@ -5,13 +5,12 @@
   writing-mode: vertical-rl;
   columns: 20rem;
   pointer-events: none;
-  @include mqNotSP{
-    letter-spacing: -5px;
-  }
+  letter-spacing: -5px;
   @include mqTB{
     width: calc-vw(800,1280);
   }
   @include mqSP{
+    letter-spacing: inherit;
     width: auto;
 //    height: 440px;
     height: 350px;
