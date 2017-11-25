@@ -12,6 +12,6 @@ function my_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'my_excerpt_length');
 function new_excerpt_more($more) {
-  return '- read more';
+  return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
