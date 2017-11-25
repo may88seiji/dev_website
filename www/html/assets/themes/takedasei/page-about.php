@@ -18,14 +18,16 @@ Template Name: about
 
         <div class="l-main">
           <div class="main-inner">
+<!--
             <div class="introduction">
               <p>神村図像設計は、デザインによって様々な活動に貢献することを目的に設立されたクリエイティブスタジオです。<br>私たちはデザインの専門家として、企業やブランドの活動をデザイン面から総合的にサポートしています。<br>私たちの主な仕事は、ビジュアルによるコミュニケーションを計画すること、また、それを具体的な形にすることです。<br>企業の顔となるロゴ、ブランドの声となるタイプフェイス、商品そのものや、それにまつわるコミュニケーションツール。<br>あらゆるものをより良くしていくためにはどうしたら良いか、それらを提案し、設計することが私たちの役割です。<br>私たちがデザインにおいてもっとも心がけていること、それは「革新性、実用性、独創性、そして誠実さ」です。<br>ただ形があるだけではなく、ビジョンや精神が形として体現されたものこそ、私たちの理想とするデザインです。<br>私たちはお客様とともに、妥協のないデザインを目指します。<br>本当に良いデザインは多くの人を幸せにし、より豊かな世の中へ向かうために機能すると私たちは信じています。<br>より良いデザインによって、より良い世の中を実現すること。<br>これが、私たちのスタジオにおけるもっとも大切な指針であり、果たすべきミッションです。</p>
               <p>Kamimura is a creative studio established to contribute to society by designing. <br>We have been supporting companies and brands comprehensively as a professional of visualization.<br>Our main work is to plot the strategy of visual communication and make it concrete. <br>We design things for making the world a better place: a logo as the face of a company, a typeface as the voice of a brand, products, and other communication tools as well. <br>What is important for us while we design is innovation, practicality, creativity and honesty. <br>The ideal for us is the design which is not just shapes but is embodied of visions and spirits. <br>We always aim to create the best design for our clients.<br>We believe that genuine design makes people happy and makes the world better. <br>It's the most important principle of our studio to contribute to the world through the good design.</p>
             </div>
+-->
 
             <div class="profile">
               <h2>Profile</h2>
-              <p>神村図像設計は、デザインによって様々な活動に貢献することを目的に設立されたクリエイティブスタジオです。<br>私たちはデザインの専門家として、企業やブランドの活動をデザイン面から総合的にサポートしています。<br>私たちの主な仕事は、ビジュアルによるコミュニケーションを計画すること、また、それを具体的な形にすることです。</p>
+              <p>2016年7月に京都から東京に移住。都内在住、出身は愛知。<br />2017年5月より詩作、雑誌への投稿をはじめる。このサイトの公開は2017年11月。</p>
             </div>
           </div>
         </div>
