@@ -732,10 +732,13 @@ h2 {
   .side-navi-main li {
     margin-bottom: 12px; }
     .side-navi-main li a {
-      padding-bottom: 2px; }
+      padding-bottom: 2px;
+      transition: .3s;
+      border-bottom: 1px solid transparent; }
       .side-navi-main li a:hover {
         text-decoration: none;
-        border-bottom: 1px solid; }
+        border-bottom: 1px solid #000;
+        transition: 0; }
   .side-navi-main .is-current > a {
     text-decoration: none;
     border-bottom: 1px solid;
@@ -745,6 +748,26 @@ h2 {
   display: inline-block;
   font-size: 10px;
   margin-right: 12px; }
+
+.l-blog_detail .title {
+  display: block;
+  font-weight: bold; }
+  @media screen and (min-width: 768px) {
+    .l-blog_detail .title {
+      margin-bottom: 20px; } }
+  @media screen and (max-width: 767px) {
+    .l-blog_detail .title {
+      margin-bottom: 10px; } }
+
+.not-chrome .l-works_detail .title {
+  display: block;
+  font-weight: bold; }
+  @media screen and (min-width: 768px) {
+    .not-chrome .l-works_detail .title {
+      margin-bottom: 20px; } }
+  @media screen and (max-width: 767px) {
+    .not-chrome .l-works_detail .title {
+      margin-bottom: 12px; } }
 
 .topArticle {
   position: absolute;
@@ -794,7 +817,7 @@ h2 {
     .topNews a {
       padding-left: 10px; } }
 
-.wysiwyg {
+.use-chrome .l-works_detail > .wysiwyg {
   height: 850px;
   width: 860px;
   margin: 0 auto;
@@ -803,20 +826,20 @@ h2 {
   pointer-events: none;
   letter-spacing: -5px; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .wysiwyg {
+    .use-chrome .l-works_detail > .wysiwyg {
       width: 62.5vw; } }
   @media screen and (max-width: 767px) {
-    .wysiwyg {
+    .use-chrome .l-works_detail > .wysiwyg {
       letter-spacing: inherit;
       width: auto;
       height: 350px;
       margin: 0 auto;
       writing-mode: inherit;
       columns: inherit; } }
-  .wysiwyg span {
+  .use-chrome .l-works_detail > .wysiwyg span {
     display: block;
     margin-left: 60px; }
-  .wysiwyg p {
+  .use-chrome .l-works_detail > .wysiwyg p {
     display: inline-block;
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
@@ -824,12 +847,27 @@ h2 {
     font-size: 16px;
     line-height: 1.6; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-      .wysiwyg p {
+      .use-chrome .l-works_detail > .wysiwyg p {
         font-size: 1.25vw;
         unicode-bidi: bidi-override; } }
     @media screen and (max-width: 767px) {
-      .detail .wysiwyg p {
+      .use-chrome .l-works_detail > .wysiwyg p {
         margin: 0 45.3125vw; } }
+
+.l-blog_detail > .wysiwyg {
+  text-align: justify; }
+  @media screen and (min-width: 768px) {
+    .l-blog_detail > .wysiwyg {
+      max-width: 900px;
+      text-align: justify; } }
+  @media screen and (min-width: 768px) {
+    .l-blog_detail > .wysiwyg p {
+      margin-bottom: 18px; } }
+  @media screen and (max-width: 767px) {
+    .l-blog_detail > .wysiwyg p {
+      margin-bottom: 12px;
+      font-size: 14px;
+      letter-spacing: 0.5px; } }
 
 .inlineBlock {
   display: inline-block; }

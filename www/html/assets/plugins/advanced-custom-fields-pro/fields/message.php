@@ -39,7 +39,7 @@ class acf_field_message extends acf_field {
 			'value'			=> false, // prevents acf_render_fields() from attempting to load value
 			'message'		=> '',
 			'esc_html'		=> 0,
-			'new_lines'		=> 'wpautop',
+//			'new_lines'		=> 'wpautop',
 		);
 		
 		

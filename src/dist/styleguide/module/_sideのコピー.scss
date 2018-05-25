@@ -9,31 +9,27 @@
 .side-navi-main{
   font-size: 14px;
   @include mqTB{
-    //    font-size: calc-vw(14,1280);
+//    font-size: calc-vw(14,1280);
   }
   li{
     margin-bottom: 12px;
     @include mqTB{
-      //      margin-bottom: calc-vw(12,1280);
+//      margin-bottom: calc-vw(12,1280);
     }
     a{
       padding-bottom: 2px;
-      transition: .3s;
-      border-bottom: 1px solid transparent;
       &:hover {
         text-decoration: none;
-        border-bottom: 1px solid $c_k;
-        transition: 0;
+        border-bottom: 1px solid;
       }
     }
-    
   }
   .is-current > a{
     text-decoration: none;
     border-bottom: 1px solid;
     padding-bottom: 2px;
   }
-
+  
 }
 
 .side-utility-sns{

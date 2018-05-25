@@ -1,0 +1,23 @@
+.title{
+  .l-blog_detail & {
+    display: block;
+    font-weight: bold;
+    @include mqNotSP{
+      margin-bottom: 20px;
+    }
+    @include mqSP{
+      margin-bottom: 10px;
+    }
+  }
+  
+  .not-chrome .l-works_detail &{
+    display: block;
+    font-weight: bold;
+    @include mqNotSP{
+      margin-bottom: 20px;
+    }
+    @include mqSP{
+      margin-bottom: 12px;
+    }
+  }
+}

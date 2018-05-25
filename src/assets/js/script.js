@@ -29,14 +29,19 @@ $(document)
 
     // --------------------
     // check UA, add class
-    if(ua.device === 'tablet') {
-      $('html').addClass('use-tablet');
+    $('html').addClass('use-'+ua.device);
+    $('html').addClass('use-'+ua.browser);
+    if(ua.browser != 'chrome'){
+      $('html').addClass('not-chrome');
     }
-    if(ua.device === 'sp') {
-      $('html').addClass('use-sp');
-    }
+//    if(ua.device === 'tablet') {
+//      $('html').addClass('use-tablet');
+//    }
+//    if(ua.device === 'sp') {
+//      $('html').addClass('use-sp');
+//    }
     if(ua.browser === 'ie') {
-      $('html').addClass('use-ie');
+//      $('html').addClass('use-ie');
       $('html').addClass('use-ie' + ua.ieVersion);
     }
   })

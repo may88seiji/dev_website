@@ -1,4 +1,5 @@
-.wysiwyg{
+//works
+.use-chrome .l-works_detail > .wysiwyg{
   height: 850px;
   width: 860px;
   margin: 0 auto;
@@ -36,9 +37,30 @@
     }
     @include mqSP{
 //      height: 440px;
-      .detail &{
-        margin:0 calc-vw(145,320);
-      }
+      margin:0 calc-vw(145,320);
+    }
+  }
+}
+
+//blog
+.l-blog_detail > .wysiwyg{
+  text-align: justify;
+  @include mqNotSP{
+    max-width: 900px;
+    text-align: justify;
+  }
+  @include mqSP{
+
+  }
+  
+  p{
+    @include mqNotSP{
+      margin-bottom: 18px;
+    }
+    @include mqSP{
+      margin-bottom: 12px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
     }
   }
 }

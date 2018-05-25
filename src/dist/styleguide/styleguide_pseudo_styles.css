@@ -23,7 +23,8 @@ button:.pseudo-class-focus {
 
 .side-navi-main li a.pseudo-class-hover {
   text-decoration: none;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #000;
+  transition: 0;
 }
 
 .topNews li.pseudo-class-first-child {

@@ -10,6 +10,7 @@ $pt = get_post_type( $post );;
       <li class="<?php if ( is_page('about') ) { echo 'is-current'; } ?>"><a href="<?php echo home_url('');?>/about">about</a></li>
       <li class="<?php if ( $pt == 'news') { echo 'is-current'; } ?>"><a href="<?php echo home_url('');?>/news">news</a></li>
       <li class="<?php if ( $pt == 'works') { echo 'is-current'; } ?>"><a href="<?php echo home_url('');?>/works">works</a></li>
+      <li class="<?php if ( $pt == 'blog') { echo 'is-current'; } ?>"><a href="<?php echo home_url('');?>/blog">blog</a></li>
       <li><a href="mailto:takedasei.ishere@gmail.com">contact</a></li>
     </ul>
   </div>

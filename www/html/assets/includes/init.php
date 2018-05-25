@@ -62,5 +62,34 @@ add_action('init',function()
     'show_in_nav_menu'      => true,
     'menu_icon'             => 'dashicons-tickets-alt',
   ));
+  
+  register_post_type('blog', array(
+    'labels' => array(
+      'name'                  => 'blog',
+      'singular_name'         => 'blog',
+      'add_new'               => '新規追加',
+      'add_new_item'          => 'blogを追加',
+      'edit_item'             => 'blogを編集',
+      'new_item'              => '新しいblog',
+      'view_item'             => 'blogを見る',
+      'search_items'          => 'blogを探す',
+      'not_found'             => 'blogはありません',
+      'not_found_in_trash'    => 'ゴミ箱にblogはありません',
+      'parent_item_colon'     => ''
+    ),
+    'public'                => true,
+    'publicly_queryable'    => true,
+    'show_ui'               => true,
+    'query_var'             => true,
+    // 'rewrite'               => true,
+    'capability_type'       => 'post',
+    'hierarchical'          => false,
+    'menu_position'         => 5,
+    'supports'              => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt', 'author', 'comments', 'revisions'),
+    'has_archive'           => true,
+    'show_in_menu'          => true,
+    'show_in_nav_menu'      => true,
+    'menu_icon'             => 'dashicons-tickets-alt',
+  ));
 
 });
