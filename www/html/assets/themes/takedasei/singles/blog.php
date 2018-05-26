@@ -26,6 +26,9 @@ get_header();
               <?php the_content(); ?>
             </div>
           </div>
+          <ul class="share-buttons">
+            <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Ftakedasei.com%2F&text=:%20http%3A%2F%2Ftakedasei.com%2F&via=takedaseiishere" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><i class="icon-twitter"></i></a></li>
+          </ul>
         </div>
       </div>
 
