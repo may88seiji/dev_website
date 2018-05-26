@@ -53,7 +53,7 @@
                 <ul class="menu-utility-sns">
                   <li><a href="https://twitter.com/takedaseiishere"><i class="icon-twitter"></i></a></li>
                   <li><a href="https://www.instagram.com/takedasei.ishere/?hl=ja"><i class="icon-instagram"></i></a></li>
-                  <li><a href='https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Ftakedasei.com%2Ffeed%2F%20'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='20' height='20'></a></li>
+                  <li><a href='https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Ftakedasei.com%2Ffeed%2F%3Fpost_type%3Dblog'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='20' height='20'></a></li>
                 </ul>
               </ul>
 
