@@ -16,12 +16,33 @@
     <meta property="og:site_name" content="Takeda Sei">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="">
+    
     <meta name="twitter:site" content="site">
-    <meta name="twitter:title" content="Takeda Sei">
-    <meta name="twitter:description" content="takedaseiのウェブサイトです。">
-    <meta name="twitter:url" content="http://takedasei.com/">
+    <meta name="twitter:title" content="<?php the_title() ?>">
+    <meta name="twitter:url" content="<?php the_permalink() ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="<?php echo home_url('');?>/assets/themes/takedasei/ogimg.png">
+    <meta name="twitter:description" content="takedaseiのウェブサイトです。">
+    <meta name="twitter:image" content="<?php bloginfo('template_url');?>/ogimg.png">
+    
+    <?php if( is_singular( 'blog' ) ) {
+      if(have_posts()): while(have_posts()): the_post();
+      echo '<meta name="twitter:description" content="'.mb_substr(get_the_excerpt(), 0, 100).'">';echo "\n";//抜粋を表示
+      endwhile; endif;
+      $str = $post->post_content;
+      $searchPattern = '/<img.*?src=(["\'])(.+?)\1.*?>/i';//投稿にイメージがあるか調べる
+      if (has_post_thumbnail()){//投稿にサムネイルがある場合の処理
+        $image_id = get_post_thumbnail_id();
+        $image = wp_get_attachment_image_src( $image_id, 'full');
+        $img_url = $image[0];
+        echo '<meta name="twitter:image" content="'.$image[0].'">';echo "\n";
+      } else if ( preg_match( $searchPattern, $str, $imgurl ) && !is_archive()) {//投稿にサムネイルは無いが画像がある場合の処理
+        $img_url = $imgurl[2];
+        echo '<meta name="twitter:image" content="'.$imgurl[2].'">';echo "\n";
+      } else {//投稿にサムネイルも画像も無い場合の処理
+        echo '<meta name="twitter:image" content="'.home_url("").'"/assets/themes/takedasei/ogimg.png">';
+      }
+    } ?>
+    
     <link rel="icon" href="<?php echo home_url('');?>/assets/themes/takedasei/favicon.png"/>
     <link rel="apple-touch-icon" href="<?php echo home_url('');?>/assets/themes/takedasei/touch-icon.png">
     <style>
