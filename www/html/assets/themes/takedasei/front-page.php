@@ -19,7 +19,7 @@ get_header();
       <ul class="topNews">
         <?php if($customPosts_news) : foreach($customPosts_news as $post) : setup_postdata( $post ); ?>
           <li>
-            <a href="<?php echo home_url('');?>/news"><span class="date"><?php echo $time ?></span><br>
+            <a href="<?php echo home_url('');?>/news"><span class="date"><?php echo get_post_time('Y.m.d D'); ?></span><br>
               <?php the_excerpt(); ?>
             </a>
           </li>
