@@ -50,7 +50,7 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <?php if(!IS_LOCAL) get_template_part('partial/ga');?>
+    <?php get_template_part('partial/ga');?>
     <div class="l-wrapper">
       <header class="l-header pc-hide">
         <div class="header-inner">

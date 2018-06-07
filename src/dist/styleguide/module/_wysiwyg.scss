@@ -63,6 +63,15 @@
       letter-spacing: 0.5px;
     }
   }
+  
+  .p1{
+    margin-bottom: 0;
+    @include mqNotSP{
+    }
+    @include mqSP{
+      
+    }
+  }
 }
 
 ul.share-buttons{

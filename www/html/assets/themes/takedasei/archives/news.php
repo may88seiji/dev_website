@@ -1,4 +1,5 @@
 <?php 
+
 $time = get_post_time('Y/n/j D'); 
 
 get_header(); 
@@ -21,7 +22,7 @@ get_header();
 
             <?php while( have_posts() ): the_post();?>
             <li>
-              <span class="date"><?php echo $time ?></span>
+              <span class="date"><?php echo get_post_time('Y.m.d D'); ?></span>
               <h2><?php
                 $this_content = $post->post_content;
                 echo $this_content;?>

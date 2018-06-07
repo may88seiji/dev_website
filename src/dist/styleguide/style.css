@@ -297,13 +297,14 @@ input:-webkit-autofill {
       right: 0;
       min-height: inherit; } }
 
-.main-inner {
-  width: calc(100% - 60px); }
-  @media screen and (max-width: 767px) {
-    .main-inner {
-      width: 87.5vw;
-      margin: 0 auto;
-      margin-top: 20px; } }
+@media screen and (min-width: 768px) {
+  .main-inner {
+    width: calc(100% - 60px); } }
+
+@media screen and (max-width: 767px) {
+  .main-inner {
+    box-sizing: border-box;
+    margin: 20px 20px 0; } }
 
 .l-side {
   width: 270px;
@@ -873,6 +874,8 @@ h2 {
       margin-bottom: 12px;
       font-size: 14px;
       letter-spacing: 0.5px; } }
+  .l-blog_detail > .wysiwyg .p1 {
+    margin-bottom: 0; }
 
 ul.share-buttons {
   list-style: none;

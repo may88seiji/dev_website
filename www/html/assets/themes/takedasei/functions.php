@@ -20,7 +20,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 ========================================================= */
 function cpt_publicize_share() {
   add_post_type_support( 'blog', 'publicize' );
-  add_post_type_support( 'news', 'publicize' );
   add_post_type_support( 'works', 'publicize' );
 }
 add_action( 'init', 'cpt_publicize_share' );
